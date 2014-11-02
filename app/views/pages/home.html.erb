@@ -1,42 +1,65 @@
-<h1>Hey</h1>
-<%= form_tag charges_path, id:'chargeForm' do %>
-  <div class="field">
-    <%= label_tag :address  %>
-    <%= text_field_tag 'address' %>
+<nav>
+  <h1>S & B</h1>
+  <ul>
+    <li><a class='scroll-link' href="#about">about</a></li>
+    <li><a class='scroll-link' href="#socks">socks</a></li>
+    <li><a class='scroll-link' href="#subscribe">subscribe</a></li>
+  </ul>
+</nav>
+<section id='about'>
+  <div class='container'>
+    <h2 class='text-center'>about</h2>
+    <iframe width="560" height="315" src="//www.youtube.com/embed/ALAkF14LLsQ" frameborder="0" allowfullscreen></iframe>
   </div>
-  <div class="field">
-    <%= label_tag :city  %>
-    <%= text_field_tag 'city' %>
+</section>
+<section id='socks'>
+  <div class='container'>
+    <h2 class='text-center'>socks</h2>
   </div>
-  <p>need just us or canada option here</p>
-  <div class="field">
-    <%= label_tag :country  %>
-    <%= text_field_tag 'country' %>
+</section>
+<section id='subscribe'>
+  <div class='container'>
+    <h2 class='text-center'>subscribe</h2>
+  <%= form_tag charges_path, id:'chargeForm' do %>
+    <div class="field">
+      <%= label_tag :address  %>
+      <%= text_field_tag 'address' %>
+    </div>
+    <div class="field">
+      <%= label_tag :city  %>
+      <%= text_field_tag 'city' %>
+    </div>
+
+    <div class="field">
+      <%= label_tag :country  %>
+      <%= text_field_tag 'country' %>
+    </div>
+    <div class="field">
+      <%= label_tag :postal %>
+      <%= text_field_tag 'postal' %>
+    </div>
+     	<%= hidden_field_tag 'stripeToken' %>
+      <%= hidden_field_tag 'stripeEmail' %>  
+      <button id="btn-buy" type="button" class="btn btn-success btn-lg">I want this!</button>
+      <script src="https://checkout.stripe.com/checkout.js"></script>
+      <script>
+      var handler = StripeCheckout.configure({
+        key: '<%= @stripe_key %>',
+        token: function(token, arg) {
+          document.getElementById("stripeToken").value = token.id;
+          document.getElementById("stripeEmail").value = token.email;
+          document.getElementById("chargeForm").submit();
+        }
+      });
+       document.getElementById('btn-buy').addEventListener('click', function(e) {
+        handler.open({
+          name: 'Edible Energy',
+          description: 'Edible Energy Health Package($9.99)',
+          amount: 999
+      });
+      e.preventDefault();
+     })
+    </script>
+  <% end %>
   </div>
-  <div class="field">
-    <%= label_tag :postal %>
-    <%= text_field_tag 'postal' %>
-  </div>
-   	<%= hidden_field_tag 'stripeToken' %>
-    <%= hidden_field_tag 'stripeEmail' %>  
-    <button id="btn-buy" type="button" class="btn btn-success btn-lg">I want this!</button>
-    <script src="https://checkout.stripe.com/checkout.js"></script>
-    <script>
-    var handler = StripeCheckout.configure({
-      key: '<%= @stripe_key %>',
-      token: function(token, arg) {
-        document.getElementById("stripeToken").value = token.id;
-        document.getElementById("stripeEmail").value = token.email;
-        document.getElementById("chargeForm").submit();
-      }
-    });
-     document.getElementById('btn-buy').addEventListener('click', function(e) {
-      handler.open({
-        name: 'Edible Energy',
-        description: 'Edible Energy Health Package($9.99)',
-        amount: 999
-    });
-    e.preventDefault();
-   })
-  </script>
-<% end %>
+</section>
