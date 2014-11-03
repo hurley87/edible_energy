@@ -6,5 +6,14 @@ nav {
 }
 
 section {
-	height: 700px;
+	height:100vh;
+}
+
+.bg1 { background: url('http://placehold.it/1920x780') no-repeat 50% 0; }
+.bg2 { background: url('http://placehold.it/1920x780') no-repeat 50% 0; }
+.bg3 { background: url('http://placehold.it/1920x780') no-repeat 50% 0; }
+
+.bg1, .bg2, .bg3, .bg4, .bg5 {
+	padding: 0;
+	background-attachment: fixed;
 }
