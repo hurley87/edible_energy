@@ -8,6 +8,19 @@ $(document).ready(function ($){
 		});
 	return false;
   });
+
+  $('.ock').show(2000).hide(2000);
+  $('.ox').show(2000).hide(2000);
+  $('h1').slideDown(2000);
+
+  $('nav h1').on('mouseenter', function() {
+  		$(".ox").show( 1000 );
+  		$(".ock").show(  1000 );
+  });
+  $('nav h1').on('mouseleave', function() {
+  		$(".ox").hide( 1500 );
+  		$(".ock").hide( 1500 );
+  });
 });
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -44,5 +57,7 @@ function parallaxInit() {
 		$('.bg1').parallax("50%", 0.5);
 		$('.bg2').parallax("50%", 0.5);
 		$('.bg3').parallax("50%", 0.5);
+		$('.bg4').parallax("50%", 0.5);
+		$('.bg5').parallax("50%", 0.5);
 	}
 }

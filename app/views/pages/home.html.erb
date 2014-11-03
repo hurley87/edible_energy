@@ -1,23 +1,37 @@
 <nav>
-  <h1>S & B</h1>
+  <h1><a class='scroll-link' href='#top'>S<span class='ock'>ock</span> & B<span class='ox'>ox</span></a></h1>
   <ul>
     <li><a class='scroll-link' href="#about">about</a></li>
     <li><a class='scroll-link' href="#socks">socks</a></li>
     <li><a class='scroll-link' href="#subscribe">subscribe</a></li>
   </ul>
 </nav>
-<section id='about' class='bg1'>
-  <div class='container'>
-    <h2 class='text-center'>about</h2>
-    <iframe width="560" height="315" src="//www.youtube.com/embed/ALAkF14LLsQ" frameborder="0" allowfullscreen></iframe>
+<section id='top' class='bg1'>
+  <div style='width: 60%;' class='container'>
+    <h2 class='text-center'>Tagline</h2>
+      <div class="embed-responsive embed-responsive-4by3 text-center">
+        <iframe class='embed-responsive-item' width="560" height="315" src="//www.youtube.com/embed/ALAkF14LLsQ" allowfullscreen></iframe>
+      </div>  
   </div>
 </section>
-<section id='socks' class='bg2'>
+<section id='about' class='bg2'>
+  <div class='container'>
+    <h2 class='text-center'>about</h2>
+
+  </div>
+</section>
+<section class='bg3'>
+  <div class='container'>
+    <h2 class='text-center'>about</h2>
+
+  </div>
+</section>
+<section id='socks' class='bg4'>
   <div class='container'>
     <h2 class='text-center'>socks</h2>
   </div>
 </section>
-<section id='subscribe' class='bg3'>
+<section id='subscribe' class='bg5'>
   <div class='container'>
     <h2 class='text-center'>subscribe</h2>
   <%= form_tag charges_path, id:'chargeForm' do %>
@@ -53,12 +67,12 @@
       });
        document.getElementById('btn-buy').addEventListener('click', function(e) {
         handler.open({
-          name: 'Edible Energy',
-          description: 'Edible Energy Health Package($9.99)',
+          name: 'Sock and Box',
+          description: 'Monthly Sock Delivered($9.99)',
           amount: 999
       });
       e.preventDefault();
-     })
+     });
     </script>
   <% end %>
   </div>
