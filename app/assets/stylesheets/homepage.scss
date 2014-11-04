@@ -4,6 +4,11 @@ $orange: #F9A46C;
 $blue: #A0D7EF;
 $beige: #FEFBEE;
 
+body {
+	padding: 0;
+	margin: 0;
+}
+
 nav {
 	display: inline;
 	position: fixed;
@@ -40,4 +45,51 @@ section {
 	height:100vh;
 	padding: 0;
 	background-attachment: fixed;
+}
+
+h2 {
+	margin: 0;
+	padding: 0;
+}
+
+// subscribe
+.content-box {
+	width: 50%;
+	margin: auto;
+	border: 10px solid $orange;
+	background-color: $beige;
+	padding: 30px;
+}
+
+.sub-right {
+	border-left: 3px solid $orange;
+	padding-left: 25px;
+	height: 360px;
+	
+	input {
+		width: 100%;
+		padding-right: 20px;
+	}
+
+	.btn {
+		border: none;
+		background-color: $orange;
+		color: white;
+		padding: 10px;
+		text-shadow: none;
+	}
+
+	label {
+		color: $red;
+	}
+}
+.sub-left {
+	border-right: 3px solid $orange;
+	height: 360px;
+	h1 {
+		padding-top: 45%;
+		color: $red;
+		vertical-align: middle;
+		padding-right: 20px; 
+	}
 }
