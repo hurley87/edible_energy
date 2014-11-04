@@ -35,6 +35,10 @@ section {
 	padding: 500px;
 }
 
+.youtube {
+	border: 10px solid $orange;
+}
+
 .bg1 { background: url('http://placehold.it/1920x780') no-repeat 50% 0; }
 .bg2 { background-color: $orange; color: white;}
 .bg3 { background: url('http://placehold.it/1920x780') no-repeat 50% 0; }
@@ -49,7 +53,7 @@ section {
 
 h2 {
 	margin: 0;
-	padding: 0;
+	padding-top: 15px;
 }
 
 // subscribe
