@@ -63,10 +63,10 @@ function parallaxInit() {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////
-//Special Font
+//Special Fonts
 //////////////////////////////////////////////////////////////////////////////////////////
   WebFontConfig = {
-    google: { families: [ 'Quicksand::latin' ] }
+    google: { families: [ 'Quicksand::latin', 'Droid+Serif::latin' ] }
   };
   (function() {
     var wf = document.createElement('script');
@@ -77,3 +77,13 @@ function parallaxInit() {
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(wf, s);
   })();
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//waypoints
+//////////////////////////////////////////////////////////////////////////////////////////
+$(document).ready(function() {
+  $('.sub-right').hide();
+    $('#subscribe').waypoint(function() {
+      $('.sub-right').show(1000);
+    });
+}); 

@@ -1,45 +1,17 @@
+@import "font-awesome";
 @import "bootstrap";
 
 $red: #F04E31;
 $orange: #F9A46C;
 $blue: #A0D7EF;
 $beige: #FEFBEE;
+$driod: 'Droid Serif', serif;
+$quick: 'Quicksand', sans-serif;
 
 body {
 	padding: 0;
 	margin: 0;
-  font-family: 'Quicksand', sans-serif;
-}
-
-nav {
-	display: inline;
-	position: fixed;
-	
-
-	h1 {
-		text-decoration: none;
-		padding-left: 20px;
-		font-weight: 800;
-	}
-
-	ul {
-		list-style: none;
-
-		li {
-			padding-top: 25px;
-			font-size: 1.5em;
-
-			&:hover {
-				border-bottom: 1px solid $red;
-			}
-		}
-	}
-
-	.scroll-link {
-		text-decoration: none;
-		color: $red;
-	}
-
+  font-family: $quick;
 }
 
 section {
@@ -48,7 +20,7 @@ section {
 }
 
 .youtube {
-	border: 10px solid $orange;
+	border: 10px ridge $orange;
 }
 
 .bg1 { background: image-url("sock1.jpg") no-repeat 50% 0; background-size: cover; }
@@ -61,24 +33,103 @@ section {
 	height:100vh;
 	padding: 0;
 	background-attachment: fixed;
+
+	.down {
+		position: absolute;
+		bottom: 0;
+		right: 48%;
+		color: $red;
+		a {
+			color: $red;
+		}
+	}
 }
 
 h2 {
 	margin: 0;
-	padding-top: 15px;
+	padding-top: 45px;
+	font-family: $driod;
+	font-size: 3em;
 }
 
+////////////////////////////////////////////
+// nav
+////////////////////////////////////////////
+
+nav {
+	display: inline;
+	position: fixed;
+	
+
+	h1 {
+		text-decoration: none;
+		padding-left: 20px;
+		font-weight: 800;
+		font-family: $driod;
+		font-size: 4em;
+	}
+
+	ul {
+		list-style: none;
+
+		li {
+			padding-top: 25px;
+			font-size: 1.5em;
+
+			&:hover {
+				border-bottom: 1px ridge $red;
+			}
+		}
+	}
+
+	.scroll-link {
+		text-decoration: none;
+		color: $red;
+	}
+
+}
+
+////////////////////////////////////////////
+// about
+////////////////////////////////////////////
+#about {
+	h3 {
+		font-family: $driod;
+		font-size: 4em;
+		padding: 40px;
+	}
+
+	p {
+		font-size: 2em;
+		padding: 40px 200px 0px 200px;
+	}
+}
+
+////////////////////////////////////////////
+// socks
+////////////////////////////////////////////
+#socks {
+
+	p {
+		font-size: 2em;
+		padding: 20px;
+	}
+
+}
+
+////////////////////////////////////////////
 // subscribe
+////////////////////////////////////////////
+
 .content-box {
 	width: 50%;
 	margin: auto;
-	border: 10px solid $orange;
+	border: 10px ridge $orange;
 	background-color: $beige;
 	padding: 30px;
 }
 
 .sub-right {
-	border-left: 3px solid $orange;
 	padding-left: 25px;
 	height: 360px;
 	
@@ -100,8 +151,8 @@ h2 {
 	}
 }
 .sub-left {
-	border-right: 3px solid $orange;
-	height: 360px;
+	border-right: 3px ridge $orange;
+	height: 370px;
 	h1 {
 		padding-top: 45%;
 		color: $red;

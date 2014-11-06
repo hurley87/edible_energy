@@ -15,11 +15,13 @@
       <iframe class='embed-responsive-item youtube' width="560" height="315" src="//www.youtube.com/embed/ALAkF14LLsQ" allowfullscreen></iframe>
     </div>  
   </div>
+  <div><p class='down' class='text-center'><a class='scroll-link' href="#about"><i class="fa fa-angle-double-down fa-5x"></i></a><p></div>
 </section>
 <section id='about' class='bg2'>
-  <div class='container'>
-    <h2 class='text-center'>about</h2>
-
+  <div class='container text-center'>
+    <h2>about</h2>
+    <h3>you can't afford <i>not</i><br>to look this good</h3>
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
   </div>
 </section>
 <section class='bg3'>
@@ -28,13 +30,18 @@
   </div>
 </section>
 <section id='socks' class='bg4'>
-  <div class='container'>
+  <div class='container text-center'>
     <h2 class='text-center'><b>socks</b></h2>
+    <div clsas='row'>
+      <div class='col-md-3'><%= image_tag('sock5.png') %><%= image_tag('soc3.png') %></div>
+      <div class='col-md-6'><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p></div>
+      <div class='col-md-3'><%= image_tag('sock1.png') %><%= image_tag('sock4.png') %></div>
+    </div>
+    
   </div>
 </section>
 <section id='subscribe' class='bg5'>
     <h2 class='text-center'>subscribe</h2>
-    <br>
     <br>
     <br>
     <div class='content-box row'>
@@ -63,7 +70,7 @@
         <br>
          	<%= hidden_field_tag 'stripeToken' %>
           <%= hidden_field_tag 'stripeEmail' %>  
-          <button id="btn-buy" type="button" class='btn btn-success'>subscribe</button>
+          <button id="btn-buy" type="button" class='btn btn-success'>subscribe <i class="fa fa-cc-stripe fa-2x"></i></button>
           <script src="https://checkout.stripe.com/checkout.js"></script>
           <script>
           var handler = StripeCheckout.configure({
@@ -86,4 +93,7 @@
       <% end %>
       </div>
     </div>
+    <br>
+    <br>
+    <h1 class='text-center'>Some More Fucking Text</h1>
 </section>

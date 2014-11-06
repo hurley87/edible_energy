@@ -40,3 +40,5 @@ gem 'devise'
 
 gem 'pry'
 
+gem "font-awesome-rails"
+
