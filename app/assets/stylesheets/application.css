@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+@media (min-width: 480px) {
+	#vid-container {
+		width: 50%; 
+		margin: auto;
+		
+		height: 360px !important;
+	}
+
+	#youtube {
+		border: 10px ridge #F9A46C;
+	}
+
+	#main-nav #logo h1 {
+		color: green;
+	}
+
+	#brand a {
+		margin-left: 50px;
+		margin-top: 0;
+	}
+}
