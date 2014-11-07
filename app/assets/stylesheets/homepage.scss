@@ -15,7 +15,9 @@ body {
 }
 
 section {
-	height:100vh;}
+	height:100vh;
+	padding: 500px;
+}
 
 #youtube {
 	border: 10px ridge $orange;
@@ -50,7 +52,8 @@ section {
 }
 
 h2 {
-
+	padding-top: 60px;
+	padding-bottom: 45px;
 	font-family: $driod;
 	font-size: 3em;
 	border-bottom: 2px solid white;
