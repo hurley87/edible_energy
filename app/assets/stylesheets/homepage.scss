@@ -48,6 +48,7 @@ section {
 h2 {
 	margin: 0;
 	padding-top: 45px;
+	padding-bottom: 45px;
 	font-family: $driod;
 	font-size: 3em;
 }
@@ -67,6 +68,7 @@ nav {
 		font-weight: 800;
 		font-family: $driod;
 		font-size: 4em;
+		letter-spacing: 80%;
 	}
 
 	ul {
@@ -96,12 +98,12 @@ nav {
 	h3 {
 		font-family: $driod;
 		font-size: 4em;
-		padding: 40px;
+		padding: 30px;
 	}
 
 	p {
 		font-size: 2em;
-		padding: 40px 200px 0px 200px;
+		padding: 0px 200px 0px 200px;
 	}
 }
 
@@ -109,11 +111,9 @@ nav {
 // socks
 ////////////////////////////////////////////
 #socks {
-
-	p {
-		font-size: 2em;
-		padding: 20px;
-	}
+	
+	padding: 10px;
+	font-size: 1.1em;
 
 }
 
