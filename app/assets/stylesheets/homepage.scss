@@ -11,7 +11,7 @@ $quick: 'Quicksand', sans-serif;
 body {
 	padding: 0;
 	margin: 0;
-  font-family: $quick;
+  font-family: $driod;
   background-color: $orange;
 }
 
@@ -35,8 +35,9 @@ section {
 .bg3 { background: image-url("sock2.jpg") no-repeat 50% 0; background-size: cover;  }
 .bg4 { background-color: $orange; color: white;}
 .bg5 { background-image: image-url("sock3.jpg"); background-size: cover;  background-position: right !important;  }
+.bg6 { background-color: #A0D7EF; color: $orange;}
 
-.bg1, .bg2, .bg3, .bg4, .bg5 {
+.bg1, .bg2, .bg3, .bg4, .bg5, .bg6 {
 	height:100vh;
 	padding: 0;
 	background-attachment: fixed;
@@ -59,7 +60,9 @@ h2 {
 	font-size: 3em;
 	border-bottom: 2px solid white;
 }
-
+.bg6 {
+	height: 100%;
+}
 ////////////////////////////////////////////
 // nav
 ////////////////////////////////////////////
@@ -179,10 +182,6 @@ h2 {
 		padding: 30px;
 	}
 
-	p {
-		font-size: 2em;
-		padding: 0px 200px 0px 200px;
-	}
 }
 
 ////////////////////////////////////////////
@@ -201,6 +200,7 @@ h2 {
 ////////////////////////////////////////////
 #subscribe {
 	height: 100%;
+	color: $orange;
 	.content-box {
 		width: 50%;
 		margin: auto;
@@ -240,4 +240,26 @@ h2 {
 			padding-right: 20px; 
 		}
 	}	
+}
+
+////////////////////////////////////////////
+// footer
+////////////////////////////////////////////
+footer .scroll-link {
+	text-decoration: none;
+	color: white;
+}
+
+footer {
+	color: white;
+	background-color: $orange;
+}
+
+footer h3 {
+	color: $red;
+}
+
+footer .link-times {
+	text-decoration: none;
+	color: white;
 }
