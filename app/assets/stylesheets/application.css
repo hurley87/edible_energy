@@ -14,9 +14,12 @@
  *= require_self
  */
 
-@media (min-width: 480px) {
+@media (max-width: 900px) {
+	h2 {
+		margin-top: 60px;
+	}
 	#vid-container {
-		width: 50%; 
+		width: 100%; 
 		margin: auto;
 		
 		height: 360px !important;
@@ -30,8 +33,25 @@
 		color: green;
 	}
 
-	#brand a {
-		margin-left: 50px;
-		margin-top: 0;
+	
+	#brand {
+		position: fixed;
+		top: -10px;
+		left: 0;
+	}
+
+	#subscribe .content-box {
+		width: 100%;
+		height: 130%;
+
+	}
+
+	#subscribe .content-box .sub-right, #subscribe .content-box .sub-left {
+		border: none;
+	}
+
+	#subscribe .content-box .sub-left {
+		height: 50%;
+		margin-top: -150px;
 	}
 }
