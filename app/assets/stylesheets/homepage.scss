@@ -67,6 +67,25 @@ h2 {
 .bg6 {
 	height: 100%;
 }
+
+.faq-circle {
+	background-color: white;
+	height: 300px;
+	width: 300px;
+	border-radius: 150px;
+	padding-top: 60px; 
+
+	h4 {
+		width: 60%;
+		margin: auto;
+		padding-bottom: 30px;
+	}
+
+	p {
+		width: 90%;
+		margin: auto;
+	}
+}
 ////////////////////////////////////////////
 // nav
 ////////////////////////////////////////////
