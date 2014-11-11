@@ -19,9 +19,11 @@
 		margin-top: 60px;
 	}
 	#vid-container {
-		width: 100%; 
+		width: 90%;
+		position: absolute;
+		top: 60px;
+		left: 20px;
 		margin: auto;
-		
 		height: 360px !important;
 	}
 

@@ -62,7 +62,7 @@ h2 {
 	padding-bottom: 45px;
 	font-family: $driod;
 	font-size: 3em;
-	border-bottom: 2px solid white;
+	border-bottom: 20px solid $blue;
 }
 .bg6 {
 	height: 100%;
@@ -96,7 +96,9 @@ h2 {
 #vid-container {
 		width: 50%; 
 		margin: auto;
-		
+		position: absolute;
+		top: 80px;
+		left: 25%;
 		height: 360px !important;
 	}
 
@@ -211,11 +213,12 @@ h2 {
 	margin: auto;
 	background-color: white;
 	font-size: 6em;
-	padding-top: 10%;
-	color: $orange;
+	padding-top: 5%;
+	color: $blue;
 	width: 200px;
 	height: 200px;
 	border-radius: 100px;
+	border: 20px solid $blue;
 }
 
 ////////////////////////////////////////////
@@ -226,6 +229,12 @@ h2 {
 	height: 100%;
 	padding: 10px;
 	font-size: 1.1em;
+
+	h3 {
+		font-family: $driod;
+		font-size: 4em;
+		padding: 30px;
+	}
 
 }
 
