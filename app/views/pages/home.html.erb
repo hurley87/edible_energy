@@ -58,67 +58,65 @@
  <br id='sock-start'>
 <section id='socks' class='bg4'>
   <div class='container text-center'>
-    <h2 class='text-center'><b>socks</b></h2>
+    <h2 class='text-center'>These socks are fancy</h2>
     <div clsas='row'>
       <br>
         <br>
       <h3>Made in <i>Canada</i><br>so don't worry about quality.</h3>
       <div id='sock1' class='col-md-3'>
+        <div style='margin-top: 300px;' class='sock-quality'>
+          <p class='text-center'>Commitment Problems? We got you covered.
+  You can purchase just 1 month (5 pairs) of our socks. No strings attached.</p>
+        </div>
         <br>
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <p class='text-center'>Commitment Problems? We got you covered.
+        <div class='sock-quality'>
+          <p class='text-center'>Commitment Problems? We got you covered.
 You can purchase just 1 month (5 pairs) of our socks. No strings attached.</p>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <p class='text-center'>Commitment Problems? We got you covered.
-You can purchase just 1 month (5 pairs) of our socks. No strings attached.</p>
+        </div>
       </div>
       <div id='sock2' class='col-md-3'>
+        <div class='sock-quality'>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </div>
         <br>
         <br>
         <%= image_tag('sock5.png') %>
          <%= image_tag('soc3.png') %>
          <br>
          <br>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        <div class='sock-quality'>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </div>
       </div>
       <div id='sock3' class='col-md-3'>
+
+        <div class='sock-quality'>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </div>
         <br>
         <br>
         <%= image_tag('sock4.png') %>
         <%= image_tag('sock1.png') %>
         <br>
         <br>
-        <p>doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
+        <div class='sock-quality'>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </div>
+        </div>
       </div>
       <div id='sock4' class='col-md-3'>
+       
+        <div style='margin-top: 300px;' class='sock-quality'>
+          <p class='text-center'>Commitment Problems? We got you covered.
+  You can purchase just 1 month (5 pairs) of our socks. No strings attached.</p>
+        </div>
         <br>
-
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <p class='text-center'>Commitment Problems? We got you covered.
+        <div class='sock-quality'>
+          <p class='text-center'>Commitment Problems? We got you covered.
 You can purchase just 1 month (5 pairs) of our socks. No strings attached.</p>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <p class='text-center'>Commitment Problems? We got you covered.
-You can purchase just 1 month (5 pairs) of our socks. No strings attached.</p>
+        </div>
       </div>
     </div>
     
@@ -127,7 +125,7 @@ You can purchase just 1 month (5 pairs) of our socks. No strings attached.</p>
   <br>
 </section>
 <section id='subscribe' class='bg5'>
-    <h2 class='text-center container'>It's time to step up your sock game.</h2>
+    <h2 class='text-center container'>Step up your sock game.</h2>
     <br><br>
     <div class='content-box row'>
     <div class='row'>
@@ -171,7 +169,7 @@ You can purchase just 1 month (5 pairs) of our socks. No strings attached.</p>
         <br>
          	<%= hidden_field_tag 'stripeToken' %>
           <%= hidden_field_tag 'stripeEmail' %>  
-          <button id="btn-buy" type="button" class='btn btn-success'>subscribe <i class="fa fa-cc-stripe fa-2x"></i></button>
+          <button style="font-size: 2em;" id="btn-buy" type="button" class='btn btn-success pull-right'>subscribe</button>
           <script src="https://checkout.stripe.com/checkout.js"></script>
       <% end %>
       </div>

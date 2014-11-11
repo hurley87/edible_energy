@@ -26,6 +26,9 @@
 		margin: auto;
 		height: 360px !important;
 	}
+	#heatmap {
+		display: none;
+	}
 
 	#youtube {
 		border: 10px ridge #F9A46C;

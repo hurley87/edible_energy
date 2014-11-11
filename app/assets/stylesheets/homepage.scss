@@ -61,7 +61,7 @@ h2 {
 	padding-top: 80px;
 	padding-bottom: 45px;
 	font-family: $driod;
-	font-size: 3em;
+	font-size: 6em;
 	border-bottom: 20px solid $blue;
 }
 .bg6 {
@@ -69,7 +69,8 @@ h2 {
 }
 
 .faq-circle {
-	background-color: white;
+	background-color: $beige;
+	border: 10px solid $orange;
 	height: 300px;
 	width: 300px;
 	border-radius: 150px;
@@ -79,6 +80,7 @@ h2 {
 		width: 60%;
 		margin: auto;
 		padding-bottom: 30px;
+		color: $red;
 	}
 
 	p {
@@ -221,6 +223,24 @@ h2 {
 	border: 20px solid $blue;
 }
 
+.sock-quality {
+	margin: auto;
+	background-color: white;
+	padding-top: 15%;
+	color: $blue;
+	width: 250px;
+	height: 250px;
+	border-radius: 125px;
+	border: 20px solid $blue;
+	background-color: $beige;
+	color: $red;
+
+	p {
+		width: 75%;
+		margin: auto;
+	}
+}
+
 ////////////////////////////////////////////
 // socks
 ////////////////////////////////////////////
@@ -247,7 +267,7 @@ h2 {
 	.content-box {
 		width: 50%;
 		margin: auto;
-		border: 10px ridge $orange;
+		border: 10px solid $orange;
 		background-color: $beige;
 		padding: 30px;
 	}
@@ -274,7 +294,7 @@ h2 {
 		}
 	}
 	.sub-left {
-		border-right: 3px ridge $orange;
+		border-right: 10px solid $orange;
 		height: 370px;
 		h1 {
 			padding-top: 45%;
