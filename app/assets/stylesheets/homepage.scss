@@ -69,34 +69,7 @@ h2 {
 	height: 100%;
 }
 
-.faq-circle {
-	background-color: $beige;
-	border: 10px solid $orange;
-	height: 300px;
-	width: 300px;
-	margin: auto;
-	border-radius: 150px;
-	padding-top: 60px; 
-
-	h4 {
-		width: 60%;
-		margin: auto;
-		padding-bottom: 30px;
-		color: $red;
-	}
-
-	p {
-		width: 90%;
-		margin: auto;
-	}
-}
-////////////////////////////////////////////
-// nav
-////////////////////////////////////////////
-
-/*----------------------
-----Navigation Styles---
-------------------------*/
+ 
 #vid-container {
 		width: 50%; 
 		margin: auto;
@@ -105,6 +78,20 @@ h2 {
 		left: 25%;
 		height: 360px !important;
 	}
+
+
+////////////////////////////////////////////
+// nav
+////////////////////////////////////////////
+
+/*----------------------
+----Navigation Styles---
+------------------------*/
+
+#buy {
+    border: 15px solid $red;
+  }
+
 
 
 
@@ -132,11 +119,6 @@ h2 {
 
     -webkit-transition:padding 0.3s ease-out;
     transition:padding 0.3s ease-out;
-}
-
-#main-nav.scrolled {
-    background:#fff;
-    box-shadow:0 1px 2px rgba(0,0,0,0.1);
 }
 
 #main-nav.scrolled .container{
@@ -314,6 +296,32 @@ h2 {
 			padding-right: 20px; 
 		}
 	}	
+}
+
+////////////////////////////////////////////
+// FAQ
+////////////////////////////////////////////
+
+.faq-circle {
+	background-color: $beige;
+	border: 10px solid $orange;
+	height: 300px;
+	width: 300px;
+	margin: auto;
+	border-radius: 150px;
+	padding-top: 60px; 
+
+	h4 {
+		width: 60%;
+		margin: auto;
+		padding-bottom: 30px;
+		color: $red;
+	}
+
+	p {
+		width: 90%;
+		margin: auto;
+	}
 }
 
 ////////////////////////////////////////////
