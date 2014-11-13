@@ -28,6 +28,11 @@ section {
 	border: 20px solid $orange;
 }
 
+#heatmap {
+  position: relative;
+  right: 250px;
+}
+
 #brand a {
 	color: $red;
 	font-family: $driod;

@@ -4,13 +4,19 @@
     <br>
     <br>
   <div class='container'> 
+    <script src="https://cdn.auth0.com/w2/auth0-widget-5.2.min.js"></script>
+<script type="text/javascript">
+
+  var widget = new Auth0Widget({
+    domain:         'dhurls99.auth0.com',
+    clientID:       'W5OqSKypRQRMZChFkHyhXUc1Bd6YxEWj',
+    callbackURL:    'http://localhost:3000/auth/auth0/callback'
+  });
+  
+</script>
+<button onclick="widget.signin({ scope: 'openid profile' })">Login</button>
   <canvas id="heatmap" class="clear" height="600" width="1500"> </canvas> 
-   <style type="text/css">
-    #heatmap {
-      position: relative;
-      right: 250px;
-    }
-    </style>
+   
    <div id='vid-container' class="embed-responsive embed-responsive-4by3"><p class='text-right'><iframe style='height: 360px !important; ' id='youtube' class='embed-responsive-item' width="560" height="315" src="//www.youtube.com/embed/ALAkF14LLsQ" allowfullscreen></iframe></p></div>
    </div>   
   <div><p class='down' class='text-center'><a class='scroll-link' href="#about"><i class="fa fa-angle-double-down fa-5x"></i></a><p></div>
