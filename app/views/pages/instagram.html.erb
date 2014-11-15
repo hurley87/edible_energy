@@ -3,6 +3,7 @@
 <% @photos.each do |instagram| %>
 	<div class='likes'><%= instagram.likes[:count] %></div>
     <div class='instaBox'><a href='<%= instagram.link %>'><%= image_tag instagram.images.thumbnail.url %></a></div> 
+    <br>
 <% end %>
 </div>
 <style type="text/css">
