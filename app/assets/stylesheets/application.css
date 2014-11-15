@@ -18,6 +18,12 @@
 	h2 {
 		margin-top: 60px;
 	}
+	.content-box {
+		width: 100%;
+	}
+	.sub-left {
+		border: none;
+	}
 	#vid-container {
 		width: 90%;
 		position: absolute;

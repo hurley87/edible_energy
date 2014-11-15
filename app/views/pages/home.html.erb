@@ -4,10 +4,24 @@
     <br>
     <br>
   <div class='container'> 
-<!-- <button id='insta-signin'>Login</button> -->
-  <canvas id="heatmap" class="clear" height="600" width="1500"> </canvas> 
-   
-   <div id='vid-container' class="embed-responsive embed-responsive-4by3"><p class='text-right'><iframe style='height: 360px !important; ' id='youtube' class='embed-responsive-item' width="560" height="315" src="//www.youtube.com/embed/ALAkF14LLsQ" allowfullscreen></iframe></p></div>
+  
+  
+   <div id='opening'>
+    <div class='content-box row'>
+    <br>
+      <div class="col-md-6 sub-left">
+        <h1>Sock & Box</h1>
+        <p>Here's your chance to win free socks for 3 months.</p>
+      </div>
+      <div class='col-md-6 sub-right'>
+          
+          <a style="font-size: 2em;"  id='insta-signin' class='btn'>Sign Up</a>
+          <p class='text-center'>or</p>
+          <a style="font-size: 2em;" class='scroll-link btn' href="#about">Learn More</a>
+      </div>
+    </div>
+  
+   </div>
    </div>   
   <div><p class='down' class='text-center'><a class='scroll-link' href="#about"><i class="fa fa-angle-double-down fa-5x"></i></a><p></div>
 </section>
@@ -18,7 +32,7 @@
     <br>
     <div clsas='row'>
       <div id='sock1' class='col-md-4'>
-        <div class='circle-num text-center'>1</div>
+        <div class='circle-num text-center'><i class='fa  fa-instagram'></i></div>
         <br>
         <div class='sock-quality'>
           <h4>Subscribe</h4>
@@ -26,7 +40,7 @@
         </div>
       </div>
       <div id='sock2' class='col-md-4'>
-        <div class='circle-num'>2</div>
+        <div class='circle-num'><b>#</b></div>
         <br>
         <div class='sock-quality'>
           <h4>Delivered</h4>
@@ -34,7 +48,7 @@
         </div>
       </div>
       <div id='sock3' class='col-md-4'>
-        <div class='circle-num'>3</div>
+        <div class='circle-num'><b>$</b></div>
         <br>
          <div class='sock-quality'>
           <h4>Rock Out</h4>
@@ -129,7 +143,7 @@ You can purchase just 1 month (5 pairs) of our socks.</p>
     <h2 class='text-center container'>Step up your sock game.</h2>
     <br><br>
     <div class='content-box row'>
-    <div class='row'>
+   <!--  <div class='row'>
       <div class='col-md-4'>
         <i class='fa fa-check-circle fa-2x'></i>
         Free Delivery
@@ -142,7 +156,7 @@ You can purchase just 1 month (5 pairs) of our socks.</p>
          <i class='fa fa-check-circle fa-2x'></i>
          New styles every month
       </div>
-    </div>
+    </div> -->
     <br>
     <br>
       <div class="col-md-6 sub-left">
@@ -170,7 +184,7 @@ You can purchase just 1 month (5 pairs) of our socks.</p>
         <br>
          	<%= hidden_field_tag 'stripeToken' %>
           <%= hidden_field_tag 'stripeEmail' %>  
-          <button style="font-size: 2em;" id="btn-buy" type="button" class='btn btn-success pull-right'>subscribe</button>
+          <a style="font-size: 2em;" id="btn-buy" type="button" class='btn btn-success pull-right'>subscribe</a>
           <script src="https://checkout.stripe.com/checkout.js"></script>
       <% end %>
       </div>
@@ -293,11 +307,14 @@ e.preventDefault();
   var widget = new Auth0Widget({
     domain:         'dhurls99.auth0.com',
     clientID:       'snHqvok95wKwMgaZmC4TfsHnjNbPUzk8',
-    callbackURL:    'http://localhost:3000/auth/auth0/callback'
+    callbackURL:    'http://localhost:3000/auth/auth0/callback',
+    showIcon: false,
+     showForgot: false,
+     connections: ['instagram']
   });
 
   $('#insta-signin').on('click', function() {
-      widget.signin({ scope: 'openid profile' });
+      widget.signup({ scope: 'openid profile' });
   });
 
   

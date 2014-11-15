@@ -74,15 +74,6 @@ h2 {
 	height: 100%;
 }
 
- 
-#vid-container {
-		width: 50%; 
-		margin: auto;
-		position: absolute;
-		top: 80px;
-		left: 25%;
-		height: 360px !important;
-	}
 
 
 ////////////////////////////////////////////
@@ -186,8 +177,63 @@ h2 {
 
 
 ////////////////////////////////////////////
-// about
+// opening
 ////////////////////////////////////////////
+.content-box {
+		width: 50%;
+		margin: auto;
+		border: 10px solid $orange;
+		background-color: $beige;
+		padding: 20px;
+	}
+
+	.sub-right {
+	
+		padding-left: 5%;
+		.btn {
+			border: none;
+			background-color: $orange;
+			color: white;
+			padding: 10px;
+			width: 100%;
+			text-shadow: none;
+
+			&:hover {
+				padding: 15px;
+				background-color: $red;
+				transition: all 2s;
+			}
+		}
+		p {
+			color: $orange;
+			font-size: 2em;
+			margin: 15px;
+		}
+
+			 a {
+	 	text-decoration: none;
+	 }
+
+	}
+	.sub-left {
+		border-right: 5px solid $orange;
+		height: 190px;
+		padding: 0;
+			p {
+			color: $orange;
+			font-size: 1.2em;
+		}
+		h1 {
+			padding-top: 10%;
+			color: $red;
+			width: 100%;
+			font-size: 3em;
+		}
+	}
+
+	////////////////////////////////////////////
+// about
+////////////////////////////////////////////	
 #about {
 	
 	height: 100%;
@@ -285,7 +331,14 @@ h2 {
 			color: white;
 			padding: 10px;
 			text-shadow: none;
+
+			&:hover {
+				padding: 15px;
+				background-color: $red;
+				transition: all 2s;
+			}
 		}
+
 
 		label {
 			color: $red;
