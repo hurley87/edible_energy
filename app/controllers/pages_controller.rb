@@ -23,14 +23,14 @@ class PagesController < ApplicationController
   			photos << p
   		end
   	end
-  	photos
+  	photos.uniq!
   end
 
   def find_right_photos(id)
   	instagram = Instagram.user_recent_media(id)
   	@photos = []
   	instagram.each do |i|
-  		@photos << i if i[:tags].include?('pug')
+  		@photos << i if i[:tags].include?('basset')
   	end
   	@photos
   end
@@ -40,12 +40,12 @@ class PagesController < ApplicationController
   	photos.each do |photo|
   		hash[photo] = photo[:likes][:count]
   	end
-  	arr = hash.sort_by {|_key, value| value}
+  	ranked_hash = hash.sort_by {|_key, value| value}
 
   	ranked_photos = []
-  	arr.each do |i|
+  	ranked_hash.each do |i|
   		ranked_photos << i[0]
   	end
-  	arr
+  	ranked_hash
   end
 end

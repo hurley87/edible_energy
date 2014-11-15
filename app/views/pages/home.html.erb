@@ -4,17 +4,7 @@
     <br>
     <br>
   <div class='container'> 
-    <script src="https://cdn.auth0.com/w2/auth0-widget-5.2.min.js"></script>
-<script type="text/javascript">
-
-  var widget = new Auth0Widget({
-    domain:         'dhurls99.auth0.com',
-    clientID:       'W5OqSKypRQRMZChFkHyhXUc1Bd6YxEWj',
-    callbackURL:    'http://localhost:3000/auth/auth0/callback'
-  });
-  
-</script>
-<button onclick="widget.signin({ scope: 'openid profile' })">Login</button>
+<!-- <button id='insta-signin'>Login</button> -->
   <canvas id="heatmap" class="clear" height="600" width="1500"> </canvas> 
    
    <div id='vid-container' class="embed-responsive embed-responsive-4by3"><p class='text-right'><iframe style='height: 360px !important; ' id='youtube' class='embed-responsive-item' width="560" height="315" src="//www.youtube.com/embed/ALAkF14LLsQ" allowfullscreen></iframe></p></div>
@@ -26,29 +16,28 @@
     <h2>Join the club</h2>
     <h3>in just <i>3</i><br> easy steps.</h3>
     <br>
-    <br>
     <div clsas='row'>
       <div id='sock1' class='col-md-4'>
         <div class='circle-num text-center'>1</div>
         <br>
-        <h4>Subscribe</h4>
         <div class='sock-quality'>
+          <h4>Subscribe</h4>
           <p>Sign up with your shipping info and credit card. We take care of the rest with no strings attached.</p>
         </div>
       </div>
       <div id='sock2' class='col-md-4'>
         <div class='circle-num'>2</div>
         <br>
-        <h4>Delivered</h4>
         <div class='sock-quality'>
+          <h4>Delivered</h4>
           <p>We deliver 3 pairs of awesome socks each month. Feel free to cancel at any time. </p>
         </div>
       </div>
       <div id='sock3' class='col-md-4'>
         <div class='circle-num'>3</div>
         <br>
-        <h4>Rock Out</h4>
          <div class='sock-quality'>
+          <h4>Rock Out</h4>
           <p>Use #imsofancy on instagram to show off your new socks. Person with the most likes wins a free month.</p>
         </div>
       </div>
@@ -276,6 +265,11 @@ You can purchase just 1 month (5 pairs) of our socks.</p>
       <br>
       <br>
 </section>
+<script src="https://cdn.auth0.com/w2/auth0-widget-5.2.min.js"></script>
+<script type="text/javascript">
+
+  
+</script>
 <script type="text/javascript">
   
   var handler = StripeCheckout.configure({
@@ -294,5 +288,18 @@ You can purchase just 1 month (5 pairs) of our socks.</p>
 });
 e.preventDefault();
 });
+
+
+  var widget = new Auth0Widget({
+    domain:         'dhurls99.auth0.com',
+    clientID:       'snHqvok95wKwMgaZmC4TfsHnjNbPUzk8',
+    callbackURL:    'http://localhost:3000/auth/auth0/callback'
+  });
+
+  $('#insta-signin').on('click', function() {
+      widget.signin({ scope: 'openid profile' });
+  });
+
+  
 
 </script>
