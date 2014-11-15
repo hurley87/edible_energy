@@ -1,3 +1,27 @@
+<div class='instaHolder'>
+	<h1 class='text-center'>Leaderboard this Week</h1>
 <% @photos.each do |instagram| %>
-     <%= image_tag instagram.images.standard_resolution.url %>
+	<div class='likes'><%= instagram.likes[:count] %></div>
+    <div class='instaBox'><a href='<%= instagram.link %>'><%= image_tag instagram.images.thumbnail.url %></a></div> 
 <% end %>
+</div>
+<style type="text/css">
+	.instaHolder {
+		width: 80%;
+		margin: auto;
+		margin-top: 100px;
+	}
+	.likes {
+		background-color: #A0D7EF;
+		color: #F04E31;
+		width: 150px;
+		text-align: center;
+		font-size: 2em;
+	}
+
+	.instaBox img{
+		border: 5px solid #A0D7EF;
+		width: 150px;
+
+	}
+</style>

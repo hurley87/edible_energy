@@ -174,7 +174,105 @@ h2 {
 		text-decoration: none;
 	}
 }
+////////////////////////////////////////////
+// opening
+////////////////////////////////////////////
+@mixin redDot {
+	background-color: $orange;
+	position: absolute;
+	height: 150px;
+	width: 150px;
+	border-radius: 75px;
+	opacity: 0.5;
+	z-index: 1;
+}
 
+.fadeIn1 {
+	opacity: 1;
+	transition: all 2s;
+}
+.fadeIn2 {
+	opacity: 1;
+	transition: opacity 2s delay 0.75s;
+}
+.fadeIn3 {
+	opacity: 1;
+	transition: opacity 2s delay 1s;
+}
+.fadeIn4 {
+	opacity: 1;
+	transition: opacity 2s delay 1.5s;
+}
+.fadeIn5 {
+	opacity: 1;
+	transition: opacity 2s delay 1.75s;
+}
+.fadeIn6 {
+	opacity: 1;
+	transition: opacity 2s delay 2s;
+}
+
+@mixin changeSize {
+	transition: all 2s;
+	background-color: $red;
+	height: 200px;
+	width: 200px;
+	border-radius: 100px;
+}
+
+.red-dot1 {
+	@include redDot;
+	top: 100px;
+	left: 50px;
+
+	&:hover {
+		@include changeSize;
+	}
+}
+.red-dot2 {
+	@include redDot;
+	top: 100px;
+	right: 50px;
+
+	&:hover {
+		@include changeSize;
+	}
+}
+.red-dot3 {
+	@include redDot;
+	top: 400px;
+	left: 50px;
+	&:hover {
+		@include changeSize;
+	}
+}
+.red-dot4 {
+	@include redDot;
+	top: 400px;
+	right: 50px;
+
+	&:hover {
+		@include changeSize;
+	}
+}
+.red-dot5 {
+	@include redDot;
+	top: 250px;
+	left: 250px;
+
+	&:hover {
+		@include changeSize;
+	}
+}
+.red-dot6 {
+	@include redDot;
+	top: 250px;
+	right: 250px;
+
+	&:hover {
+		@include changeSize;
+	}
+}
 
 ////////////////////////////////////////////
 // opening
@@ -234,7 +332,7 @@ h2 {
 	////////////////////////////////////////////
 // about
 ////////////////////////////////////////////	
-#about {
+.about {
 	
 	height: 100%;
 

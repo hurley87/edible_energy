@@ -24,6 +24,24 @@
 	.sub-left {
 		border: none;
 	}
+	.red-dot1 {
+		display: none;
+	}
+	.red-dot2 {
+		display: none;
+	}
+	.red-dot3 {
+		display: none;
+	}
+	.red-dot4 {
+		display: none;
+	}
+	.red-dot5 {
+		display: none;
+	}
+	.red-dot6 {
+		display: none;
+	}
 	#vid-container {
 		width: 90%;
 		position: absolute;
@@ -43,7 +61,10 @@
 	#main-nav #logo h1 {
 		color: green;
 	}
-
+	
+	#about {
+		height: 100%;
+	}
 	
 	#brand {
 		position: fixed;
