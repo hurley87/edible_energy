@@ -393,7 +393,7 @@ h2 {
 	height: 100%;
 	color: $orange;
 	.content-box {
-		width: 50%;
+		width: 90%;
 		margin: auto;
 		border: 20px solid $orange;
 		background-color: $beige;
@@ -402,6 +402,7 @@ h2 {
 
 	.sub-right {
 		padding-left: 25px;
+		padding-bottom: 25px;
 		height: 360px;
 		
 		input {
@@ -409,12 +410,15 @@ h2 {
 			padding-right: 20px;
 		}
 
-		.btn {
+		a {
 			border: none;
 			background-color: $orange;
 			color: white;
 			padding: 10px;
 			text-shadow: none;
+			margin-left: 20px;
+			position: relative;
+			left: 10px;
 
 			&:hover {
 				padding: 15px;
@@ -438,6 +442,8 @@ h2 {
 			padding-right: 20px; 
 		}
 	}	
+
+	
 }
 
 ////////////////////////////////////////////

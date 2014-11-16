@@ -110,4 +110,13 @@ $(document).ready(function() {
     //   $('#sock3').fadeIn(1500);
     //   $('#sock4').fadeIn(2000);
     // });
+    $('#one').hide();
+    $('#two').hide();
+    $('#three').hide();
+
+    $('#subscribe').waypoint(function() {
+        $('#one').show(500);
+        $('#two').show(1500);
+        $('#three').show(3000);
+    });
 }); 

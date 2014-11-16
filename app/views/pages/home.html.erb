@@ -127,57 +127,59 @@ You can purchase just 1 month (5 pairs) of our socks.</p>
   <br>
 </section>
 <section id='subscribe' class='bg5'>
-    <h2 class='text-center container'>Step up your sock game.</h2>
-    <br><br>
-    <div class='content-box row'>
-   <!--  <div class='row'>
-      <div class='col-md-4'>
-        <i class='fa fa-check-circle fa-2x'></i>
-        Free Delivery
-      </div>
-      <div class='col-md-4'>
-         <i class='fa fa-check-circle fa-2x'></i>
-         Cancel Anytime
-      </div>
-      <div class='col-md-4'>
-         <i class='fa fa-check-circle fa-2x'></i>
-         New styles every month
-      </div>
-    </div> -->
+    <div class='row'>
+      <div class='col-md-3'>&nbsp;</div>
+      <div class='col-md-6'>
+        <h2 class='text-center'>Step up your sock game.</h2>
+  
+        <div class='content-box row'>
+          <div class="col-md-6 sub-left">
+            <h1 class='text-center'>Sock & Box</h1>
+          </div>
+          <div class='col-md-6 sub-right'>
+          <%= form_tag charges_path, id:'chargeForm' do %>
+            <div class="field">
+              <h5><%= label_tag :address, 'address:'  %></h5>
+              <%= text_field_tag 'address', nil, style: 'width: 100%;' %>
+            </div>
+            <div class="field">
+              <h5><%= label_tag :city, 'city:'  %></h5>
+              <%= text_field_tag 'city', nil, style: 'width: 100%;' %>
+            </div>
 
-      <div class="col-md-6 sub-left">
-        <h1 class='text-center'>Sock & Box</h1>
-      </div>
-      <div class='col-md-6 sub-right'>
-      <%= form_tag charges_path, id:'chargeForm' do %>
-        <div class="field">
-          <h5><%= label_tag :address, 'address:'  %></h5>
-          <%= text_field_tag 'address', nil, style: 'width: 100%;' %>
-        </div>
-        <div class="field">
-          <h5><%= label_tag :city, 'city:'  %></h5>
-          <%= text_field_tag 'city', nil, style: 'width: 100%;' %>
-        </div>
-
-        <div class="field">
-          <h5><%= label_tag :country, 'province:'  %></h5>
-          <%= text_field_tag 'country', nil, style: 'width: 100%;' %>
-        </div>
-        <div class="field">
-          <h5><%= label_tag :postal, 'postal:' %></h5>
-          <%= text_field_tag 'postal', nil, style: 'width: 100%;' %>
+            <div class="field">
+              <h5><%= label_tag :country, 'province:'  %></h5>
+              <%= text_field_tag 'country', nil, style: 'width: 100%;' %>
+            </div>
+            <div class="field">
+              <h5><%= label_tag :postal, 'postal:' %></h5>
+              <%= text_field_tag 'postal', nil, style: 'width: 100%;' %>
+            </div>
+             <a style="font-size: 2em;" id="btn-buy" type="button" class='btn pull-right'>subscribe</a>
+            <br>
+             	<%= hidden_field_tag 'stripeToken' %>
+              <%= hidden_field_tag 'stripeEmail' %>  
+             
+              <script src="https://checkout.stripe.com/checkout.js"></script>
+          <% end %>
+          </div>
         </div>
         <br>
-         	<%= hidden_field_tag 'stripeToken' %>
-          <%= hidden_field_tag 'stripeEmail' %>  
-          <a style="font-size: 2em;" id="btn-buy" type="button" class='btn btn-success pull-right'>subscribe</a>
-          <script src="https://checkout.stripe.com/checkout.js"></script>
-      <% end %>
+        <br class='clear'>
       </div>
+      <div class='col-md-3'>
+        <h2 class='text-center'>&nbsp;</h2>
+        
+        <p id='one' style='margin-top: 40%;' class='lead'><i class='fa fa-check-circle fa-2x'></i>Free Delivery</p>
+        <br>
+        <p id='two' class='lead'><i class='fa fa-check-circle fa-2x'></i>Cancel Anytime</p>
+        <br>
+        <p id='three' class='lead'><i class='fa fa-check-circle fa-2x'></i>New styles every month</p>
+      </div>
+      <br>
+      <br>
+      <br class='clear'>
     </div>
-    <br>
-    <br>
-    <br class='clear'>
 </section>
 <section id='instagram' class='bg7'>
   <div class='container text-center'>
