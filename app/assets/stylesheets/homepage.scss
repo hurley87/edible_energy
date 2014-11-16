@@ -41,7 +41,7 @@ section {
 
 .bg1 { background: image-url("sock1.jpg") no-repeat 50% 0; background-size: cover; }
 .bg2 { background-color: $orange; color: white;}
-.bg3 { background: image-url("sock2.jpg") no-repeat 50% 0; background-size: cover;  }
+.bg3 { background: image-url("sock2.jpg") no-repeat 50% 0; background-size: cover; color: $red; }
 .bg4 { background-color: $orange; color: white;}
 .bg5 { background-image: image-url("sock3.jpg"); background-size: cover;  background-position: right !important;  }
 .bg6 { background-color: #A0D7EF; color: $orange;}
@@ -443,7 +443,7 @@ h2 {
 		}
 	}	
 
-	
+
 }
 
 ////////////////////////////////////////////
