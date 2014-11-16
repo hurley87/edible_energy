@@ -30,7 +30,7 @@ class PagesController < ApplicationController
   	instagram = Instagram.user_recent_media(id)
   	@photos = []
   	instagram.each do |i|
-  		@photos << i if i[:tags].include?('basset')
+  		@photos << i if i[:tags].include?('pug')
   	end
   	@photos
   end
