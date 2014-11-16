@@ -103,7 +103,7 @@ function parallaxInit() {
 //waypoints
 //////////////////////////////////////////////////////////////////////////////////////////
 $(document).ready(function() {
-  $('.red-dot1').removeClass('.red-dot1');
+  $('.red-dot1').addClass('fadeIn1');
     // $('#socks').waypoint(function() {
     //   $('#sock1').fadeIn(500);
     //   $('#sock2').fadeIn(100);

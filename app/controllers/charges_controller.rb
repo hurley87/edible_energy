@@ -14,7 +14,7 @@ class ChargesController < ApplicationController
     customer_id: customer.id, amount: 999, product_id: 1, uuid: SecureRandom.uuid, 
     address: params[:address], city: params[:city], postal: params[:postal], country: params[:country])
 
-    redirect_to purchase
+    redirect_to root_path, :notice => 'Look for your receipt in your e-mail. Thanks buddy!'
 
 	rescue Stripe::CardError => e
 	  flash[:error] = e.message

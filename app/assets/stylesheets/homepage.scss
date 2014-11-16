@@ -183,33 +183,8 @@ h2 {
 	height: 150px;
 	width: 150px;
 	border-radius: 75px;
-	opacity: 0.5;
+	opacity: 0.2;
 	z-index: 1;
-}
-
-.fadeIn1 {
-	opacity: 1;
-	transition: all 2s;
-}
-.fadeIn2 {
-	opacity: 1;
-	transition: opacity 2s delay 0.75s;
-}
-.fadeIn3 {
-	opacity: 1;
-	transition: opacity 2s delay 1s;
-}
-.fadeIn4 {
-	opacity: 1;
-	transition: opacity 2s delay 1.5s;
-}
-.fadeIn5 {
-	opacity: 1;
-	transition: opacity 2s delay 1.75s;
-}
-.fadeIn6 {
-	opacity: 1;
-	transition: opacity 2s delay 2s;
 }
 
 @mixin changeSize {
@@ -218,7 +193,20 @@ h2 {
 	height: 200px;
 	width: 200px;
 	border-radius: 100px;
+	opacity: 0.9;
 }
+
+// .change1{
+// 	transition: all 2s;
+// 	background-color: $red;
+// 	height: 200px;
+// 	width: 200px;
+// 	border-radius: 100px;
+// 	position: absolute;
+// 	top: 100px;
+// 	left: 50px;
+// 	opacity: 0.9;
+// }
 
 .red-dot1 {
 	@include redDot;
@@ -259,7 +247,6 @@ h2 {
 	@include redDot;
 	top: 250px;
 	left: 250px;
-
 	&:hover {
 		@include changeSize;
 	}
@@ -282,7 +269,7 @@ h2 {
 		margin: auto;
 		border: 10px solid $orange;
 		background-color: $beige;
-		padding: 20px;
+		padding-bottom: 20px;
 	}
 
 	.sub-right {
@@ -292,7 +279,8 @@ h2 {
 			border: none;
 			background-color: $orange;
 			color: white;
-			padding: 10px;
+			padding: 20px 0 20px 0;
+			margin: 10px 0 10px 0;
 			width: 100%;
 			text-shadow: none;
 
@@ -316,7 +304,6 @@ h2 {
 	.sub-left {
 		border-right: 5px solid $orange;
 		height: 190px;
-		padding: 0;
 			p {
 			color: $orange;
 			font-size: 1.2em;
@@ -461,22 +448,14 @@ h2 {
 .faq-circle {
 	background-color: $beige;
 	border: 10px solid $orange;
-	height: 300px;
-	width: 300px;
 	margin: auto;
-	border-radius: 150px;
-	padding-top: 60px; 
+	text-align: left;
+	height: 450px;
+	padding: 4w0px 20px 40px 20px;
 
 	h4 {
-		width: 60%;
-		margin: auto;
 		padding-bottom: 30px;
 		color: $red;
-	}
-
-	p {
-		width: 90%;
-		margin: auto;
 	}
 }
 
