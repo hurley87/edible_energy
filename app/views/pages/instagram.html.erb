@@ -1,9 +1,12 @@
 <div class='instaHolder'>
 	<h1 class='text-center'>Leaderboard this Week</h1>
-<% @photos.each do |instagram| %>
-	<div class='likes'><%= instagram.likes[:count] %></div>
-    <div class='instaBox'><a href='<%= instagram.link %>'><%= image_tag instagram.images.thumbnail.url %></a></div> 
-    <br>
+
+<% if @photos  %>	
+	<% @photos.each do |instagram| %>
+		<div class='likes'><%= instagram.likes[:count] %></div>
+	    <div class='instaBox'><a href='<%= instagram.link %>'><%= image_tag instagram.images.thumbnail.url %></a></div> 
+	    <br>
+	<% end %>
 <% end %>
 </div>
 <style type="text/css">
