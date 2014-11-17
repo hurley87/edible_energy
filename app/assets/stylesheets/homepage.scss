@@ -325,7 +325,7 @@ h2 {
 
 	h3 {
 		font-family: $driod;
-		font-size: 4em;
+		font-size: 3em;
 		padding: 30px;
 	}
 
@@ -389,6 +389,7 @@ h2 {
 
 	p {
 		font-size: 1.2em;
+		text-align: left;
 	}
 }
 
@@ -494,6 +495,10 @@ h2 {
 footer .scroll-link {
 	text-decoration: none;
 	color: white;
+
+	&:hover {
+		color: $blue;
+	}
 }
 
 footer {
@@ -508,6 +513,10 @@ footer h3 {
 footer .link-times {
 	text-decoration: none;
 	color: white;
+
+	&:hover {
+		color: $blue;
+	}
 }
 
 .insta1 {
