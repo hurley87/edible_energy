@@ -64,8 +64,8 @@ section {
 }
 
 h2 {
-	padding-top: 80px;
-	padding-bottom: 45px;
+	padding-top: 60px;
+	padding-bottom: 25px;
 	font-family: $driod;
 	font-size: 3em;
 }
@@ -274,6 +274,7 @@ h2 {
 	.sub-right {
 	
 		padding-left: 5%;
+		padding-right: 5%;
 		.btn {
 			border: none;
 			background-color: $orange;
@@ -324,7 +325,7 @@ h2 {
 
 	h3 {
 		font-family: $driod;
-		font-size: 3em;
+		font-size: 4em;
 		padding: 30px;
 	}
 
@@ -378,6 +379,19 @@ h2 {
 	}
 }
 
+.sock-list {
+	background-color: white;
+	padding: 10px;
+	color: $blue;
+	border: 10px solid $blue;
+	background-color: $beige;
+	color: $red;
+
+	p {
+		font-size: 1.2em;
+	}
+}
+
 ////////////////////////////////////////////
 // socks
 ////////////////////////////////////////////
@@ -389,7 +403,7 @@ h2 {
 
 	h3 {
 		font-family: $driod;
-		font-size: 3em;
+		font-size: 4em;
 		padding: 30px;
 	}
 
@@ -446,9 +460,10 @@ h2 {
 		height: 370px;
 		h1 {
 			padding-top: 45%;
+			font-size: 2.5em;
 			color: $red;
 			vertical-align: middle;
-			padding-right: 20px; 
+			padding-right: 15px; 
 		}
 	}	
 
@@ -497,14 +512,18 @@ footer .link-times {
 
 .insta1 {
 		background-image: image-url("Instagram01.jpg"); background-size: cover;
+		height: 300px;
 }
 .insta2 {
 		background-image: image-url("Instagram02.jpg"); background-size: cover;
+		height: 300px;
 }
 .insta3 {
 		background-image: image-url("Instagram03.jpg"); background-size: cover;
+		height: 300px;
 }
 .insta4 {
 		background-image: image-url("Instagram04.jpg"); background-size: cover;
+		height: 300px;
 }
 
