@@ -150,4 +150,21 @@ $(document).ready(function() {
         $('#two').show(1000);
         $('#three').show(1500);
     });
+
+    for(var i =0; i < 5; i++) {
+      $('.sock-list').eq(i).css({'opacity':0});
+    }
+
+    $('#sock-start').waypoint(function() {
+      
+      for(var i =0; i < 5; i++) {
+      $('.sock-list').eq(i).css({'opacity':0});
+    }
+    $('.sock-list').eq(0).animate({"opacity": 1}, 500);
+    $('.sock-list').eq(1).animate({"opacity": 1}, 1000);
+    $('.sock-list').eq(2).animate({"opacity": 1}, 1500);
+    $('.sock-list').eq(3).animate({"opacity": 1}, 2000);
+    $('.sock-list').eq(4).animate({"opacity": 1}, 2500);
+    
+    });
 }); 

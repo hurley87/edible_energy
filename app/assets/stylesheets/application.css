@@ -65,6 +65,9 @@
 	#about {
 		height: 100%;
 	}
+	.down {
+		padding: none;
+	}
 	
 	#brand {
 		position: fixed;
