@@ -3,6 +3,37 @@
 //Nav
 //////////////////////////////////////////////////////////////////////////////////////////
 $(document).ready(function ($){
+  animateOpening('.red-dot1', 1000);
+  animateOpening('.red-dot2', 1000);
+  animateOpening('.red-dot3', 1000);
+  animateOpening('.red-dot4', 1000);
+
+  animateOpening('.red-dot5', 2500);
+  animateOpening('.red-dot6', 2500);
+  
+
+  function animateOpening(div, time) {
+      setTimeout(function(){
+        $(div).animate({
+        'background-color': '#F04E31',
+        'height': '180px',
+        'width': '180px',
+        'border-radius': '90px',
+        'opacity': 1,
+        'font-size': '1.4em',
+       ' padding-top': '95px'
+      }, 1000);
+      }, time);
+  }
+
+
+  setTimeout(function() {
+    $('.learn-more').animate({
+        'padding': '8px',
+        'font-size': '1.1em'
+    }, 1000);
+  }, 3000);
+
   $('#main-nav').css('background-', 'transparent'); 
   if ($(window).scrollTop()===0){
     $('#main-nav').removeClass('scrolled');
@@ -87,7 +118,7 @@ function parallaxInit() {
 //Special Fonts
 //////////////////////////////////////////////////////////////////////////////////////////
   WebFontConfig = {
-    google: { families: [ 'Quicksand::latin', 'Droid+Serif::latin' ] }
+    google: { families: [ 'Quicksand::latin', 'Droid+Serif::latin', 'Montserrat::latin' ] }
   };
   (function() {
     var wf = document.createElement('script');
@@ -116,7 +147,7 @@ $(document).ready(function() {
 
     $('#subscribe').waypoint(function() {
         $('#one').show(500);
-        $('#two').show(1500);
-        $('#three').show(3000);
+        $('#two').show(1000);
+        $('#three').show(1500);
     });
 }); 

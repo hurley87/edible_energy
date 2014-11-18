@@ -4,30 +4,32 @@
     <br>
     <br>
   <div class='container'> 
-  <div class='red-dot1'></div>
-  <div class='red-dot2'></div>
-  <div class='red-dot3'></div>
-  <div class='red-dot4'></div>
-  <div class='red-dot5'></div>
-  <div class='red-dot6'></div>
+  <div class='red-dot1'>Free Shipping</div>
+  <div class='red-dot2'>Every Month</div>
+  <div class='red-dot3'>Once a Month</div>
+  <div class='red-dot4'>$9.99</div>
+  <div class='red-dot5'>Great Quality</div>
+  <div class='red-dot6'>1 Pair</div>
    <div id='opening'>
     <div class='content-box row'>
     <br>
       <div class="col-md-6 sub-left">
         <h1>Sock & Box</h1>
-        <p>Here's your chance to win free socks for 3 months.</p>
+        <p>We deliver cool socks to your home each month.</p>
       </div>
       <div class='col-md-6 sub-right'>
           
-          <a style="font-size: 2em;"  id='insta-signin' class='btn'>Register</a>
-         <!--  <p class='text-center'>&nbsp;</p> -->
-          <a style="font-size: 2em;" class='scroll-link btn' href="#about">Learn More</a>
+       
+        <div class='learn-more'>
+          <a style="font-size: 2em;" class='scroll-link btn' href="#about">Continue</a>
+          <a style="font-size: 2em;" class='scroll-link btn' href="#about"><i class="fa fa-angle-double-down fa-2x"></i></a>
+        </div>
       </div>
     </div>
   
    </div>
    </div>   
-  <div><p class='down' class='text-center'><a class='scroll-link' href="#about"><i class="fa fa-angle-double-down fa-5x"></i></a><p></div>
+ <p class='down' class='text-center'><a class='scroll-link' href="#about">Find out how you can use <i class='fa  fa-instagram'></i> to win free socks.</a><p>
 </section>
 <section id='about' class='bg2'>
   <div class='container text-center'>
@@ -36,27 +38,28 @@
     <br>
     <div clsas='row'>
       <div id='sock1' class='col-md-4'>
-        <div class='circle-num text-center'><i class='fa  fa-instagram'></i></div>
+       <div class='circle-num'><b>$</b></div>
         <br>
         <div class='sock-quality'>
-          <h4>Subscribe</h4>
-          <p>Sign up with your shipping info and credit card. We take care of the rest with no strings attached.</p>
+          <h4>&nbsp;</h4>
+          <p>Provide your shipping info and credit card to purchase 1 pair of socks monthly.</p>
         </div>
       </div>
       <div id='sock2' class='col-md-4'>
         <div class='circle-num'><b>#</b></div>
         <br>
         <div class='sock-quality'>
-          <h4>Delivered</h4>
-          <p>We deliver 3 pairs of awesome socks each month. Feel free to cancel at any time. </p>
+          <h4>&nbsp;</h4>
+          <p>Mention @soxandbox in an Instagram post using the hashtag #mysockgamesocks </p>
         </div>
       </div>
       <div id='sock3' class='col-md-4'>
-        <div class='circle-num'><b>$</b></div>
+        
+         <div class='circle-num text-center'><i class='fa  fa-instagram'></i></div>
         <br>
          <div class='sock-quality'>
-          <h4>Rock Out</h4>
-          <p>Use #imsofancy on instagram to show off your new socks. Person with the most likes wins a free month.</p>
+          <h4>&nbsp;</h4>
+          <p>Subscribers with the most Instagram likes win free socks. Verify your post through our website.</p>
         </div>
       </div>
     </div>
@@ -189,6 +192,7 @@ You can purchase just 1 month (5 pairs) of our socks.</p>
 <section id='instagram' class='bg7'>
   <div class='container text-center'>
     <h2 class='text-center'>#imsofancy = free socks</h2>
+       <a style="font-size: 2em;"  id='insta-signin' class='btn'>Register</a>s
     <div class='row'>
       <div class='col-md-3'>
         <br>
@@ -305,6 +309,9 @@ e.preventDefault();
   $('#insta-signin').on('click', function() {
       widget.signup({ scope: 'openid profile' });
   });
+
+ 
+
 
   
 
