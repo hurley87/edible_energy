@@ -20,7 +20,7 @@ body {
 }
 
 section {
-	height:100vh;
+	height: 110%;
 	padding: 500px;
 }
 
@@ -48,18 +48,28 @@ section {
 .bg7 { background-color: $orange; color: white;}
 
 .bg1, .bg2, .bg3, .bg4, .bg5, .bg6, .bg7 {
-	height:100vh;
+	height: 125%;
 	padding: 0;
 	background-attachment: fixed;
 
 	.down{
-		color: $red;
+		
 		text-align: center;
-		padding-top: 17%;
+		border: 10px solid $orange;
+		background-color: $orange;
+
+		&:hover {
+			transition: all 1s;
+			background-color: $red;
+			border: 15px solid $red;
+			color: $orange;
+		}
+
 		a {
-			color: $red;
+			color: white;
+			padding: 15px;
 			text-decoration: none;
-			font-size: 3em;
+			font-size: 1.5em;
 			text-align: center;
 		}
 	}
@@ -67,7 +77,8 @@ section {
 
 h2 {
 	padding-top: 70px;
-	padding-bottom: 25px;
+	padding-bottom: 5px;
+	line-height: 120%;
 	font-family: $driod;
 	font-size: 3em;
 }
@@ -241,7 +252,7 @@ h2 {
 .red-dot5 {
 	@include redDot;
 	top: 250px;
-	left: 250px;
+	left: 200px;
 	&:hover {
 		@include changeSize;
 	}
@@ -249,7 +260,7 @@ h2 {
 .red-dot6 {
 	@include redDot;
 	top: 250px;
-	right: 250px;
+	right: 200px;
 
 	&:hover {
 		@include changeSize;
@@ -329,7 +340,7 @@ h2 {
 
 	h3 {
 		font-family: $driod;
-		font-size: 3em;
+		font-size: 3.5em;
 		padding: 30px;
 	}
 
@@ -372,7 +383,7 @@ h2 {
 .sock-quality {
 	margin: auto;
 	background-color: white;
-	padding-top: 10%;
+	padding-top: 5%;
 	color: $blue;
 	width: 300px;
 	height: 300px;
@@ -557,4 +568,11 @@ footer .link-times {
 		background-image: image-url("Instagram04.jpg"); background-size: cover;
 		height: 300px;
 }
-
+.insta-card {
+	background-color: $beige;
+	height: 600px;
+	overflow: scroll;
+	border: 10px solid $blue;
+	color: $red;
+	padding: 10px;
+}
