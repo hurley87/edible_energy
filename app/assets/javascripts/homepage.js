@@ -3,37 +3,7 @@
 //Nav
 //////////////////////////////////////////////////////////////////////////////////////////
 $(document).ready(function ($){
-  animateOpening('.red-dot1', 1000);
-  animateOpening('.red-dot2', 1000);
-  animateOpening('.red-dot3', 1000);
-  animateOpening('.red-dot4', 1000);
-
-  animateOpening('.red-dot5', 2500);
-  animateOpening('.red-dot6', 2500);
   
-
-  function animateOpening(div, time) {
-      setTimeout(function(){
-        $(div).animate({
-        'background-color': '#F04E31',
-        'height': '180px',
-        'width': '180px',
-        'border-radius': '90px',
-        'opacity': 1,
-        'font-size': '1.4em',
-       ' padding-top': '95px'
-      }, 1000);
-      }, time);
-  }
-
-
-  setTimeout(function() {
-    $('.learn-more').animate({
-        'padding': '8px',
-        'font-size': '1.1em'
-    }, 1000);
-  }, 3000);
-
   $('#main-nav').css('background-', 'transparent'); 
   if ($(window).scrollTop()===0){
     $('#main-nav').removeClass('scrolled');
@@ -111,6 +81,8 @@ function parallaxInit() {
 		$('.bg3').parallax("50%", 0.5);
 		$('.bg4').parallax("50%", 0.5);
 		$('.bg5').parallax("50%", 0.5);
+    $('.bg8').parallax("50%", 0.5);
+    $('.bg9').parallax("50%", 0.5);
 	}
 }
 
@@ -134,31 +106,19 @@ function parallaxInit() {
 //waypoints
 //////////////////////////////////////////////////////////////////////////////////////////
 $(document).ready(function() {
-  $('.red-dot1').addClass('fadeIn1');
-    $('#one').hide();
-    $('#two').hide();
-    $('#three').hide();
 
-    $('#subscribe').waypoint(function() {
-        $('#one').show(500);
-        $('#two').show(1000);
-        $('#three').show(1500);
-    });
+    setInterval(function() {
+       $('.open-arrow').animate({'bottom': '-10px'}).animate({'bottom': '10px'});
+    }, 2000);
+   
 
-    for(var i =0; i < 5; i++) {
-      $('.sock-list').eq(i).css({'opacity':0});
-    }
+          setInterval(function() {
+          $('.sock1').animate({'left': '+20px', 'right': '-20px'}, 2000);
+          $('.sock2').animate({'right': '+20px', 'right': '-20px'}, 2000);
 
+        }, 2000);
     $('#sock-start').waypoint(function() {
       
-      for(var i =0; i < 5; i++) {
-      $('.sock-list').eq(i).css({'opacity':0});
-    }
-    $('.sock-list').eq(0).animate({"opacity": 1}, 500);
-    $('.sock-list').eq(1).animate({"opacity": 1}, 1000);
-    $('.sock-list').eq(2).animate({"opacity": 1}, 1500);
-    $('.sock-list').eq(3).animate({"opacity": 1}, 2000);
-    $('.sock-list').eq(4).animate({"opacity": 1}, 2500);
-    
+
     });
 }); 

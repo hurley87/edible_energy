@@ -14,23 +14,12 @@ body {
   font-family: $driod;
   background-color: $orange;
 }
+#top {
+	height: 100vh;
+}
 
 .clear {
 	clear: both;
-}
-
-section {
-	height: 110%;
-	padding: 500px;
-}
-
-#youtube {
-	border: 20px solid $orange;
-}
-
-#heatmap {
-  position: relative;
-  right: 250px;
 }
 
 #brand a {
@@ -39,40 +28,21 @@ section {
 	text-decoration: none;
 }
 
-.bg1 { background: image-url("sock1.jpg") no-repeat 50% 0; background-size: cover; }
+.bg1 { background: image-url("sock1.jpg") no-repeat 50% 0; background-size: cover; height: 100vh; }
 .bg2 { background-color: $orange; color: white;}
 .bg3 { background: image-url("blue2.jpg") no-repeat 50% 0; color: $red; }
 .bg4 { background-color: $orange; color: white;}
 .bg5 { background-image: image-url("image3.jpg"); background-position: right !important;  }
 .bg6 { background-color: #A0D7EF; color: $orange;}
 .bg7 { background-color: $orange; color: white;}
+.bg8 { background-image: image-url("sock4.png"); background-position: center; height: 250px; width: 200px; background-color: $blue; border: 5px solid $orange; margin: 20px;  }
+.bg9 { background-image: image-url("sock5.png"); background-position: center; height: 250px; width: 200px; background-color: $blue; border: 5px solid $orange; margin: 20px;  }
 
 .bg1, .bg2, .bg3, .bg4, .bg5, .bg6, .bg7 {
 	height: 125%;
 	padding: 0;
 	background-attachment: fixed;
 
-	.down{
-		
-		text-align: center;
-		border: 10px solid $orange;
-		background-color: $orange;
-
-		&:hover {
-			transition: all 1s;
-			background-color: $red;
-			border: 15px solid $red;
-			color: $orange;
-		}
-
-		a {
-			color: white;
-			padding: 15px;
-			text-decoration: none;
-			font-size: 1.5em;
-			text-align: center;
-		}
-	}
 }
 
 h2 {
@@ -189,83 +159,7 @@ h2 {
 ////////////////////////////////////////////
 // opening
 ////////////////////////////////////////////
-@mixin redDot {
-	background-color: $orange;
-	position: absolute;
-	height: 150px;
-	width: 150px;
-	border-radius: 75px;
-	opacity: 0.2;
-	z-index: 1;
-	padding-top: 60px;
-	text-align: center;
-	color: white;
-	font-size: 0.4em;
-}
 
-@mixin changeSize {
-	transition: all 2s;
-	background-color: $red;
-	height: 200px;
-	width: 200px;
-	border-radius: 100px;
-	opacity: 0.9;
-	font-size: 2em;
-	padding-top: 70px;
-}
-
-.red-dot1 {
-	@include redDot;
-	top: 100px;
-	left: 50px;
-
-	&:hover {
-		@include changeSize;
-	}
-}
-.red-dot2 {
-	@include redDot;
-	top: 100px;
-	right: 50px;
-
-	&:hover {
-		@include changeSize;
-	}
-}
-.red-dot3 {
-	@include redDot;
-	top: 400px;
-	left: 50px;
-	&:hover {
-		@include changeSize;
-	}
-}
-.red-dot4 {
-	@include redDot;
-	top: 400px;
-	right: 50px;
-
-	&:hover {
-		@include changeSize;
-	}
-}
-.red-dot5 {
-	@include redDot;
-	top: 250px;
-	left: 200px;
-	&:hover {
-		@include changeSize;
-	}
-}
-.red-dot6 {
-	@include redDot;
-	top: 250px;
-	right: 200px;
-
-	&:hover {
-		@include changeSize;
-	}
-}
 
 ////////////////////////////////////////////
 // opening
@@ -273,64 +167,40 @@ h2 {
 .content-box {
 		width: 50%;
 		margin: auto;
-		border: 10px solid $orange;
+		padding: 15px;
+		border: 5px solid $orange;
 		background-color: $beige;
 		padding-bottom: 20px;
 
-	}
-
-	.sub-right {
-		padding-left: 5%;
-		padding-right: 5%;
-
-		.learn-more {
-			&:hover {
-				padding: 15px;
-				background-color: $red;
-				transition: all 2s;
-			}
-			background-color: $orange;
-		}
-		.btn {
-			border: none;
-			background-color: $orange;
-			color: white;
-			padding: 20px 0 20px 0;
-			width: 100%;
-			text-shadow: none;
-
-			&:hover {
-				padding: 15px;
-				background-color: $red;
-				transition: all 2s;
-			}
-		}
-		p {
-			color: $orange;
-			font-size: 2em;
-			margin: 15px;
-		}
-
-	a {
-	 	text-decoration: none;
-	 }
-
-	}
-	.sub-left {
-		border-right: 5px solid $orange;
-		height: 190px;
-			p {
-			color: $orange;
-			font-size: 1.2em;
-		}
 		h1 {
-			padding-top: 10%;
 			color: $red;
-			width: 100%;
-			font-size: 3em;
+			font-size: 4em;
 		}
+
+		p {
+			font-size: 1.5em;
+		}
+
 	}
 
+.open-arrow {
+	position: absolute;
+	bottom: 0;
+	margin: auto;
+	right: 47%;
+	font-size: 5em;
+	
+  a {
+  	color: $orange;
+
+  	&:hover {
+		 	transition: all 1s;
+		 	color: $red;
+		 	bottom: -25px;
+		 }
+  }
+ 
+}
 	////////////////////////////////////////////
 // about
 ////////////////////////////////////////////	
@@ -349,22 +219,31 @@ h2 {
 	}
 
 	p {
-
+			color: black;
 	}
 
 }
 
 .intro {
 
-	padding: 10px;
+	padding: 15px;
 	color: $blue;
-	border: 10px solid $blue;
+	border: 5px solid $orange;
 	background-color: $beige;
 	color: $red;
+	 hr {
+	 	color: $red;
+	 }
 
-	h2 {
-		padding-top: 10px;
-		color: $orange;
+	 img {
+	 	border: 5px solid $orange;
+		background-color: $blue;
+	 }
+
+	p {
+		padding: 15px;
+		color: black;
+		
 	}
 }
 
@@ -383,7 +262,7 @@ h2 {
 .sock-quality {
 	margin: auto;
 	background-color: white;
-	padding-top: 5%;
+	padding-top: 15%;
 	color: $blue;
 	width: 300px;
 	height: 300px;
@@ -396,20 +275,26 @@ h2 {
 		width: 75%;
 		margin: auto;
 		font-size: 1.2em;
+		color: black;
 	}
 }
 
 .sock-list {
+	margin-top: 15%;
+	height: 100%;
 	padding: 10px;
-	color: $blue;
-	border: 10px solid $blue;
+	color: black;
+	border: 5px solid $blue;
 	background-color: $beige;
-	color: $red;
 
 	p {
 		font-size: 1.2em;
 		text-align: left;
+
 	}
+}
+.sock1, .sock2 {
+	position: relative;
 }
 
 #instagram {
@@ -543,6 +428,11 @@ h2 {
 		padding-bottom: 30px;
 		color: $red;
 	}
+
+	p {
+
+		color: black;
+	}
 }
 
 ////////////////////////////////////////////
@@ -598,4 +488,8 @@ footer .link-times {
 	border: 10px solid $blue;
 	color: $red;
 	padding: 10px;
+
+	h4 {
+		color: black;
+	}
 }
