@@ -107,18 +107,43 @@ function parallaxInit() {
 //////////////////////////////////////////////////////////////////////////////////////////
 $(document).ready(function() {
 
+
     setInterval(function() {
        $('.open-arrow').animate({'bottom': '-10px'}).animate({'bottom': '10px'});
     }, 2000);
-   
+    
+    function animateSock1() {
+      return TweenMax.to($('#cool1'), 2, {rotation: -10, onComplete: makeItRain, scale:1.1, ease:Back.easeOut});
+    }
+    function animateSock2() {
+      return TweenMax.to($('#cool2'), 2, {rotation: -10, onComplete: makeItRain, scale:1.1, ease:Back.easeOut});
+    }
 
-          setInterval(function() {
-          $('.sock1').animate({'left': '+20px', 'right': '-20px'}, 2000);
-          $('.sock2').animate({'right': '+20px', 'right': '-20px'}, 2000);
+    function makeItRain() {
+      TweenMax.to($('#cool1'), 2, {rotation: 10, onComplete: makeItRain, scale:1.1, ease:Back.easeOut });
+      TweenMax.to($('#cool2'), 2, {rotation: 10, onComplete: makeItRain, scale:1.1, ease:Back.easeOut });
+     }
 
-        }, 2000);
-    $('#sock-start').waypoint(function() {
-      
+     setInterval(function() {
+       animateSock1();
+       animateSock2();
+     }, 4000);
 
+    $('#subscribe').waypoint({ 
+      triggerOnce: true,
+      handler: subList
     });
+    $('#about').waypoint({
+      triggerOnce: true,
+      handler: coolList
+    });
+
+    function coolList() {
+      return TweenMax.staggerTo(".cool-list", 2, {scale:1.1, delay:1, ease:Elastic.easeOut, force3D:true}, 1);
+    }
+
+    function subList() {
+      return TweenMax.staggerFrom(".sub-list", 2, {scale:0.8, opacity:0.8, delay:1, ease:Elastic.easeOut, force3D:true}, 1);
+    }
+
 }); 

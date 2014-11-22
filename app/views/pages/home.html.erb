@@ -23,26 +23,26 @@
     <br>
     <div clsas='row'>
       <div id='sock1' class='col-md-4'>
-       <div class='circle-num'><b>1</b></div>
+       <div class='circle-num cool-list'><b>1</b></div>
         <br>
-        <div class='sock-quality'>
+        <div class='sock-quality cool-list'>
           <h3>Introduce Yourself</h3>
           <p>Let us know your shipping info and we send you 1 pair of socks monthly.</p>
         </div>
       </div>
       <div id='sock2' class='col-md-4'>
-        <div class='circle-num'>2</div>
+        <div class='circle-num cool-list'>2</div>
         <br>
-        <div class='sock-quality'>
+        <div class='sock-quality cool-list'>
           <h3>Put Your Feet Up</h3>
           <p>We’ll get the socks to you in 2-7 business days. Shipping is free.</p>
         </div>
       </div>
       <div id='sock3' class='col-md-4'>
         
-         <div class='circle-num text-center'>3</div>
+         <div class='circle-num text-center cool-list'>3</div>
         <br>
-         <div class='sock-quality'>
+         <div class='sock-quality cool-list'>
           <h3>Get Fancy</h3>
           <p>Share your instagram pics and compete for free socks</p>
         </div>
@@ -69,19 +69,19 @@
     </div>
   </div>
 </section>
- <br id='sock-start'>
 <section id='socks' class='bg4'>
+  <br>
   <div class='container text-center'>
     
     <div clsas='row'>
       <div class='col-md-6'>
-        <p><span class='sock1'><%= image_tag("happysocks2.png") %></span><span class='sock2'><%= image_tag("happysocks3.png") %></span></p>
+        <p id='cool1'><span class='sock1'><%= image_tag("happysocks2.png") %></span><span class='sock2'><%= image_tag("happysocks3.png") %></span></p>
         
       </div>
       <div class='col-md-6'>
        
         <div class='sock-list'>
-          <p class='text-center'>Commitment Problems? We got you covered. You can purchase just 1 month (5 pairs) of our socks.</p>
+          <p class='text-center'>You’ll never get the same pair twice and we promise you will love the pair you get – if you don’t, send em back and we’ll get you a fresh design!</p>
         </div>
       </div>
     </div> 
@@ -95,11 +95,12 @@
         
       </div>
       <div class='col-md-6'>
-       <p><span class='sock1'><%= image_tag("happysocks4.png") %></span><span class='sock2'><%= image_tag("happysocks5.png") %></span></p>
+       <p id='cool2'><span class='sock1'><%= image_tag("happysocks4.png") %></span><span class='sock2'><%= image_tag("happysocks5.png") %></span></p>
       </div>
     </div>     
   </div>
 </section>
+ <br id='sock-start'>
 <section id='subscribe' class='bg5'>
     <div class='row'>
       <div class='col-md-3'>&nbsp;</div>
@@ -143,19 +144,18 @@
       </div>
       <div class='col-md-3'>
         <h2 class='text-center'>&nbsp;</h2>
+        <p class='sub-list' class='lead'><i class='fa fa-check-circle fa-2x'></i> Every Month</p>
         <br>
-        <p id='two' class='lead'><i class='fa fa-check-circle fa-2x'></i>Every Month</p>
+        <p class='sub-list' class='lead'><i class='fa fa-check-circle fa-2x'></i> Free Delivery</p>
         <br>
-        <p id='one'  class='lead'><i class='fa fa-check-circle fa-2x'></i>Free Delivery</p>
+        <p class='sub-list' class='lead'><i class='fa fa-check-circle fa-2x'></i> Cancel Anytime</p>
         <br>
-        <p id='two' class='lead'><i class='fa fa-check-circle fa-2x'></i>Cancel Anytime</p>
+        <p class='sub-list' class='lead'><i class='fa fa-check-circle fa-2x'></i> Unique Styles</p>
         <br>
-        <p id='three' class='lead'><i class='fa fa-check-circle fa-2x'></i> Unique Styles</p>
-        <br>
-        <p id='one' class='lead'><i class='fa fa-check-circle fa-2x'></i> High Quality</p>
+        <p class='sub-list' class='lead'><i class='fa fa-check-circle fa-2x'></i> High Quality</p>
         
         <br>
-        <p id='three' class='lead'><i class='fa fa-check-circle fa-2x'></i>Great Gift Idea</p>
+        <p class='sub-list'  class='lead'><i class='fa fa-check-circle fa-2x'></i> Great Gift Idea</p>
       </div>
       <br>
       <br>
@@ -281,18 +281,18 @@ e.preventDefault();
 });
 
 
-  var widget = new Auth0Widget({
-    domain:         'dhurls99.auth0.com',
-    clientID:       'snHqvok95wKwMgaZmC4TfsHnjNbPUzk8',
-    callbackURL:    'http://www.sockandbox.com/auth/auth0/callback',
-    showIcon: false,
-     showForgot: false,
-     connections: ['instagram']
-  });
+  // var widget = new Auth0Widget({
+  //   domain:         'dhurls99.auth0.com',
+  //   clientID:       'snHqvok95wKwMgaZmC4TfsHnjNbPUzk8',
+  //   callbackURL:    'http://www.sockandbox.com/auth/auth0/callback',
+  //   showIcon: false,
+  //    showForgot: false,
+  //    connections: ['instagram']
+  // });
 
-  $('#insta-signin').on('click', function() {
-      widget.signup({ scope: 'openid profile' });
-  });
+  // $('#insta-signin').on('click', function() {
+  //     widget.signup({ scope: 'openid profile' });
+  // });
 
  
 

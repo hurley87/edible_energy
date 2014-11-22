@@ -228,7 +228,6 @@ h2 {
 
 	padding: 15px;
 	color: $blue;
-	border: 5px solid $orange;
 	background-color: $beige;
 	color: $red;
 	 hr {
@@ -408,7 +407,18 @@ h2 {
 			padding-right: 15px; 
 		}
 	}	
+	.sub-list {
+		background-color: $orange;
+		color: white;
+		border-radius: 20px;
+		width: 250px !important;
+		padding: 10px;
+		font-size: 1.1em;
 
+		.fa {
+			color: $red;
+		}
+	}
 
 }
 
