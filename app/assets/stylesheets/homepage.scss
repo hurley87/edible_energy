@@ -92,11 +92,6 @@ h2 {
     background-color: $blue;
 }
 
-#main-nav .container{
-		
-    -webkit-transition:padding 0.3s ease-out;
-    transition:padding 0.3s ease-out;
-}
 .scrolled {
 	background-color: $blue;
 }
@@ -409,6 +404,9 @@ h2 {
 			vertical-align: middle;
 			padding-right: 15px; 
 		}
+		p {
+			color: black;
+		}
 	}	
 
 
@@ -435,9 +433,10 @@ h2 {
 	background-color: $blue;
 	margin: auto;
 	text-align: left;
+	height: 200px;
 
 	h4 {
-		padding-bottom: 30px;
+		padding-bottom: 5px;
 		color: $red;
 	}
 

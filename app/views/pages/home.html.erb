@@ -61,7 +61,7 @@
         
         <p class='pull-left bg8'></p>
  
-        <p class='lead'> Our socks we use a high quality combed cotton and some of the best fabrics. Want us to be specific - 80% combed cotton, 17% polyamide, 3% elastane. Bottom line, they’re fancy as f#*k.  </p>
+        <p class='lead'> Our socks - a high quality combed cotton and some of the best fabrics. Want us to be specific: 80% combed cotton, 17% polyamide, 3% elastane. Bottom line, they’re fancy as f#*k.  </p>
         <br class='clear'>
         <p class='pull-right bg9'></p>
     
@@ -76,6 +76,7 @@
   <br>
   <div class='container text-center'>
     <hr>
+    <br>
     <div clsas='row'>
       <div class='col-md-6'>
         <p id='cool1'><span class='sock1'><%= image_tag("happysocks2.png") %></span><span class='sock2'><%= image_tag("happysocks3.png") %></span></p>
@@ -102,6 +103,7 @@
       </div>
     </div>     
   </div>
+  <br>
 </section>
  <br id='sock-start'>
 <section id='subscribe' class='bg5'>
@@ -113,7 +115,7 @@
         <div class='content-box row'>
           <div class="col-md-6 sub-left">
             <h1>Sock & Box</h1>
-            <p>$9.99 / month</p>
+            <p>$14.99 / month</p>
           </div>
           <div class='col-md-6 sub-right'>
           <%= form_tag charges_path, id:'chargeForm' do %>
@@ -265,43 +267,24 @@
       <br>
       <br>
 </section>
-<script src="https://cdn.auth0.com/w2/auth0-widget-5.2.min.js"></script>
+
 <script type="text/javascript">
   
   var handler = StripeCheckout.configure({
-  key: '<%= @stripe_key %>',
-  token: function(token, arg) {
-    document.getElementById("stripeToken").value = token.id;
-    document.getElementById("stripeEmail").value = token.email;
-    document.getElementById("chargeForm").submit();
-  }
-});
- document.getElementById('btn-buy').addEventListener('click', function(e) {
-  handler.open({
-    name: 'Sock and Box',
-    description: 'Monthly Sock Delivered ($14.99)',
-    amount: 1499
-});
-e.preventDefault();
-});
-
-
-  // var widget = new Auth0Widget({
-  //   domain:         'dhurls99.auth0.com',
-  //   clientID:       'snHqvok95wKwMgaZmC4TfsHnjNbPUzk8',
-  //   callbackURL:    'http://www.sockandbox.com/auth/auth0/callback',
-  //   showIcon: false,
-  //    showForgot: false,
-  //    connections: ['instagram']
-  // });
-
-  // $('#insta-signin').on('click', function() {
-  //     widget.signup({ scope: 'openid profile' });
-  // });
-
- 
-
-
-  
+    key: '<%= @stripe_key %>',
+    token: function(token, arg) {
+      document.getElementById("stripeToken").value = token.id;
+      document.getElementById("stripeEmail").value = token.email;
+      document.getElementById("chargeForm").submit();
+    }
+  });
+   document.getElementById('btn-buy').addEventListener('click', function(e) {
+    handler.open({
+      name: 'Sock and Box',
+      description: 'Monthly Sock Delivered ($14.99)',
+      amount: 1499
+   });
+   e.preventDefault();
+  });
 
 </script>

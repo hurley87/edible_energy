@@ -10,3 +10,20 @@
 
     </div>
     <br>
+
+<script src="https://cdn.auth0.com/w2/auth0-widget-5.2.min.js"></script>
+<script type="text/javascript">
+  var widget = new Auth0Widget({
+    domain:         'dhurls99.auth0.com',
+    clientID:       'snHqvok95wKwMgaZmC4TfsHnjNbPUzk8',
+    callbackURL:    'http://www.sockandbox.com/auth/auth0/callback',
+    showIcon: false,
+     showForgot: false,
+     connections: ['instagram']
+  });
+
+  $('#insta-signin').on('click', function() {
+      widget.signup({ scope: 'openid profile' });
+  });
+
+</script>
