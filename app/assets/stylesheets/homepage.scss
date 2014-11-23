@@ -28,7 +28,7 @@ body {
 	text-decoration: none;
 }
 
-.bg1 { background: image-url("sock1.jpg") no-repeat 50% 0; background-size: cover; height: 100%; }
+.bg1 { background: image-url("photo8.jpg") no-repeat 50% 0; background-size: cover; height: 100%; }
 .bg2 { background-color: $orange; color: white;}
 .bg3 { background-color: $blue; color: white; }
 .bg4 { background-color: $orange; color: white;}
@@ -171,7 +171,7 @@ h2 {
 		margin: auto;
 		padding: 15px;
 		border: 5px solid $orange;
-		background-color: $beige;
+		background-color: $blue;
 		padding-bottom: 20px;
 
 		h1 {
@@ -181,6 +181,7 @@ h2 {
 
 		p {
 			font-size: 1.5em;
+			color: white;
 		}
 
 	}
@@ -190,10 +191,10 @@ h2 {
 	bottom: 0;
 	margin: auto;
 	right: 47%;
-	font-size: 5em;
+	font-size: 6em;
 	
   a {
-  	color: $orange;
+  	color: white;
 
   	&:hover {
 		 	transition: all 1s;

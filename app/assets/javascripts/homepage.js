@@ -34,15 +34,6 @@ $(document).ready(function ($){
   $('.ock').show(2000).hide(2000);
   $('.ox').show(2000).hide(2000);
   $('h1').slideDown(2000);
-
-  $('nav h1').on('mouseenter', function() {
-  		$(".ox").show( 1000 );
-  		$(".ock").show(  1000 );
-  });
-  $('nav h1').on('mouseleave', function() {
-  		$(".ox").hide( 1500 );
-  		$(".ock").hide( 1500 );
-  });
 });
 
 //////////////////////////////////////////////////////////////////////////////////////////
