@@ -1,9 +1,9 @@
 @import "font-awesome";
 @import "bootstrap";
 
-$red: #F04E31;
-$orange: #F9A46C;
-$blue: #A0D7EF;
+$red: #f37453;
+$orange: #0a3542;
+$blue: #0a3542;
 $beige: #FEFBEE;
 $driod: 'Montserrat', sans-serif;
 $quick: 'Quicksand', sans-serif;
@@ -28,16 +28,16 @@ body {
 	text-decoration: none;
 }
 
-.bg1 { background: image-url("sock1.jpg") no-repeat 50% 0; background-size: cover; height: 100vh; }
+.bg1 { background: image-url("sock1.jpg") no-repeat 50% 0; background-size: cover; height: 100%; }
 .bg2 { background-color: $orange; color: white;}
-.bg3 { background: image-url("blue2.jpg") no-repeat 50% 0; color: $red; }
+.bg3 { background-color: $blue; color: white; }
 .bg4 { background-color: $orange; color: white;}
 .bg5 { background-image: image-url("image3.jpg"); background-position: right !important;  }
-.bg6 { background-color: #A0D7EF; color: $orange;}
+.bg6 { background-color: $blue; color: $orange;}
 .bg7 { background-color: $orange; color: white;}
 .bg8 { background-image: image-url("sock4.png"); background-position: center; height: 250px; width: 200px; background-color: $blue; border: 5px solid $orange; margin: 20px;  }
 .bg9 { background-image: image-url("sock5.png"); background-position: center; height: 250px; width: 200px; background-color: $blue; border: 5px solid $orange; margin: 20px;  }
-
+.coolpic { background: image-url("Photo2.jpg") no-repeat 50% 0; background-size: cover; height: 820px;}
 .bg1, .bg2, .bg3, .bg4, .bg5, .bg6, .bg7 {
 	height: 125%;
 	padding: 0;
@@ -79,7 +79,6 @@ h2 {
 }
 
 #main-nav{
-    background:transparent;
     -webkit-transition:background 0.3s ease-out;
     transition:background 0.3s ease-out;
 }
@@ -90,13 +89,16 @@ h2 {
 }
 
 #main-nav .navbar-toggle .icon-bar{
-    background:$red;
+    background-color: $blue;
 }
 
 #main-nav .container{
-
+		
     -webkit-transition:padding 0.3s ease-out;
     transition:padding 0.3s ease-out;
+}
+.scrolled {
+	background-color: $blue;
 }
 
 #main-nav.scrolled .container{
@@ -145,12 +147,12 @@ h2 {
 
 #main-nav.scrolled .nav #logo a:hover {
     color: $red;
-       -webkit-transition:color .2s ease-out;
+    -webkit-transition:color .2s ease-out;
     transition:color .2s ease-out;
 }
 
 #site-nav {
-	color: red;
+	color: $red;
 
 	a {
 		text-decoration: none;
@@ -227,8 +229,8 @@ h2 {
 .intro {
 
 	padding: 15px;
-	color: $blue;
-	background-color: $beige;
+	color: white;
+	background-color: $blue;
 	color: $red;
 	 hr {
 	 	color: $red;
@@ -241,7 +243,8 @@ h2 {
 
 	p {
 		padding: 15px;
-		color: black;
+		margin-top: 80px;
+		color: white;
 		
 	}
 }
@@ -282,9 +285,8 @@ h2 {
 	margin-top: 15%;
 	height: 100%;
 	padding: 10px;
-	color: black;
-	border: 5px solid $blue;
-	background-color: $beige;
+	color: white;
+	background-color: $blue;
 
 	p {
 		font-size: 1.2em;
@@ -407,6 +409,8 @@ h2 {
 			padding-right: 15px; 
 		}
 	}	
+
+
 	.sub-list {
 		background-color: $orange;
 		color: white;
@@ -427,12 +431,9 @@ h2 {
 ////////////////////////////////////////////
 
 .faq-circle {
-	background-color: $beige;
-	border: 10px solid $orange;
+	background-color: $blue;
 	margin: auto;
 	text-align: left;
-	height: 450px;
-	padding: 40px 20px 40px 20px;
 
 	h4 {
 		padding-bottom: 30px;
@@ -440,8 +441,7 @@ h2 {
 	}
 
 	p {
-
-		color: black;
+		color: white;
 	}
 }
 
@@ -503,3 +503,12 @@ footer .link-times {
 		color: black;
 	}
 }
+
+	#faq {
+		h2 {
+			color: white;
+		}
+		p {
+			color: white;
+		}
+	}

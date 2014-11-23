@@ -21,7 +21,7 @@ $(document).ready(function ($){
     }
     else{
       $('#main-nav').addClass('scrolled'); 
-      $('#main-nav').css('background-color', '#FEFBEE');    
+      $('#main-nav').css('background-color', '#0a3542');    
     }
   });
   $('.scroll-link').click(function(){
@@ -83,6 +83,7 @@ function parallaxInit() {
 		$('.bg5').parallax("50%", 0.5);
     $('.bg8').parallax("50%", 0.5);
     $('.bg9').parallax("50%", 0.5);
+    $('.coolpic').parallax("50%", 0.5);
 	}
 }
 
@@ -139,11 +140,11 @@ $(document).ready(function() {
     });
 
     function coolList() {
-      return TweenMax.staggerTo(".cool-list", 2, {scale:1.1, delay:1, ease:Elastic.easeOut, force3D:true}, 1);
+      return TweenMax.staggerTo(".cool-list", 0.5, {scale:1.1, ease:Elastic.easeOut, force3D:true}, 1);
     }
 
     function subList() {
-      return TweenMax.staggerFrom(".sub-list", 2, {scale:0.8, opacity:0.8, delay:1, ease:Elastic.easeOut, force3D:true}, 1);
+      return TweenMax.staggerFrom(".sub-list", 1, {scale:0.8, opacity:0.8, delay:1, ease:Elastic.easeOut, force3D:true}, 1);
     }
 
 }); 
