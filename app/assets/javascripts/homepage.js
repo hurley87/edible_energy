@@ -105,15 +105,15 @@ $(document).ready(function() {
     }, 2000);
     
     function animateSock1() {
-      return TweenMax.to($('#cool1'), 2, {rotation: -10, onComplete: makeItRain, scale:1.1, ease:Back.easeOut});
+      return TweenMax.to($('#cool1'), 2, {rotation: -10, onComplete: makeItRain, opacity:0.8,  ease:Back.easeOut});
     }
     function animateSock2() {
-      return TweenMax.to($('#cool2'), 2, {rotation: -10, onComplete: makeItRain, scale:1.1, ease:Back.easeOut});
+      return TweenMax.to($('#cool2'), 2, {rotation: -10, onComplete: makeItRain, opacity:0.8,  ease:Back.easeOut});
     }
 
     function makeItRain() {
-      TweenMax.to($('#cool1'), 2, {rotation: 10, onComplete: makeItRain, scale:1.1, ease:Back.easeOut });
-      TweenMax.to($('#cool2'), 2, {rotation: 10, onComplete: makeItRain, scale:1.1, ease:Back.easeOut });
+      TweenMax.to($('#cool1'), 2, {rotation: 10, onComplete: makeItRain, opacity:0.8,  ease:Back.easeOut });
+      TweenMax.to($('#cool2'), 2, {rotation: 10, onComplete: makeItRain, opacity:0.8,  ease:Back.easeOut });
      }
 
      setInterval(function() {
@@ -131,11 +131,11 @@ $(document).ready(function() {
     });
 
     function coolList() {
-      return TweenMax.staggerTo(".cool-list", 0.5, {scale:1.1, ease:Elastic.easeOut, force3D:true}, 1);
+      return TweenMax.staggerTo(".cool-list", 0.5, {opacity:0.8,  ease:Elastic.easeOut, force3D:true}, 1);
     }
 
     function subList() {
-      return TweenMax.staggerFrom(".sub-list", 1, {scale:0.8, opacity:0.8, delay:1, ease:Elastic.easeOut, force3D:true}, 1);
+      return TweenMax.staggerFrom(".sub-list", 1, {opacity:0.8,  opacity:0.8, delay:1, ease:Elastic.easeOut, force3D:true}, 1);
     }
 
 }); 
