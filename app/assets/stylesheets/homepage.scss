@@ -302,36 +302,6 @@ h2 {
 		padding-bottom: 5px;
 	}
 	
-
-	.insta-cta {
-		width: 55%;
-		margin: auto;
-		text-align: left;
-		ol {
-			font-size: 2em;
-		}	
-			li {
-				background-color: $beige;
-				margin: 10px;
-				color: $red;
-				padding: 10px;
-				border: 15px solid $blue;
-				.btn {
-			border: none;
-			background-color: $orange;
-			color: white;
-			padding: 20px 0 20px 0;
-			width: 100%;
-			text-shadow: none;
-
-			&:hover {
-				padding: 15px;
-				background-color: $red;
-				transition: all 2s;
-			}
-		}
-			}
-	}
 }
 ////////////////////////////////////////////
 // socks
@@ -496,6 +466,9 @@ footer .link-times {
 .insta-card {
 	background-color: $beige;
 	height: 600px;
+	width: 350px;
+	margin: auto;
+	border-radius: 15px;
 	overflow: scroll;
 	border: 10px solid $blue;
 	color: $red;

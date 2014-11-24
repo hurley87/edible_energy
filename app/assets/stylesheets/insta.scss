@@ -1,0 +1,42 @@
+@import "font-awesome";
+@import "bootstrap";
+
+$red: #f37453;
+$orange: #0a3542;
+$blue: #0a3542;
+$beige: #FEFBEE;
+
+.thankyou {
+	color: white;
+	padding-top: 75px;
+	background-color: $blue;
+}
+
+.insta-cta {
+	width: 55%;
+	margin: auto;
+	text-align: left;
+	ol {
+		font-size: 2em;
+	}	
+		li {
+			margin: 10px;
+			padding: 10px;
+			border-radius: 15px;
+			.btn {
+		border: none;
+		background-color: $orange;
+		color: white;
+		padding: 20px 0 20px 0;
+		width: 100%;
+		text-shadow: none;
+
+		&:hover {
+			padding: 15px;
+			background-color: $red;
+			transition: all 2s;
+		}
+	}
+		}
+}
+

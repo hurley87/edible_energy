@@ -1,16 +1,17 @@
-<br>
+<div class='thankyou'>
+  <div class='container'>
+    <h1>Thanks for being a really cool person. <br> Here's your chance to get some free socks.</h1>
     <div class='insta-cta'>
       <ol>
-        <li><p class='lead'>make sure you join the club and subscribe above</p></li>
-        <li><p class='lead'>come up with a creative Instagram post using the #imsofancy hashtag</p></li>
-        <li><p class='lead'>verify your account with us by logging in<a style="font-size: 2em;"  id='insta-signin' class='btn'> <i class='fa fa-instagram fa-2x'></i> click here</a></p></li>
+        <li><p class='lead'>come up with a creative Instagram post using the #fancyasfuck hashtag</p></li>
+        <li><p class='lead'>verify your account with us<a style="font-size: 2em;"  id='insta-signin' class='btn'> <i class='fa fa-instagram fa-2x'></i> login</a></p></li>
         <li><p class='lead'>the top three subscribers appear on our homepage</p></li>
         <li><p class='lead'>these three winners dont have to pay for their socks the following month</p> </li>
       </ol>
-
     </div>
     <br>
-
+  </div>
+</div>
 <script src="https://cdn.auth0.com/w2/auth0-widget-5.2.min.js"></script>
 <script type="text/javascript">
   var widget = new Auth0Widget({
@@ -25,5 +26,4 @@
   $('#insta-signin').on('click', function() {
       widget.signup({ scope: 'openid profile' });
   });
-
 </script>

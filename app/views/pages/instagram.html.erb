@@ -1,36 +1,19 @@
-<div class='instaHolder'>
-	<h1 class='text-center'>Leaderboard this Month</h1>
+<div class='thankyou'>
+	<h1 class='text-center'>Leaderboard</h1>
 
 <% if @photos  %>	
 	<% @photos.each do |instagram| %>
-		<div class='likes'><%= instagram.likes[:count] %></div>
-
-	    <div class='instaBox'><a href='<%= instagram.link %>'><%= image_tag instagram.images.thumbnail.url %></a></div> 
-	    <div class='likes'>@<%= instagram.user[:full_name] %>dafafaaf</div>
-	    <br>
-
+		<div class='insta-card'>
+		  <h3><%= instagram.user[:full_name] %></h3>
+		  <div class='sock-list'>
+		  	<a href='<%= instagram.link %>'><%= image_tag instagram.images.thumbnail.url %></a>
+		  </div>
+		  <hr>
+		  <h3><i class='fa  fa-heart'></i> <%= instagram.likes[:count] %> likes</h3>
+		  <hr>
+		  <h4>@soxnbox just arrived today #imsofancy #ladieslikethis</h4>
+		</div>
 	<% end %>
 <% end %>
 </div>
-<style type="text/css">
-	.instaHolder {
-		width: 80%;
-		margin: auto;
-		margin-top: 100px;
 
-	}
-	.likes {
-		background-color: #A0D7EF;
-		color: #F04E31;
-		width: 150px;
-		text-align: center;
-		font-size: 2em;
-		overflow: scroll;
-	}
-
-	.instaBox img{
-		border: 5px solid #A0D7EF;
-		width: 150px;
-
-	}
-</style>
