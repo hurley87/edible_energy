@@ -13,6 +13,7 @@ body {
 	margin: 0;
   font-family: $driod;
   background-color: $orange;
+  overflow-x: hidden;
 }
 #top {
 	height: 100vh;
@@ -32,12 +33,12 @@ body {
 .bg2 { background-color: $orange; color: white;}
 .bg3 { background-color: $blue; color: white; }
 .bg4 { background-color: $orange; color: white;}
-.bg5 { background-image: image-url("image3.jpg"); background-position: right !important;  }
+.bg5 { background: image-url("image3.jpg") no-repeat 50% 0; background-position: right !important;  }
 .bg6 { background-color: $blue; color: $orange;}
 .bg7 { background-color: $orange; color: white;}
-.bg8 { background-image: image-url("sock4.png"); background-position: center; height: 250px; width: 200px; background-color: $blue; border: 5px solid $orange; margin: 20px;  }
-.bg9 { background-image: image-url("sock5.png"); background-position: center; height: 250px; width: 200px; background-color: $blue; border: 5px solid $orange; margin: 20px;  }
-.coolpic { background: image-url("Photo2.jpg") no-repeat 50% 0; background-size: cover; height: 820px;}
+.bg8 { background-image: image-url("sock4.png"); background-position: center; height: 300px; width: 200px; background-color: $blue; border: 5px solid $orange; margin: 20px;  }
+.bg9 { background-image: image-url("sock5.png"); background-position: center; height: 300px; width: 200px; background-color: $blue; border: 5px solid $orange; margin: 20px;  }
+.coolpic { background: image-url("Photo2.jpg") no-repeat 50% 0; background-size: cover; height: 820px; border-radius: 20px;}
 .bg1, .bg2, .bg3, .bg4, .bg5, .bg6, .bg7 {
 	height: 125%;
 	padding: 0;
@@ -71,7 +72,9 @@ h2 {
   }
 
 
-
+#main-nav {
+	width: 100% !important;
+}
 
 #main-nav .navbar-nav li {
     display:inline-block;
@@ -94,10 +97,6 @@ h2 {
 
 .scrolled {
 	background-color: $blue;
-}
-
-#main-nav.scrolled .container{
-    padding:0;
 }
 
 #main-nav .nav a{
@@ -123,7 +122,6 @@ h2 {
 
 #main-nav li{
     background:transparent;
-    margin:0 20px;
     opacity:0.7;
     vertical-align:middle;
     -webkit-transition:opacity 0.2s ease-out;
@@ -168,6 +166,7 @@ h2 {
 		border: 5px solid $orange;
 		background-color: $blue;
 		padding-bottom: 20px;
+		border-radius: 15px;
 
 		h1 {
 			color: $red;
@@ -283,9 +282,10 @@ h2 {
 	padding: 10px;
 	color: white;
 	background-color: $blue;
+	border-radius: 15px;
 
 	p {
-		font-size: 1.2em;
+		font-size: 1.5em;
 		text-align: left;
 
 	}
