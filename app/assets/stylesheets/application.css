@@ -53,6 +53,9 @@
 	#heatmap {
 		display: none;
 	}
+	.okwhat {
+		display: none;
+	}
 
 	#youtube {
 		border: 10px ridge #F9A46C;
@@ -93,6 +96,10 @@
 		width: 100%;
 		height: 130%;
 
+	}
+
+	#subscribe .content-box h1 {
+		font-size: 1em;
 	}
 
 	#subscribe .content-box .sub-right, #subscribe .content-box .sub-left {

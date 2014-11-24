@@ -437,11 +437,13 @@ h2 {
 
 	h4 {
 		padding-bottom: 5px;
+		padding-top: 15px;
 		color: $red;
 	}
 
 	p {
 		color: white;
+		height: 60px;
 	}
 }
 
@@ -453,7 +455,7 @@ footer .scroll-link {
 	color: white;
 
 	&:hover {
-		color: $blue;
+		color: $red;
 	}
 }
 
@@ -471,7 +473,7 @@ footer .link-times {
 	color: white;
 
 	&:hover {
-		color: $blue;
+		color: $red;
 	}
 }
 
