@@ -10,6 +10,9 @@ class PagesController < ApplicationController
   def terms
   end
 
+  def faq
+  end
+
   def instagram
   	@users = Insta.all
   	@photos = grab_photos_from(@users)
