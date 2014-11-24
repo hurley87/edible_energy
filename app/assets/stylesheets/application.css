@@ -99,9 +99,14 @@
 	}
 
 	#subscribe .content-box h1 {
-		font-size: 1em;
+		display: none;
 	}
-
+	.sock1 {
+		display: none;
+	}
+	.sock2 {
+		display: none;
+	}
 	#subscribe .content-box .sub-right, #subscribe .content-box .sub-left {
 		border: none;
 	}
