@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141113033248) do
+ActiveRecord::Schema.define(version: 20141125032151) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -68,6 +68,23 @@ ActiveRecord::Schema.define(version: 20141113033248) do
     t.string   "city"
     t.string   "country"
     t.string   "postal"
+    t.string   "billing_address_apt"
+    t.string   "billing_address_city"
+    t.string   "billing_address_country"
+    t.string   "billing_address_country_code"
+    t.string   "billing_address_line1"
+    t.string   "billing_address_state"
+    t.string   "billing_address_zip"
+    t.string   "billing_name"
+    t.string   "shipping_address_apt"
+    t.string   "shipping_address_city"
+    t.string   "ashipping_address_country"
+    t.string   "shipping_address_country_code"
+    t.string   "shipping_address_line1"
+    t.string   "shipping_address_state"
+    t.string   "shipping_address_zip"
+    t.string   "shipping_name"
+    t.string   "referral"
   end
 
 end

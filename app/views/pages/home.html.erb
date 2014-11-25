@@ -111,44 +111,44 @@
       <div class='col-md-3'>&nbsp;</div>
       <div class='col-md-6'>
         <h2 class='text-center'>Step up your sock game.</h2>
-        <br>
-        <div class='content-box row'>
-          <div class="col-md-6 sub-left text-center">
-            <h1>Sock & Box</h1>
-            <p>$14.99 / month</p>
-          </div>
-          <div class='col-md-6 sub-right'>
-          <%= form_tag charges_path, id:'chargeForm' do %>
-            <div class="field">
-              <h5><%= label_tag :address, 'address:'  %></h5>
-              <%= text_field_tag 'address', nil, style: 'width: 100%;' %>
-            </div>
-            <div class="field">
-              <h5><%= label_tag :city, 'city:'  %></h5>
-              <%= text_field_tag 'city', nil, style: 'width: 100%;' %>
-            </div>
+            <div class='content-box'>
 
-            <div class="field">
-              <h5><%= label_tag :country, 'province:'  %></h5>
-              <%= text_field_tag 'country', nil, style: 'width: 100%;' %>
+              <h1 class='text-center'>Sock & Box</h1>
+              <p class='text-center'>Need some copy here about referral. After a subscription is given that subscriber gets a referral code. If friends or family use this codethat subscriber gets a discount on their next month. </p>
+              
+          <%= form_tag charges_path, id:'chargeForm' do %>
+              <div style='margin: auto; width: 85%;' class="field">
+              <p clsas='text-center'><%= label_tag :referral, 'Referral Code:'  %></p>
+              <%= text_field_tag 'referral', nil, class: 'form-control'%>
             </div>
-            <div class="field">
-              <h5><%= label_tag :postal, 'postal:' %></h5>
-              <%= text_field_tag 'postal', nil, style: 'width: 100%;' %>
-            </div>
-             <a style="font-size: 2em;" id="btn-buy" type="button" class='btn pull-right'>subscribe</a>
+               <p class='text-center'><a style="font-size: 2em;" id="btn-buy" type="button" class='btn'>subscribe</a></p>
             <br>
              	<%= hidden_field_tag 'stripeToken' %>
-              <%= hidden_field_tag 'stripeEmail' %>  
+              <%= hidden_field_tag 'stripeEmail' %> 
+              <%= hidden_field_tag 'billingApt' %>
+              <%= hidden_field_tag 'billingCity' %> 
+              <%= hidden_field_tag 'billingCountry' %>
+              <%= hidden_field_tag 'billingCountryCode' %> 
+              <%= hidden_field_tag 'billingAddress1' %> 
+              <%= hidden_field_tag 'billingState' %>
+              <%= hidden_field_tag 'billingZip' %> 
+              <%= hidden_field_tag 'billingName' %>
+              <%= hidden_field_tag 'shippingApt' %>
+              <%= hidden_field_tag 'shippingCity' %> 
+              <%= hidden_field_tag 'shippingCountry' %>
+              <%= hidden_field_tag 'shippingCountryCode' %> 
+              <%= hidden_field_tag 'shippingAddress1' %> 
+              <%= hidden_field_tag 'shippingState' %>
+              <%= hidden_field_tag 'shippingZip' %> 
+              <%= hidden_field_tag 'shippingName' %>
+
               <script src="https://checkout.stripe.com/checkout.js"></script>
           <% end %>
           </div>
         </div>
-        <br>
-        <br class='clear'>
-      </div>
       <div class='col-md-3'>
         <h2 class='text-center okwhat'>&nbsp;</h2>
+
         <p class='sub-list' class='lead'><i class='fa fa-check-circle fa-2x'></i> Every Month</p>
         <br>
         <p class='sub-list' class='lead'><i class='fa fa-check-circle fa-2x'></i> Free Delivery</p>
@@ -161,11 +161,12 @@
         
         <br>
         <p class='sub-list'  class='lead'><i class='fa fa-check-circle fa-2x'></i> Great Gift Idea</p>
+       
       </div>
       <br>
-      <br>
-      <br class='clear'>
     </div>
+       <br>
+      <br class='clear'>
 </section>
 <section id='instagram' class='bg7'>
   <div class='container text-center'>
@@ -212,7 +213,7 @@
         <br>
       </div>
     </div>
-    <h3>Questions? <a href="/instagram">Ask Here</a> </h3>
+    <h3>Questions? <a style='text-decoration: none;' href="/faq" class='btn btn-success btn-lg'>Ask Here</a> </h3>
   </div>
 </section>
 
@@ -223,6 +224,23 @@
     token: function(token, arg) {
       document.getElementById("stripeToken").value = token.id;
       document.getElementById("stripeEmail").value = token.email;
+      document.getElementById("billingApt").value = arg.billing_address_city;
+      document.getElementById("billingCity").value = arg.billing_address_city;
+      document.getElementById("billingCountry").value = arg.billing_address_country;
+      document.getElementById("billingCountryCode").value = arg.billing_address_country_code;
+      document.getElementById("billingAddress1").value = arg.billing_address_line1;
+      document.getElementById("billingState").value = arg.billing_address_state;
+      document.getElementById("billingZip").value = arg.billing_address_zip;
+      document.getElementById("billingName").value = arg.billing_name;
+
+      document.getElementById("shippingApt").value = arg.shipping_address_apt;
+      document.getElementById("shippingCity").value = arg.shipping_address_city;
+      document.getElementById("shippingCountry").value = arg.shipping_address_country;
+      document.getElementById("shippingCountryCode").value = arg.shipping_address_country_code;
+      document.getElementById("shippingAddress1").value = arg.shipping_address_line1;
+      document.getElementById("shippingState").value = arg.shipping_address_state;
+      document.getElementById("shippingZip").value = arg.shipping_address_zip;
+      document.getElementById("shippingName").value = arg.shipping_name;
       document.getElementById("chargeForm").submit();
     }
   });
@@ -230,7 +248,9 @@
     handler.open({
       name: 'Sock and Box',
       description: 'Monthly Sock Delivered ($14.99)',
-      amount: 1499
+      amount: 1499,
+      shippingAddress: true,
+      billingAddress: true
    });
    e.preventDefault();
   });

@@ -334,10 +334,8 @@ h2 {
 		padding: 30px;
 	}
 
-	.sub-right {
-		padding-left: 25px;
-		padding-bottom: 25px;
-		height: 360px;
+	
+	
 		
 		input {
 			width: 100%;
@@ -363,21 +361,11 @@ h2 {
 		label {
 			color: $red;
 		}
-	}
-	.sub-left {
-		border-right: 10px solid $orange;
-		height: 370px;
-		h1 {
-			padding-top: 45%;
-			font-size: 2.5em;
-			color: $red;
-			vertical-align: middle;
-			padding-right: 15px; 
-		}
+
 		p {
 			color: black;
 		}
-	}	
+	
 
 
 	.sub-list {
@@ -420,7 +408,7 @@ h2 {
 ////////////////////////////////////////////
 // footer
 ////////////////////////////////////////////
-footer .scroll-link {
+footer p a{
 	text-decoration: none;
 	color: white;
 
