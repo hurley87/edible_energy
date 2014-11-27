@@ -8,7 +8,7 @@ class ChargesController < ApplicationController
 	    :card  => params[:stripeToken],
 	    :plan => 'SOCKS'
 	  )
-	  pry
+	 
 	  purchase = Purchase.create(email: params[:stripeEmail], card: params[:stripeToken], 
     amount: params[:amount], description: 'You get one pair of cool socks a month!', currency: 'cad',
     customer_id: customer.id, amount: 1499, product_id: 1, uuid: SecureRandom.uuid, 

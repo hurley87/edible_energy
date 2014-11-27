@@ -142,7 +142,7 @@
               <%= hidden_field_tag 'shippingZip' %> 
               <%= hidden_field_tag 'shippingName' %>
 
-              <script src="https://checkout.stripe.com/checkout.js"></script>
+              
           <% end %>
           </div>
         </div>
@@ -216,7 +216,7 @@
     <h3>Questions? <a style='text-decoration: none;' href="/faq" class='btn btn-success btn-lg'>Ask Here</a> </h3>
   </div>
 </section>
-
+<script src="https://checkout.stripe.com/checkout.js"></script>
 <script type="text/javascript">
   
   var handler = StripeCheckout.configure({

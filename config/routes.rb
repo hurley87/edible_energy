@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
  
+
+  get 'instas/new'
+
   get 'auth0/callback'
   get 'auth0/failure'
   get "/auth/auth0/callback" => "auth0#callback"
@@ -16,4 +19,5 @@ Rails.application.routes.draw do
   
   resources :charges
   resources :purchases, only: [:show]
+  resources :emails
 end
