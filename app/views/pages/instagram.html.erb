@@ -1,15 +1,14 @@
 <div class='thankyou'>
 	<h1 class='text-center'>Leaderboard</h1>
-
-<% if @photos  %>	
-	<% @photos.each do |instagram| %>
+<% if @users  %>	
+	<% @users.each do |user| %>
 		<div class='insta-card'>
-		  <h3><%= instagram.user[:full_name] %></h3>
+		  <h3><%= user.nickname %></h3>
 		  <div class='sock-list'>
-		  	<a href='<%= instagram.link %>'><%= image_tag instagram.images.thumbnail.url %></a>
+		  
 		  </div>
 		  <hr>
-		  <h3><i class='fa  fa-heart'></i> <%= instagram.likes[:count] %> likes</h3>
+
 		  <hr>
 		  <h4>@soxnbox just arrived today #imsofancy #ladieslikethis</h4>
 		</div>
