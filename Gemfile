@@ -48,3 +48,5 @@ gem 'omniauth-auth0', '~> 1.1'
 
 gem 'greensock-rails'
 
+gem "letter_opener", :group => :development
+

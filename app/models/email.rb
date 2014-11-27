@@ -8,7 +8,7 @@ class Email < ActiveRecord::Base
 	private
 
 	def email_purchaser
-	   ReferalMailer.please_buy(self).deliver
+	   ReferalMailer.please_buy(self.target).deliver
 	end
 
 end
