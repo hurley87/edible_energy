@@ -14,7 +14,8 @@
 <table width="580" bgcolor="#ffffff" align="center" cellpadding="0" cellspacing="0" class="table-centered" style="margin: 0 auto;">
 <tr>
 <td style="color: #535353; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 20px; text-align: left;">
-	<%= image_tag("happysocks2.png") %>
+
+	
 <!-- Header -->
 <table border="0" cellspacing="0" cellpadding="0" class="header" style="background-color: #0a3542; width: 580px;">
 	<tr>
@@ -47,7 +48,7 @@
 			<td style="color: #535353; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 12px; text-align: left; background-color: #f37453; width: 580px;">&nbsp;</td>
 		</tr>
 		<tr>
-			<td><img style='display: block;' src="images/photo8.jpg"></td>
+			<td><%= image_tag attachments['photocool.jpg'].url %></td>
 		</tr>
 		<tr>
 			<td style="color: #535353; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 12px; text-align: left; background-color: #f37453; width: 580px;">&nbsp;</td>
@@ -94,7 +95,7 @@
 			<table border="0" cellspacing="0" cellpadding="0">
 				
 				<tr>
-					<td><img src="images/happysocks2.png"></td>
+					<td><%= image_tag attachments['happysocks2.png'].url %></td>
 					<td class="heading1" style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; line-height: 20px; color: #f37453; font-size: 19px; text-align: left;">
 						Catch HE recurrences early by making patients and caregivers aware of its symptoms.
 					</td>
@@ -103,10 +104,10 @@
 					<td class="heading1" style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; line-height: 20px; color: #f37453; font-size: 19px; text-align: left;">
 						Catch HE recurrences early by making patients and caregivers aware of its symptoms.
 					</td>
-					<td><img src="images/happysocks3.png"></td>
+					<td><%= image_tag attachments['happysocks5.png'].url %></td>
 				</tr>
 				<tr>
-					<td><img src="images/happysocks4.png"></td>
+					<td><%= image_tag attachments['happysocks3.png'].url %></td>
 					<td class="heading1" style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; line-height: 20px; color: #f37453; font-size: 19px; text-align: left;">
 						Catch HE recurrences early by making patients and caregivers aware of its symptoms.
 					</td>
@@ -115,7 +116,7 @@
 					<td class="heading1" style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; line-height: 20px; color: #f37453; font-size: 19px; text-align: left;">
 						Catch HE recurrences early by making patients and caregivers aware of its symptoms.
 					</td>
-					<td><img src="images/happysocks3.png"></td>
+					<td><%= image_tag attachments['happysocks4.png'].url %></td>
 				</tr>
 				<tr>
 					<td class="padding-small" style="color: #535353; font-family: Arial, Helvetica, sans-serif; font-size: 14px; height: 15px; text-align: left; background-color: #0a3542;">&nbsp;</td>
@@ -175,7 +176,7 @@
 					<td style="color: #535353; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 20px; text-align: left;">
 						<table border="0" cellspacing="0" cellpadding="0" style="width: 580px; height: 75px; background-color: #b6bd00; " bgcolor='#b6bd00'>
 							<tr>
-								<td style='background-color: #4b6daa; width: 50px;'>&nbsp;&nbsp;<img height='40' src="images/facebook.png"></td>
+								<td style='background-color: #4b6daa; width: 50px;'>&nbsp;&nbsp;<%= image_tag attachments['facebook.png'].url %></td>
 								<td style='background-color: #4b6daa; color: white; text-align: left; font-size: 16px;' >Any Questions or Concerns? Find on on Facebook.</td>
 							</tr>	
 						</table>
@@ -188,7 +189,7 @@
 					<td style="color: #535353; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 20px; text-align: left;">
 						<table border="0" cellspacing="0" cellpadding="0" style="width: 580px; height: 75px; background-color: #47403a; " bgcolor='#b6bd00'>
 							<tr>
-								<td style='background-color: #82ddf2; width: 50px;'>&nbsp;&nbsp;<img height='40' src="images/twitter.jpg"></td>
+								<td style='background-color: #82ddf2; width: 50px;'>&nbsp;&nbsp;<%= image_tag attachments['twitter.jpg'].url %></td>
 								<td style='background-color: #82ddf2; color: white; text-align: left; font-size: 16px;' >Have a quick question or need a laugh? Follow us on Twitter.</td>
 							</tr>	
 						</table>
@@ -202,7 +203,7 @@
 						<table border="0" cellspacing="0" cellpadding="0" style="width: 503px; height: 75px; " >
 							<tr>
 								<tr>
-								<td style='background-color: #47403a; width: 50px;'><img height='40' src="images/insta.jpg"></td>
+								<td style='background-color: #47403a; width: 50px;'><%= image_tag attachments['insta.png'].url %></td>
 								<td style='background-color: #47403a; color: white; font-size: 16px;' >Gain followers and earn free socks.</td>
 							</tr>
 							</tr>	
