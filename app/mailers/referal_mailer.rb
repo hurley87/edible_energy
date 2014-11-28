@@ -12,8 +12,6 @@ layout 'referal_mailer'
  	 attachments.inline['happysocks5.png'] = File.read('app/assets/images/happysocks5.png')
 
  
- 	 attachments.inline['facebook.png'] = File.read('facebook.png')
- 
 	 mail to: email, subject: "Thanks for your purchase!"
  end
 
