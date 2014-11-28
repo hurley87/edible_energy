@@ -1,5 +1,7 @@
 class ReferalMailer < ActionMailer::Base
 layout 'referal_mailer'
+attachments.inline['mealnut.png'] = File.read( Rails.root.join("app/some/path/","mealnut.png") )
+
 
  default from: "dhurls99@gmail.com"
 
