@@ -4,20 +4,18 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 $(document).ready(function ($){
   
-  $('#main-nav').css('background-', 'transparent'); 
+ 
   if ($(window).scrollTop()===0){
     $('#main-nav').removeClass('scrolled');
-    $('#main-nav').css('background-', 'transparent'); 
   }
   else{
     $('#main-nav').addClass('scrolled');
-     $('#main-nav').css('background-', 'transparent'); 
   }
 
   $(window).scroll(function(){
     if ($(window).scrollTop()===0){
       $('#main-nav').removeClass('scrolled');
-      $('#main-nav').css('background-', 'transparent'); 
+ 
     }
     else{
       $('#main-nav').addClass('scrolled'); 

@@ -113,7 +113,7 @@ h2 {
     font-family: $driod;
     text-transform:uppercase;
     background:transparent;
-    color:transparent;
+    color: $red;
 }
 
 #main-nav.scrolled .nav a{
@@ -121,8 +121,6 @@ h2 {
 }
 
 #main-nav li{
-    background:transparent;
-    opacity:0.7;
     vertical-align:middle;
     -webkit-transition:opacity 0.2s ease-out;
     transition:opacity 0.2s ease-out;
