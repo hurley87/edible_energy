@@ -42,6 +42,10 @@
 	.red-dot6 {
 		display: none;
 	}
+
+	.sock-dis {
+		display: none;
+	}
 	#vid-container {
 		width: 90%;
 		position: absolute;

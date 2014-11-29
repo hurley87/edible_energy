@@ -38,7 +38,7 @@ body {
 .bg7 { background-color: $orange; color: white;}
 .bg8 { background-image: image-url("sock4.png"); background-position: center; height: 300px; width: 200px; background-color: $blue; border: 5px solid $orange; margin: 20px;  }
 .bg9 { background-image: image-url("sock5.png"); background-position: center; height: 300px; width: 200px; background-color: $blue; border: 5px solid $orange; margin: 20px;  }
-.coolpic { background: image-url("Photo2.jpg") no-repeat 50% 0; background-size: cover; height: 820px; border-radius: 20px;}
+.coolpic { background: image-url("Photo2.jpg") no-repeat 50% 0; background-size: cover; height: 620px; border-radius: 20px;}
 .bg1, .bg2, .bg3, .bg4, .bg5, .bg6, .bg7 {
 	height: 125%;
 	padding: 0;
@@ -238,10 +238,12 @@ h2 {
 
 	p {
 		padding: 15px;
-		margin-top: 80px;
-		color: white;
+		font-size: 2.5em;
 		
 	}
+}
+.info {
+	font-size: 2em;
 }
 
 .circle-num {
@@ -270,6 +272,7 @@ h2 {
 
 	p {
 		width: 75%;
+		margin-top: 10px;
 		margin: auto;
 		font-size: 1.2em;
 		color: black;
@@ -277,7 +280,6 @@ h2 {
 }
 
 .sock-list {
-	margin-top: 15%;
 	height: 100%;
 	padding: 10px;
 	color: white;
@@ -285,9 +287,10 @@ h2 {
 	border-radius: 15px;
 
 	p {
-		font-size: 1.5em;
+		padding: 15px;
+		font-size: 2em;
 		text-align: left;
-
+		color: $red;
 	}
 }
 .sock1, .sock2 {
