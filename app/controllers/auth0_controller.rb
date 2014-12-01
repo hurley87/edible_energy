@@ -3,10 +3,14 @@ class Auth0Controller < ApplicationController
     session[:userinfo] = request.env['omniauth.auth']
     name = session[:userinfo][:extra][:raw_info][:nickname]
     insta_id = session[:userinfo][:extra][:raw_info][:identities][0]['user_id']
-    p session[:userinfo][:extra][:raw_info]
-    pry
-    Insta.create(nickname: name)
-    #@photos = grab_photos_from(@users)
+
+    @photos = find_right_photos(insta_id)
+
+
+    # photos.each do |photo|
+    #   Insta.create(nickname: name)
+    # end
+    
     redirect_to instagram_path
   end
 
@@ -14,22 +18,11 @@ class Auth0Controller < ApplicationController
     @error_msg = request.params['message']
   end
 
-   def grab_photos_from(users)
-    photos = []
-    users.each do |user|
-      user_photos = find_right_photos(user.insta_id)
-      user_photos.each do |p|
-        photos << p
-      end
-    end
-    photos.uniq!
-  end
-
   def find_right_photos(id)
     instagram = Instagram.user_recent_media(id)
     @photos = []
     instagram.each do |i|
-      @photos << i if i[:tags].include?('fancyasfuck')
+      @photos << i if i[:tags].include?('pug')
     end
     @photos
   end

@@ -18,15 +18,15 @@
 <section id='about' class='bg2'>
   <div class='container text-center'>
 
-    <h2 style='font-size: 6em;'>how it works</h2>
+    <h2 style='font-size: 4em;'>how it works</h2>
     <br>
     <br>
     <div clsas='row'>
       <div id='sock1' class='col-md-4'>
-       <div class='circle-num cool-list'><b>1</b></div>
+       <div class='circle-num cool-list'>1</div>
         <br>
         <div class='sock-quality cool-list'>
-          <h3>Introduce Yourself</h3>
+          <h3>Subcribe</h3>
           <p>Let us know your shipping info and we send you 1 pair of socks monthly.</p>
         </div>
       </div>
@@ -34,7 +34,7 @@
         <div class='circle-num cool-list'>2</div>
         <br>
         <div class='sock-quality cool-list'>
-          <h3>Put Your Feet Up</h3>
+          <h3>Recieve Socks</h3>
           <p>We’ll get the socks to you in 2-7 business days. Shipping is free.</p>
         </div>
       </div>
@@ -44,7 +44,7 @@
         <br>
          <div class='sock-quality cool-list'>
           <h3>Get Fancy</h3>
-          <p>Tell your friends and family about us through email or over Instagram and you'll be rewarded.</p>
+          <p>Tell your friends and family about us through email.</p>
         </div>
       </div>
     </div>
@@ -54,16 +54,18 @@
   <br>
   <br>
   <br>
+  <br>
+  <br>
 </section>
 <div class='sock-dis'>
 <p class='text-center'>
-<svg height="100" width="800">
-  <polygon points="0,0 0,100 100,50 200,0 200,100" style="fill:#f37453;  " />
-  <polygon points="200,0 200,100 300,50 400,0 400,100" style="fill:#f37453;  " />
-  <polygon points="400,0 400,100 500,50 600,0 600,100" style="fill:#f37453;  " />
-  <polygon points="600,0 600,100 700,50 800,0 800,100" style="fill:#f37453;  " />
+<svg height="100" width="400">
+  <polygon points=" 50,25 100,0 100,50" style="fill:#f37453;  " />
+  <polygon points="100,0 100,50 150,25 200,0 200,50" style="fill:#f37453;" />
+  <polygon points="200,0 200,50 250,25 300,0 300,50" style="fill:#f37453;" />
+  <polygon points="300,50 300,0 350,25" style="fill:#f37453;" />
 </svg> 
-</p> 
+</p>
 <section class='bg3'>
   <div class='container'>
     <div class='row'>
@@ -71,11 +73,10 @@
       <div class='intro col-md-8'>
       
  
-        <p class='info'>Our socks are a high quality combed cotton and some of the best fabrics. Bottom line, they’re fancy as f#*k.  </p>
-
-        <div class='coolpic'>&nbsp;</div>
-        <br>
-        <p class='info'>These socks are delivered straight to your doorstep and you don't have to worry about shipping. That’s pretty fancy, too. </p>
+        <p  id='cool1' class='text-center'><span class='sock1'><%= image_tag("happysocks2.png") %></span><span class='sock2'><%= image_tag("happysocks3.png") %></span></p>
+        <div class='sock-list'>
+          <p class='info'>You’ll never get the same pair twice and we promise you will love the pair you get – if you don’t, send em back and we’ll get you a fresh design!</p>
+        </div>
         <br>
       </div>
       <br>
@@ -84,18 +85,17 @@
   </div>
 </section>
 <p class='text-center'>
-<svg height="100" width="800">
-  <polygon points="0,0 0,100 100,50 200,0 200,100" style="fill:#f37453;  " />
-  <polygon points="200,0 200,100 300,50 400,0 400,100" style="fill:#f37453;  " />
-  <polygon points="400,0 400,100 500,50 600,0 600,100" style="fill:#f37453;  " />
-  <polygon points="600,0 600,100 700,50 800,0 800,100" style="fill:#f37453;  " />
+<svg height="100" width="400">
+  <polygon points=" 50,25 100,0 100,50" style="fill:#f37453;  " />
+  <polygon points="100,0 100,50 150,25 200,0 200,50" style="fill:#f37453;" />
+  <polygon points="200,0 200,50 250,25 300,0 300,50" style="fill:#f37453;" />
+  <polygon points="300,50 300,0 350,25" style="fill:#f37453;" />
 </svg> 
 </p>
 <section id='socks' class='bg4'>
   <br>
   <div class='container text-center'>
   
-    <br>
     <div clsas='row'>
       <div class='col-md-2'></div>
       <div class='col-md-8'>
@@ -111,23 +111,30 @@
  <br id='sock-start'>
 </div>
 </div>
+<p class='text-center'>
+<svg height="100" width="400">
+  <polygon points=" 50,25 100,0 100,50" style="fill:#f37453;  " />
+  <polygon points="100,0 100,50 150,25 200,0 200,50" style="fill:#f37453;" />
+  <polygon points="200,0 200,50 250,25 300,0 300,50" style="fill:#f37453;" />
+  <polygon points="300,50 300,0 350,25" style="fill:#f37453;" />
+</svg> 
+</p>
 <section id='subscribe' class='bg5'>
     <div class='row'>
       <div class='col-md-3'>&nbsp;</div>
       <div class='col-md-6'>
         <br>
-        <br>
-        <br>
+   
             <div class='content-box'>
 
               <h1 class='text-center'>Sock & Box</h1>
-              <p class='text-center'>Need some copy here about referral. After a subscription is given that subscriber gets a referral code. If friends or family use this codethat subscriber gets a discount on their next month. </p>
-              
+              <p class='text-center'>Really need copy here so users understand that by clicking this button they are starting the process of subcribing.</p>
+        <!--       
           <%= form_tag charges_path, id:'chargeForm' do %>
               <div style='margin: auto; width: 85%;' class="field">
               <p clsas='text-center'><%= label_tag :referral, 'Referral Code:'  %></p>
               <%= text_field_tag 'referral', nil, class: 'form-control'%>
-            </div>
+            </div> -->
                <p class='text-center'><a style="font-size: 2em;" id="btn-buy" type="button" class='btn'>subscribe</a></p>
             <br>
              	<%= hidden_field_tag 'stripeToken' %>
@@ -154,7 +161,7 @@
           </div>
         </div>
       <div class='col-md-3'>
-      <br>
+<!--       <br>
       <br>
       <br>
       <br>
@@ -174,7 +181,7 @@
         <p class='sub-list'  class='lead'><i class='fa fa-check-circle fa-2x'></i> Great Gift Idea</p>
        
       </div>
-      <br>
+      <br> -->
     </div>
        <br>
       <br class='clear'>

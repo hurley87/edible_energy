@@ -7,22 +7,22 @@
     <br>
     <h3>Each month we give away free socks to subscribers who earn the most likes over Instagram.</h3>
      <h3><a style='text-decoration: none; color: white;' href="/instas/new" class='btn btn-success btn-lg'>Find Out How</a> </h3>
-    <br>
+    <h3>Top Posts</h3>
     <div class='row text-left'>
-      <div class='col-md-4'>
       	<% if @users  %>	
 					<% @users.each do |user| %>
-        <div class='insta-card'>
+        <div stlye='display: inline-block;' class='insta-card'>
           <h3><%= user.nickname %></h3>
           <div class='sock-list insta1'>
 
           </div>
           <hr>
-          <h3><i class='fa  fa-heart'></i> <%= user.likes %> likes</h3>
+          <h3><i class='fa  fa-heart'></i> likes</h3>
         </div>
-      </div>
     </div>
-   
+   				<% end %>
+				<% end %>
   </div>
 </section>
+
 

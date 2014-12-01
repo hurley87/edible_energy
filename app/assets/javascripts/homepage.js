@@ -3,8 +3,7 @@
 //Nav
 //////////////////////////////////////////////////////////////////////////////////////////
 $(document).ready(function ($){
-  
- 
+
   if ($(window).scrollTop()===0){
     $('#main-nav').removeClass('scrolled');
   }
@@ -102,11 +101,11 @@ $(document).ready(function() {
        $('.open-arrow').animate({'bottom': '-10px'}).animate({'bottom': '10px'});
     }, 2000);
     
-    function animateSock1() {
-      return TweenMax.to($('#cool1'), 1, {rotation: -10, onComplete: makeItRain, opacity:0.8,  ease:Back.easeOut});
+    function animateSock1(sock) {
+      return TweenMax.to($(sock), 1, {rotation: -10, onComplete: makeItRain, opacity:0.8,  ease:Back.easeOut});
     }
-    function animateSock2() {
-      return TweenMax.to($('#cool2'), 1, {rotation: -10, onComplete: makeItRain, opacity:0.8,  ease:Back.easeOut});
+    function animateSock2(sock) {
+      return TweenMax.to($(sock), 1, {rotation: -10, onComplete: makeItRain, opacity:0.8,  ease:Back.easeOut});
     }
 
     function makeItRain() {
@@ -115,25 +114,25 @@ $(document).ready(function() {
      }
 
      setInterval(function() {
-       animateSock1();
-       animateSock2();
+       animateSock1('#cool1');
+       animateSock2('#cool2');
      }, 2000);
 
-    $('#subscribe').waypoint({ 
-      triggerOnce: true,
-      handler: subList
-    });
-    $('#about').waypoint({
-      triggerOnce: true,
-      handler: coolList
-    });
+    // $('#subscribe').waypoint({ 
+    //   triggerOnce: true,
+    //   handler: subList
+    // });
+    // $('#about').waypoint({
+    //   triggerOnce: true,
+    //   handler: coolList
+    // });
 
-    function coolList() {
-      return TweenMax.staggerTo(".cool-list", 0.5, {scale: 1.1,  ease:Elastic.easeOut, force3D:true}, 1);
-    }
+    // function coolList() {
+    //   return TweenMax.staggerTo(".cool-list", 0.5, {scale: 1.1,  ease:Elastic.easeOut, force3D:true}, 1);
+    // }
 
-    function subList() {
-      return TweenMax.staggerFrom(".sub-list", 1, {scale: 1.1,  opacity:0.8, delay:1, ease:Elastic.easeOut, force3D:true}, 1);
-    }
+    // function subList() {
+    //   return TweenMax.staggerFrom(".sub-list", 1, {scale: 1.1,  opacity:0.8, delay:1, ease:Elastic.easeOut, force3D:true}, 1);
+    // }
 
 }); 

@@ -33,12 +33,12 @@ body {
 .bg2 { background-color: $orange; color: white;}
 .bg3 { background-color: $blue; color: white; }
 .bg4 { background-color: $orange; color: white;}
-.bg5 { background: image-url("image3.jpg") no-repeat 50% 0; background-size: cover; background-position: right !important;  }
+.bg5 { background-color: $blue; color: white;}
 .bg6 { background-color: $blue; color: $orange;}
 .bg7 { background-color: $orange; color: white;}
 .bg8 { background-image: image-url("sock4.png"); background-position: center; height: 300px; width: 200px; background-color: $blue; border: 5px solid $orange; margin: 20px;  }
 .bg9 { background-image: image-url("sock5.png"); background-position: center; height: 300px; width: 200px; background-color: $blue; border: 5px solid $orange; margin: 20px;  }
-.coolpic { background: image-url("Photo2.jpg") no-repeat 50% 0; background-size: cover; height: 620px; border-radius: 20px;}
+.coolpic { background: image-url("Photo2.jpg") 0 0; background-size: cover; height: 620px; border: 5px solid $red;}
 .bg1, .bg2, .bg3, .bg4, .bg5, .bg6, .bg7 {
 	height: 125%;
 	padding: 0;
@@ -259,11 +259,11 @@ h2 {
 .sock-quality {
 	margin: auto;
 	background-color: white;
-	padding-top: 15%;
+	padding-top: 10%;
 	color: $blue;
-	width: 300px;
-	height: 300px;
-	border-radius: 150px;
+	width: 250px;
+	height: 250px;
+	border-radius: 125px;
 	border: 10px solid $red;
 	background-color: $beige;
 	color: $red;
@@ -273,7 +273,6 @@ h2 {
 		margin-top: 10px;
 		margin: auto;
 		font-size: 1.2em;
-		color: black;
 	}
 }
 
@@ -287,8 +286,6 @@ h2 {
 	p {
 		padding: 15px;
 		font-size: 2em;
-		text-align: left;
-		color: $red;
 	}
 }
 .sock1, .sock2 {
@@ -330,7 +327,7 @@ h2 {
 	.content-box {
 		width: 90%;
 		margin: auto;
-		border: 20px solid $orange;
+		border: 10px solid $red;
 		background-color: $beige;
 		padding: 30px;
 	}
@@ -475,4 +472,9 @@ footer .link-times {
 		p {
 			color: white;
 		}
+	}
+	.info {
+		margin: 20px;
+		color: white;
+		text-align: center;
 	}
