@@ -1,8 +1,17 @@
-<div style='color: black;' class='thankyou'>
-    <%= form_for(@email) do |f| %>
-      <%= f.label :target  %>
-      <%= f.text_field :target  %>
 
-      <%= f.submit  %>
-    <% end %>
+<h2 style='color:white;' class='text-center'>Tell a friend</h2>
+<p style='color:white;' class='text-center container'>We send an email to your friend with all the info.</p>
+
+<div class='row'>
+	<div class='col-md-2'>	</div>
+	<div class='col-md-8'>
+		<div style='color: white;' class='thankyou content-box '>
+		    <%= form_for(@email) do |f| %>
+		      <p style='color: black;' class='text-center'><%= f.text_field :target  %></p>
+		      <br>
+		    <p class='text-center'><%= f.submit 'refer a friend'  %></p>
+		    <% end %>
+		</div>
+	</div>
+	<div class='col-md-2'>	</div>
 </div>

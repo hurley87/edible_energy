@@ -4,9 +4,9 @@ class EmailsController < ApplicationController
   	@purchase = Purchase.find_by_uuid(params[:id])
 
   	if @email.save
-      redirect_to instas_new_path
+      redirect_to(:back)
   	else
-  		redirect_to @purchase
+  		redirect_to(:back)
   	end
   end
 
