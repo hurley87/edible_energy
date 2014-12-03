@@ -354,7 +354,6 @@ h2 {
 			margin-top: 10px;
 
 			&:hover {
-				padding: 15px;
 				background-color: $red;
 				transition: all 2s;
 			}
@@ -482,6 +481,8 @@ footer .link-times {
 	}
 	.info {
 		margin: 20px;
+		margin-top: 0;
+		padding: 10px;
 		color: white;
 		text-align: center;
 	}
