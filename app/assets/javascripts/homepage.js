@@ -69,7 +69,7 @@ function parallaxInit() {
 		$('.bg3').parallax("50%", 0.5);
 		$('.bg4').parallax("50%", 0.5);
 		$('.bg5').parallax("50%", 0.5);
-    $('.bg8').parallax("50%", 0.5);
+    // $('.bg8').parallax("100%", 1);
     $('.bg9').parallax("50%", 0.5);
     $('.coolpic').parallax("50%", 0.5);
 	}
@@ -79,7 +79,7 @@ function parallaxInit() {
 //Special Fonts
 //////////////////////////////////////////////////////////////////////////////////////////
   WebFontConfig = {
-    google: { families: [ 'Quicksand::latin', 'Droid+Serif::latin', 'Montserrat::latin' ] }
+    google: { families: ['Raleway::latin', 'Montserrat::latin' ] }
   };
   (function() {
     var wf = document.createElement('script');
@@ -128,7 +128,7 @@ $(document).ready(function() {
     // });
 
     // function coolList() {
-    //   return TweenMax.staggerTo(".cool-list", 0.5, {scale: 1.1,  ease:Elastic.easeOut, force3D:true}, 1);
+    //   return $('.bg8').parallax("100%", 1);
     // }
 
     // function subList() {
