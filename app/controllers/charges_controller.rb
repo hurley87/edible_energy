@@ -22,7 +22,6 @@ class ChargesController < ApplicationController
     shipping_address_line1: params[:shippingAddress1], shipping_address_state: params[:shippingState],
     shipping_address_zip: params[:shippingZip], shipping_name: params[:shippingName], referral: params[:referral]
     )
-		
 
     redirect_to purchase
 

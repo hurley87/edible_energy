@@ -12,7 +12,7 @@ layout 'referal_mailer'
  	 attachments.inline['photocool.png'] = File.read('app/assets/images/photocool.png')
 
  
-	 mail to: email, subject: "Thanks for your purchase!"
+	 mail to: email, subject: "Hey! Check this out."
  end
 
 end

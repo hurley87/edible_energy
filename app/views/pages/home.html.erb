@@ -51,14 +51,6 @@
 </section>
 <div class='sock-dis'>
 
-<p class='text-center'>
-<svg height="25" width="400">
-  <polygon points=" 50,25 100,0 100,50" style="fill:#f37453;  " />
-  <polygon points="100,0 100,50 150,25 200,0 200,50" style="fill:#f37453;" />
-  <polygon points="200,0 200,50 250,25 300,0 300,50" style="fill:#f37453;" />
-  <polygon points="300,50 300,0 350,25" style="fill:#f37453;" />
-</svg> 
-</p>
 <section class='bg3'>
   <div class='container'>
     <div class='row'>
@@ -88,7 +80,6 @@
 <div class='bg8'></div>
 <br>
 <br>
-<br>
 <p class='text-center'>
 <svg height="100" width="400">
   <polygon points=" 50,25 100,0 100,50" style="fill:#f37453;  " />
@@ -116,27 +107,19 @@
  <br id='sock-start'>
 </div>
 </div>
-<p class='text-center'>
-<svg height="100" width="400">
-  <polygon points=" 50,25 100,0 100,50" style="fill:#f37453;  " />
-  <polygon points="100,0 100,50 150,25 200,0 200,50" style="fill:#f37453;" />
-  <polygon points="200,0 200,50 250,25 300,0 300,50" style="fill:#f37453;" />
-  <polygon points="300,50 300,0 350,25" style="fill:#f37453;" />
-</svg> 
-</p>
+
 <section id='subscribe' class='bg5'>
     <div class='row'>
       <div class='col-md-3'>&nbsp;</div>
       <div class='col-md-6'>
-        <br>
-   
+      
             <div class='content-box'>
 
               <h1 class='text-center'>Sock & Box</h1>
               <p class='text-center'>Subscribe now for only $14.99 a month! </p>
-        <!--       
+              
           <%= form_tag charges_path, id:'chargeForm' do %>
-              <div style='margin: auto; width: 85%;' class="field">
+             <!--  <div style='margin: auto; width: 85%;' class="field">
               <p clsas='text-center'><%= label_tag :referral, 'Referral Code:'  %></p>
               <%= text_field_tag 'referral', nil, class: 'form-control'%>
             </div> -->
@@ -165,32 +148,10 @@
           <% end %>
           </div>
         </div>
-      <div class='col-md-3'>
-<!--       <br>
-      <br>
-      <br>
-      <br>
- 
-
-        <p class='sub-list' class='lead'><i class='fa fa-check-circle fa-2x'></i> Every Month</p>
-        <br>
-        <p class='sub-list' class='lead'><i class='fa fa-check-circle fa-2x'></i> Free Delivery</p>
-        <br>
-        <p class='sub-list' class='lead'><i class='fa fa-check-circle fa-2x'></i> Cancel Anytime</p>
-        <br>
-        <p class='sub-list' class='lead'><i class='fa fa-check-circle fa-2x'></i> Unique Styles</p>
-        <br>
-        <p class='sub-list' class='lead'><i class='fa fa-check-circle fa-2x'></i> High Quality</p>
-        
-        <br>
-        <p class='sub-list'  class='lead'><i class='fa fa-check-circle fa-2x'></i> Great Gift Idea</p>
-       
-      </div>
-      <br> -->
-    </div>
-       <br>
-      <br class='clear'>
+      
 </section>
+<br>
+<br class='clear'>
 <script src="https://checkout.stripe.com/checkout.js"></script>
 <script type="text/javascript">
   
@@ -222,7 +183,7 @@
    document.getElementById('btn-buy').addEventListener('click', function(e) {
     handler.open({
       name: 'Sock and Box',
-      description: 'Monthly Sock Delivered ($14.99)',
+      description: 'Monthly Socks Delivered ($14.99)',
       amount: 1499,
       shippingAddress: true,
       billingAddress: true
