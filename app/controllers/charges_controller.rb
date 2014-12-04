@@ -6,7 +6,8 @@ class ChargesController < ApplicationController
 	  customer = Stripe::Customer.create(
 	    :email => params[:stripeEmail],
 	    :card  => params[:stripeToken],
-	    :plan => 'SOCKS'
+	    :plan => 'SOCKS',
+	    :coupon => 'launch'
 	  )
 	 
 	  purchase = Purchase.create(email: params[:stripeEmail], card: params[:stripeToken], 
