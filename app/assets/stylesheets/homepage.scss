@@ -484,8 +484,14 @@ footer .link-times {
 	.info {
 		color: white;
 		text-align: center;
+		font-family: $driod;
+		font-weight: 4em !important; 
 	}
 
 	.middle p {
 		color: $blue;
+		padding: 0;
+	}
+	.middle {
+		padding-bottom: -5px;
 	}
