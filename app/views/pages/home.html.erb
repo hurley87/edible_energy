@@ -15,11 +15,13 @@
     </div>
 </section>
 <section id='about' class='bg2'>
-  <div class='container text-center'>
+  <div class='text-center'>
     <h2 style='font-size: 4em;'>how it works</h2>
     <br>
     <br>
-    <div clsas='row'>
+   
+    <div class='row steps'>
+      <div class='container'> 
       <div id='sock1' class='col-md-4'>
        <div class='circle-num cool-list'>1</div>
         <br>
@@ -46,6 +48,7 @@
         </div>
       </div>
     </div>
+  </div>
     <br class='clear'>
   </div>
 </section>
@@ -69,43 +72,17 @@
     <div class='col-md-2'></div>
   </div>
 </section>
-<div style='background-color: #f37453;' class='middle'>
-  <div style='height: 50px !important;' class='text-center'>
-  <svg height="50" width="600">
-    <polygon points=" 50,25 100,0 100,50" style="fill:#0a3542;  " />
-    <polygon points="100,0 100,50 150,25 200,0 200,50" style="fill:#0a3542;" />
-    <polygon points="200,0 200,50 250,25 300,0 300,50" style="fill:#0a3542;" />
-    <polygon points="300,50 300,0 350,25" style="fill:#0a3542;" />
-    <polygon points="350,25 400,50 400,0" style="fill:#0a3542;" />
-    <polygon points="400,50 400,0 450,25" style="fill:#0a3542;" />
-    <polygon points="450,25 500,0 500,50" style="fill:#0a3542;" />
-    <polygon points="500,0 500,50 550,25" style="fill:#0a3542;" />
-<!--     <polygon points="550,25 600,0 600,50" style="fill:#0a3542;" />
-    <polygon points="600,0 600,50 650,25" style="fill:#0a3542;" /> -->
-  </svg> 
-</div>
-</div>
+
+<div class='pattern'></div>
+
   <p class='info' style='padding: 20px;'>We distribute Happy Socks</p>
 
   <div class='bg8'></div>
 
   <p class='info' style='padding: 20px;'>Because they're fancy as F#*k</p>
-<div style='background-color: #f37453;' class='middle'>
-  <div style='height: 50px !important;' class='text-center'>
-  <svg height="50" width="600">
-    <polygon points=" 50,25 100,0 100,50" style="fill:#0a3542;  " />
-    <polygon points="100,0 100,50 150,25 200,0 200,50" style="fill:#0a3542;" />
-    <polygon points="200,0 200,50 250,25 300,0 300,50" style="fill:#0a3542;" />
-    <polygon points="300,50 300,0 350,25" style="fill:#0a3542;" />
-    <polygon points="350,25 400,50 400,0" style="fill:#0a3542;" />
-    <polygon points="400,50 400,0 450,25" style="fill:#0a3542;" />
-    <polygon points="450,25 500,0 500,50" style="fill:#0a3542;" />
-    <polygon points="500,0 500,50 550,25" style="fill:#0a3542;" />
-<!--     <polygon points="550,25 600,0 600,50" style="fill:#0a3542;" />
-    <polygon points="600,0 600,50 650,25" style="fill:#0a3542;" /> -->
-  </svg> 
-</div>
-</div>
+
+<div class='pattern'></div>
+
 <section id='socks' class='bg4'>
   <br>
   <div class='container text-center'>
@@ -141,7 +118,7 @@
               <p clsas='text-center'><%= label_tag :referral, 'Referral Code:'  %></p>
               <%= text_field_tag 'referral', nil, class: 'form-control'%>
             </div> -->
-               <p class='text-center'><a style="font-size: 1.5em;" id="btn-buy" type="button" class='btn'>become a member</a></p>
+               <p class='text-center'><a style='font-size: 1em;' id="btn-buy" type="button" class='btn'>become a member</a></p>
             <br>
              	<%= hidden_field_tag 'stripeToken' %>
               <%= hidden_field_tag 'stripeEmail' %> 

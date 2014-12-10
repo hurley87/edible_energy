@@ -29,6 +29,11 @@ body {
 	text-decoration: none;
 }
 
+.pattern {
+	height: 200px;
+	background-image: image-url('argle2.png');
+}
+
 .bg1 { background: image-url("background1.jpg") no-repeat 50% 0; background-size: cover; height: 100%; width: 100%; overflow:hidden;}
 .bg2 { background-color: $orange; color: white;}
 .bg3 { background-color: $blue; color: white; }
@@ -109,7 +114,7 @@ h2 {
 #main-nav .nav a:active,
 #main-nav .nav a:hover{
     font-size:15px;
-    line-height:64px;
+    line-height:44px;
     font-weight: 900;
     font-family: $driod;
     text-transform:uppercase;
@@ -203,12 +208,17 @@ h2 {
 }
 	////////////////////////////////////////////
 // about
-////////////////////////////////////////////	
+////////////////////////////////////////////
+
+
 .about {
 	
 	height: 100%;
+	
+
 
 	h3 {
+		
 		font-family: $driod;
 		font-size: 3.5em;
 		padding: 30px;
@@ -342,22 +352,25 @@ h2 {
 	
 		
 		input {
-			width: 100%;
+			width: 50%;
 			padding-right: 20px;
 		}
 
 		a {
 			border: none;
 			background-color: $beige;
-			color: $red;
-			border: 2px solid $red;
-			padding: 5px;
+			color: #2ECC71;
+			border: 2px solid #2ECC71;
+			padding: 10px;
 			text-shadow: none;
 			margin-top: 5px;
+			border-radius: 70px;
+			box-shadow: 1px 1px 1px black;
 
 			&:hover {
-				background-color: $blue;
-				transition: all 2s;
+				background-color: #2ECC71;
+				color: white;
+				transition: all 1.5s;
 			}
 		}
 
@@ -495,3 +508,8 @@ footer .link-times {
 	.middle {
 		padding-bottom: -5px;
 	}
+
+	.steps {
+	background-image: image-url('dots.jpeg');
+	height: 300px;
+}	
