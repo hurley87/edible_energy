@@ -40,11 +40,16 @@ body {
 	background-image: image-url('argle2.png');
 }
 
+.pattern1 {
+	height: 100px;
+	background-image: image-url('dots.jpeg');
+}
+
 .bg1 { background: image-url("background1.jpg") no-repeat 50% 0; background-size: cover; height: 100%; width: 100%; overflow:hidden;}
-.bg2 { background-color: $orange; color: white;}
+.bg2 { background-color: $beige; color: $blue;}
 .bg3 { background-color: $blue; color: white; }
 .bg4 { background-color: $orange; color: white;}
-.bg5 { background-color: $blue; color: white;}
+.bg5 { background-color: $beige; color: white;}
 .bg6 { background-color: $blue; color: $orange;}
 .bg7 { background-color: $orange; color: white;}
 .bg8 { background: image-url('background4.jpg') no-repeat top center fixed; height: 400px;}
@@ -59,6 +64,7 @@ body {
 
 h2 {
 	padding-top: 70px;
+	margin: 0 !important;
 	padding-bottom: 5px;
 	line-height: 120%;
 	font-family: $quick;
@@ -253,12 +259,12 @@ h2 {
 	}
 }
 .info {
-	font-size: 3em;
+	font-size: 4em;
 	color: $red !important;
 	font-family: $quick;
-	font-weight: 800;
+	font-weight: 900;
 	text-align: center;
-	padding-top: 10%;
+	line-height: 400px;
 }
 
 .circle-num {
@@ -269,7 +275,7 @@ h2 {
 	width: 100px;
 	height: 100px;
 	border-radius: 50px;
-	border: 20px solid red;
+	border: 10px solid red;
 }
 
 .sock-quality {
@@ -280,7 +286,7 @@ h2 {
 	width: 250px;
 	height: 250px;
 	border-radius: 125px;
-	border: 20px solid red;
+	border: 10px solid red;
 	background-color: $beige;
 	color: $red;
 
@@ -338,11 +344,12 @@ h2 {
 ////////////////////////////////////////////
 #subscribe {
 	height: 100%;
-	color: $orange;
+	padding: 60px;
+	color: $beige;
 	.content-box {
 		width: 90%;
 		margin: auto;
-		border: 10px solid $red;
+		border: 10px solid red;
 		background-color: $beige;
 		padding: 30px;
 	}
@@ -507,7 +514,3 @@ footer .link-times {
 		padding-bottom: -5px;
 	}
 
-	.steps {
-	background-image: image-url('dots.jpeg');
-	height: 100%;
-}	

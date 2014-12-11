@@ -71,7 +71,7 @@ function parallaxInit() {
 		$('.bg5').parallax("50%", 0.5);
     $('.bg9').parallax("50%", 0.5);
     $('.coolpic').parallax("50%", 0.5);
-    $('.steps').parallax("50%", 0.5);
+    $('.pattern1').parallax("50%", 0.5);
 	}
 }
 
