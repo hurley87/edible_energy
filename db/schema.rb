@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141129213922) do
+ActiveRecord::Schema.define(version: 20141210042546) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -95,6 +95,9 @@ ActiveRecord::Schema.define(version: 20141129213922) do
     t.string   "shipping_address_zip"
     t.string   "shipping_name"
     t.string   "referral"
+    t.string   "note"
+    t.boolean  "one"
+    t.boolean  "three"
   end
 
 end

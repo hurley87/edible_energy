@@ -24,6 +24,10 @@
 		width: 100% !important;
 	}
 
+	h2 {
+		font-size: 3em !important;
+	}
+
 	.content-box {
 		width: 100%;
 	}
@@ -74,6 +78,10 @@
  h1 {
  	font-size: 3em !important;
  }
+
+ h2 {
+ 	margin-top: -30px;
+ }
 	#main-nav #logo h1 {
 		color: green;
 	}
@@ -89,7 +97,7 @@
 	}
 	
 	#about {
-		height: 1250px !important;
+		height: 1400px !important;
 	}
 	.down {
 		padding: none;

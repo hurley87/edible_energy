@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   
   root 'pages#home'
   get 'terms' => 'pages#terms'
+  get 'gift' => 'pages#gift'
   get 'privacy' => 'pages#privacy'
   get 'instagram' => 'pages#instagram'
   get 'faq' => 'pages#faq'

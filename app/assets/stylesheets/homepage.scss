@@ -1,17 +1,23 @@
 @import "font-awesome";
 @import "bootstrap";
+@font-face {
+	font-family: 'Avenir';
+	src: font-url('avenir.ttc') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
 
 $red: #f37453;
 $orange: #0a3542;
 $blue: #0a3542;
 $beige: #FEFBEE;
 $driod: 'Montserrat', sans-serif;
-$quick: 'Quicksand', sans-serif;
+$quick: 'Avenir';
 
 body {
 	padding: 0;
 	margin: 0;
-  font-family: $driod;
+  font-family: $quick;
   background-color: $blue !important;
   overflow-x: hidden;
 }
@@ -25,7 +31,7 @@ body {
 
 #brand a {
 	color: $red;
-	font-family: $driod;
+	font-family: $quick;
 	text-decoration: none;
 }
 
@@ -41,22 +47,21 @@ body {
 .bg5 { background-color: $blue; color: white;}
 .bg6 { background-color: $blue; color: $orange;}
 .bg7 { background-color: $orange; color: white;}
-.bg8 { background: image-url('background4.jpg') no-repeat top center fixed; height: 300px;}
+.bg8 { background: image-url('background4.jpg') no-repeat top center fixed; height: 400px;}
 
 .bg9 { background-image: image-url("sock5.png"); background-position: center; height: 300px; width: 200px; background-color: $blue; border: 5px solid $orange; margin: 20px;  }
 .coolpic { background: image-url("blue2.jpg") 0 0; background-size: cover; height: 620px; border: 5px solid $red;}
 .bg1, .bg2, .bg3, .bg4, .bg5, .bg6, .bg7 {
-	height: 125%;
 	padding: 0;
 	background-attachment: fixed;
-	font-family: 'Raleway', sans-serif;
+	font-family: 	$quick;
 }
 
 h2 {
 	padding-top: 70px;
 	padding-bottom: 5px;
 	line-height: 120%;
-	font-family: $driod;
+	font-family: $quick;
 	font-size: 6em;
 }
 .bg6, .bg7  {
@@ -85,6 +90,7 @@ h2 {
 #main-nav .navbar-nav li {
     display:inline-block;
     float:none;
+
 }
 
 #main-nav{
@@ -116,7 +122,7 @@ h2 {
     font-size:15px;
     line-height:44px;
     font-weight: 900;
-    font-family: $driod;
+    font-family: $quick;
     text-transform:uppercase;
     background:transparent;
     color: $red;
@@ -142,11 +148,6 @@ h2 {
     display:none;
 }
 
-#main-nav.scrolled .nav #logo a:hover {
-    color: $red;
-    -webkit-transition:color .2s ease-out;
-    transition:color .2s ease-out;
-}
 
 #site-nav {
 	color: $red;
@@ -164,22 +165,18 @@ h2 {
 // opening
 ////////////////////////////////////////////
 .content-box {
-		width: 50%;
+		width: 60%;
 		margin: auto;
 		padding: 15px;
-		border: 5px solid $orange;
-		background-color: $blue;
 		padding-bottom: 20px;
-		border-radius: 15px;
 
 		h1 {
 			color: $red;
-			font-size: 4em;
+			font-size: 6em;
 		}
 
 		p {
 			font-size: 1.5em;
-			color: white;
 		}
 
 	}
@@ -192,7 +189,7 @@ h2 {
 	font-size: 6em;
 	
   a {
-  	color: $blue;
+  	color: $red;
 
   	&:hover {
 		 	transition: all 1s;
@@ -204,22 +201,22 @@ h2 {
 }
 
 .thankyou {
-	font-family: 'Raleway', sans-serif;
+	font-family: $quick;
 }
 	////////////////////////////////////////////
 // about
 ////////////////////////////////////////////
 
+#about {
+
+}
 
 .about {
 	
-	height: 100%;
 	
-
-
 	h3 {
 		
-		font-family: $driod;
+		font-family: $quick;
 		font-size: 3.5em;
 		padding: 30px;
 	}
@@ -256,19 +253,23 @@ h2 {
 	}
 }
 .info {
-	font-size: 2em;
-	font-family: 'Raleway', sans-serif;
+	font-size: 3em;
+	color: $red !important;
+	font-family: $quick;
+	font-weight: 800;
+	text-align: center;
+	padding-top: 10%;
 }
 
 .circle-num {
 	margin: auto;
 	background-color: $beige;
 	font-size: 3.5em;
-	color: $red;
+	color: red;
 	width: 100px;
 	height: 100px;
 	border-radius: 50px;
-	border: 10px solid $red;
+	border: 20px solid red;
 }
 
 .sock-quality {
@@ -279,7 +280,7 @@ h2 {
 	width: 250px;
 	height: 250px;
 	border-radius: 125px;
-	border: 10px solid $red;
+	border: 20px solid red;
 	background-color: $beige;
 	color: $red;
 
@@ -304,9 +305,7 @@ h2 {
 		font-size: 2em;
 	}
 }
-.sock1, .sock2 {
-	position: relative;
-}
+
 
 #instagram {
 
@@ -327,7 +326,7 @@ h2 {
 	font-size: 1.1em;
 
 	h3 {
-		font-family: $driod;
+		font-family: $quick;
 		font-size: 4em;
 		padding: 30px;
 	}
@@ -366,6 +365,7 @@ h2 {
 			margin-top: 5px;
 			border-radius: 70px;
 			box-shadow: 1px 1px 1px black;
+			font-size: 0.9em;
 
 			&:hover {
 				background-color: #2ECC71;
@@ -494,11 +494,9 @@ footer .link-times {
 			color: white;
 		}
 	}
-	.info {
-		color: white;
-		text-align: center;
-		font-family: $driod;
-		font-weight: 4em !important; 
+
+	.bg8 p {
+		font-weight: 6em !important; 
 	}
 
 	.middle p {
@@ -511,5 +509,5 @@ footer .link-times {
 
 	.steps {
 	background-image: image-url('dots.jpeg');
-	height: 300px;
+	height: 100%;
 }	

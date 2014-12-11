@@ -1,111 +1,5 @@
-<section id='top' class='bg1'>
-    <br>
-    <br>
-    <br>
-  <div class='container'> 
-   <div id='opening'>
-    <div class='content-box'>
-    
-        <h1 class='text-center'>Sock & Box</h1>
-        <h3 class='text-center'>Comfortable socks that look great, delivered monthly.</h3>
-   
-    </div>
-    <div>
-      <p class='open-arrow'><a class='scroll-link' href="#about"><i class='fa fa-arrow-circle-down'></i></a></p>
-    </div>
-</section>
-<section id='about' class='bg2'>
-  <div class='text-center'>
-    <h2 style='font-size: 4em;'>how it works</h2>
-    <br>
-    <br>
-   
-    <div class='row steps'>
-      <div class='container'> 
-      <div id='sock1' class='col-md-4'>
-       <div class='circle-num cool-list'>1</div>
-        <br>
-        <div class='sock-quality cool-list'>
-          <h3>Subcribe</h3>
-          <p>Let us know your shipping info and we will send you a pair of our socks monthly. </p>
-        </div>
-      </div>
-      <div id='sock2' class='col-md-4'>
-        <div class='circle-num cool-list'>2</div>
-        <br>
-        <div class='sock-quality cool-list'>
-          <h3>Receive Socks</h3>
-          <p>We'll get the socks to you in 5-10 business days. Shipping is free of charge. </p>
-        </div>
-      </div>
-      <div id='sock3' class='col-md-4'>
-        
-         <div class='circle-num text-center cool-list'>3</div>
-        <br>
-         <div class='sock-quality cool-list'>
-          <h3>Get Fancy</h3>
-          <p>You receive them in the mail and feel great by slipping on your fresh, new, fancy socks!</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-    
-  </div>
-</section>
-<div class='sock-dis'>
-<br>
-<section class='bg3'>
-  <div class='container'>
-    <div class='row'>
-      <div class='col-md-2'></div>
-      <div class='intro col-md-8'>
-      
- 
-        <p  id='cool1' class='text-center'><span class='sock1'><%= image_tag("happysocks2.png") %></span><span class='sock2'><%= image_tag("happysocks3.png") %></span></p>
-        <div class='sock-list'>
-          <p class='text-center'>Colourful socks have recently become popular among the fashion conscious. There is a pair of high-quality socks for every occasion, mindset and style!</p>
-        </div>
-        <br>
-      </div>
-      <br>
-    </div>
-    <div class='col-md-2'></div>
-  </div>
-</section>
-
-<div class='pattern'></div>
-
-  
-
-  <div class='bg8'>
-  <p class='info'>We distribute <i>Happy Socks</i> because they're fancy as F#*k</p>
-
-  </div>
-
-
-<div class='pattern'></div>
-
-<section id='socks' class='bg4'>
-  <br>
-  <div class='container text-center'>
-  
-    <div clsas='row'>
-      <div class='col-md-2'></div>
-      <div class='col-md-8'>
-        <p id='cool2'><span class='sock1'><%= image_tag("happysocks4.png") %></span><span class='sock2'><%= image_tag("happysocks5.png") %></span></p>
-        <div class='sock-list'>
-          <p class='text-center'>You’ll never get the same pair twice and we promise you will love the pair you get – if you don’t, send em back and we’ll get you a fresh&nbsp;design!</p>
-        </div>
-    </div> 
-    <div class='col-md-2'></div>    
-  </div>
-  <br>
-</section>
- <br id='sock-start'>
-</div>
-</div>
-
+<div >
+  <h2  style='margin-top: 20px;' class='text-center'>Making it rain</h2>
 <section id='subscribe' class='bg5'>
     <div class='row'>
       <div class='col-md-3'>&nbsp;</div>
@@ -114,14 +8,11 @@
             <div class='content-box'>
 
               <h1 class='text-center'>Sock & Box</h1>
-              <p class='text-center'>Subscribe now for only <span style='text-decoration: line-through;'>$14.99</span> a month!<br>(First 50 customers get their first month for only $8.99!)</p>
+              <p class='text-center'>Buy just one pair of socks for  <span style='text-decoration: line-through;'>$14.99</span>!<br>(First 50 customers can buy a pair for only $8.99!)</p>
               <p class='text-center'></p>
           <%= form_tag charges_path, id:'chargeForm' do %>
-             <!--  <div style='margin: auto; width: 85%;' class="field">
-              <p clsas='text-center'><%= label_tag :referral, 'Referral Code:'  %></p>
-              <%= text_field_tag 'referral', nil, class: 'form-control'%>
-            </div> -->
-               <p class='text-center'><a id="btn-buy" type="button" class='btn'>become a member</a></p>
+                             
+            <p class='text-center'><a style='font-size: 1.2em;' id="btn-buy" type="button" class='btn'>become a member</a></p>
             <br>
              	<%= hidden_field_tag 'stripeToken' %>
               <%= hidden_field_tag 'stripeEmail' %> 
@@ -141,15 +32,14 @@
               <%= hidden_field_tag 'shippingState' %>
               <%= hidden_field_tag 'shippingZip' %> 
               <%= hidden_field_tag 'shippingName' %>
-
+              <%= hidden_field_tag 'one' %>
               
           <% end %>
           </div>
         </div>
       
 </section>
-<br>
-<br class='clear'>
+</div>
 <script src="https://checkout.stripe.com/checkout.js"></script>
 <script type="text/javascript">
   
@@ -174,6 +64,7 @@
       document.getElementById("shippingState").value = arg.shipping_address_state;
       document.getElementById("shippingZip").value = arg.shipping_address_zip;
       document.getElementById("shippingName").value = arg.shipping_name;
+      document.getElementById("one").value = true;
       document.getElementById("chargeForm").submit();
     }
   });
@@ -181,7 +72,7 @@
     handler.open({
       name: 'Sock and Box',
       description: 'Monthly Socks Delivered ($8.99)',
-      amount: 1499,
+      amount: 899,
       shippingAddress: true,
       billingAddress: true
    });
