@@ -97,7 +97,7 @@
       <div class='col-md-8'>
         <p id='cool2'><span class='sock1'><%= image_tag("happysocks4.png") %></span><span class='sock2'><%= image_tag("happysocks5.png") %></span></p>
         <div class='sock-list'>
-          <p class='text-center'>You’ll never get the same pair twice and we promise you will love the pair you get – if you don’t, send em back and we’ll get you a fresh&nbsp;design!</p>
+          <p class='text-center'>The socks we provide are manufactured using only the best materials, specifically designed for laser targeted comfort in all the right areas. The high end material will not fade or shrink. These socks are for the business man who has long days and less time. Slide into comfort and convenience with Sock & Box.</p>
         </div>
     </div> 
     <div class='col-md-2'></div>    
@@ -119,10 +119,7 @@
               <p class='text-center'>Subscribe now for only <span style='text-decoration: line-through;'>$14.99</span> a month!<br>(First 50 customers get their first month for only $8.99!)</p>
               <p class='text-center'></p>
           <%= form_tag charges_path, id:'chargeForm' do %>
-             <!--  <div style='margin: auto; width: 85%;' class="field">
-              <p clsas='text-center'><%= label_tag :referral, 'Referral Code:'  %></p>
-              <%= text_field_tag 'referral', nil, class: 'form-control'%>
-            </div> -->
+    
                <p class='text-center'><a id="btn-buy" type="button" class='btn'>become a member</a></p>
             <br>
              	<%= hidden_field_tag 'stripeToken' %>
