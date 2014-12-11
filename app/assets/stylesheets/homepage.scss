@@ -46,10 +46,10 @@ body {
 }
 
 .bg1 { background: image-url("background1.jpg") no-repeat 50% 0; background-size: cover; height: 100%; width: 100%; overflow:hidden;}
-.bg2 { background-color: $beige; color: $blue;}
-.bg3 { background-color: $blue; color: white; }
+.bg2 { background-color: $red; color: $blue;}
+.bg3 { background-color: $blue; color: white;}
 .bg4 { background-color: $orange; color: white;}
-.bg5 { background-color: $beige; color: white;}
+.bg5 { background-color: $red; color: white;}
 .bg6 { background-color: $blue; color: $orange;}
 .bg7 { background-color: $orange; color: white;}
 .bg8 { background: image-url('background4.jpg') no-repeat top center fixed; height: 400px;}
@@ -179,10 +179,16 @@ h2 {
 		h1 {
 			color: $red;
 			font-size: 6em;
+			font-weight: 800;
+		}
+
+		h3 {
+			font-size: 2em;
+			font-weight: 800;
 		}
 
 		p {
-			font-size: 1.5em;
+			font-size: 1.2em;
 		}
 
 	}
@@ -345,7 +351,7 @@ h2 {
 #subscribe {
 	height: 100%;
 	padding: 60px;
-	color: $beige;
+	color: $red;
 	.content-box {
 		width: 90%;
 		margin: auto;
