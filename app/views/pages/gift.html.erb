@@ -1,19 +1,23 @@
-<div >
+<div id='gift'>
   <h2  style='margin-top: 20px;' class='text-center'>&nbsp;</h2>
 <section id='subscribe' class='bg5'>
     <div class='row'>
-
-      <div class='col-md-3'>&nbsp;</div>
       <div class='col-md-6'>
-          <p>heyyyy</p>
+        <h1>Give the gift of Socks</h1>
+        
+        <h3>Its the holidays, your busy and we want to help. </h3>
+      </div>
+      <div class='col-md-6'>
+          
             <div class='content-box'>
 
               <h1 class='text-center'>Sock & Box</h1>
-              <p class='text-center'>Buy just one pair of socks for  <span style='text-decoration: line-through;'>$14.99</span>!<br>(First 50 customers can buy a pair for only $8.99!)</p>
+              <p class='text-center'>Buy just one pair of socks for  <span style='text-decoration: line-through;'>$8.99</span>!</p>
               <p class='text-center'></p>
           <%= form_tag charges_path, id:'chargeForm' do %>
                              
-            <p class='text-center'><a style='font-size: 1.2em;' id="btn-buy" type="button" class='btn'>become a member</a></p>
+            <p class='text-center'><a style='font-size: 1.2em;' id="btn-buy" type="button" class='btn'>purchase</a></p>
+            <p class='text-center'>PS. you can buy them a <a href="/">subscription</a> too.</p>
             <br>
              	<%= hidden_field_tag 'stripeToken' %>
               <%= hidden_field_tag 'stripeEmail' %> 

@@ -46,13 +46,23 @@ body {
 }
 
 .bg1 { background: image-url("background1.jpg") no-repeat 50% 0; background-size: cover; height: 100%; width: 100%; overflow:hidden;}
-.bg2 { background-color: $red; color: $blue;}
-.bg3 { background-color: $blue; color: white;}
-.bg4 { background-color: $orange; color: white;}
+.bg2 { background-color: $red; color: $blue; padding: 50px !important;}
+.bg3 { background-color: $blue; color: white;
+
+p {
+	padding-bottom: 100px !important;
+	padding-top: 100px !important;
+
+} }
+.bg4 { background-color: $orange; color: white; p {
+	padding-bottom: 100px !important;
+	padding-top: 100px !important;
+
+} }
 .bg5 { background-color: $red; color: white;}
 .bg6 { background-color: $blue; color: $orange;}
 .bg7 { background-color: $orange; color: white;}
-.bg8 { background: image-url('background4.jpg') no-repeat top center fixed; height: 400px;}
+.bg8 { background: image-url('background4.jpg') no-repeat top center fixed; height: 450px;}
 
 .bg9 { background-image: image-url("sock5.png"); background-position: center; height: 300px; width: 200px; background-color: $blue; border: 5px solid $orange; margin: 20px;  }
 .coolpic { background: image-url("blue2.jpg") 0 0; background-size: cover; height: 620px; border: 5px solid $red;}
@@ -270,7 +280,7 @@ h2 {
 	font-family: $quick;
 	font-weight: 900;
 	text-align: center;
-	line-height: 400px;
+	line-height: 450px;
 }
 
 .circle-num {
@@ -350,7 +360,7 @@ h2 {
 ////////////////////////////////////////////
 #subscribe {
 	height: 100%;
-	padding: 60px;
+	padding: 100px;
 	color: $red;
 	.content-box {
 		width: 90%;
