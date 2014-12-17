@@ -6,8 +6,7 @@ class ChargesController < ApplicationController
 	  customer = Stripe::Customer.create(
 	    :email => params[:stripeEmail],
 	    :card  => params[:stripeToken],
-	    :plan => 'SOCKS',
-	    :coupon => 'launch1'
+	    :plan => 'SOCKS'
 	  )
 	 
 	  purchase = Purchase.create(email: params[:stripeEmail], card: params[:stripeToken], 
@@ -21,10 +20,10 @@ class ChargesController < ApplicationController
 	    shipping_address_apt: params[:shippingApt], shipping_address_city: params[:shippingCity],
 	    ashipping_address_country: params[:shippingCountry], shipping_address_country_code: params[:shippingCountryCode],
 	    shipping_address_line1: params[:shippingAddress1], shipping_address_state: params[:shippingState],
-	    shipping_address_zip: params[:shippingZip], shipping_name: params[:shippingName], referral: params[:referral], one: params[:one]
+	    shipping_address_zip: params[:shippingZip], shipping_name: params[:shippingName], referral: params[:referral]
     )
 
-    redirect_to root_path
+    redirect_to purchase
 
 	rescue Stripe::CardError => e
 	  flash[:error] = e.message
