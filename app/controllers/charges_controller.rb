@@ -7,7 +7,7 @@ class ChargesController < ApplicationController
 	    :email => params[:stripeEmail],
 	    :card  => params[:stripeToken],
 	    :plan => 'SOCKS',
-	    :coupon => 'launch'
+	    :coupon => 'launch1'
 	  )
 	 
 	  purchase = Purchase.create(email: params[:stripeEmail], card: params[:stripeToken], 
