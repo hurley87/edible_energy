@@ -1,6 +1,6 @@
 class PurchasesController < ApplicationController
 	def show
-    @purchase = Purchase.find(params[:id])
+    @purchase = Purchase.find(11)
     @email = Email.new
   end
 end

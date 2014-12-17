@@ -24,7 +24,7 @@ class ChargesController < ApplicationController
 	    shipping_address_zip: params[:shippingZip], shipping_name: params[:shippingName], referral: params[:referral], one: params[:one]
     )
 
-    redirect_to purchase
+    redirect_to root_path
 
 	rescue Stripe::CardError => e
 	  flash[:error] = e.message
