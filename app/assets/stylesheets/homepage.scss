@@ -13,6 +13,7 @@ $blue: #0a3542;
 $beige: #FEFBEE;
 $driod: 'Montserrat', sans-serif;
 $quick: 'Avenir';
+$green: #90C695;
 
 body {
 	padding: 0;
@@ -29,20 +30,22 @@ body {
 	clear: both;
 }
 
+
 #brand a {
 	color: $red;
 	font-family: $quick;
 	text-decoration: none;
+
 }
 
 .pattern {
 	height: 100px;
-	background-image: image-url('argle2.png');
+	background-image: image-url('tile2.png');
 }
 
 .pattern1 {
 	height: 100px;
-	background-image: image-url('dots.jpeg');
+	background-image: image-url('tile1.png');
 }
 
 .bg1 { background: image-url("background1.jpg") no-repeat 50% 0; background-size: cover; height: 100%; width: 100%; overflow:hidden;}
@@ -159,7 +162,9 @@ h2 {
     opacity:1;
 }
 
-
+ #logo  {
+	background-color: red;
+}
 #main-nav .nav #logo a:before {
     display:none;
 }
@@ -185,20 +190,26 @@ h2 {
 		margin: auto;
 		padding: 15px;
 		padding-bottom: 20px;
+		background-color: $blue;
 
 		h1 {
 			color: $red;
 			font-size: 6em;
 			font-weight: 800;
+			background-color: $blue;
 		}
 
 		h3 {
 			font-size: 2em;
 			font-weight: 800;
+			color: $green;
+			background-color: $blue;
+			padding: 10px;
 		}
 
 		p {
 			font-size: 1.2em;
+
 		}
 
 	}
@@ -287,11 +298,12 @@ h2 {
 	margin: auto;
 	background-color: $beige;
 	font-size: 3.5em;
-	color: red;
+	color: $blue;
 	width: 100px;
 	height: 100px;
 	border-radius: 50px;
-	border: 10px solid red;
+	border: 10px solid #90C695;
+	text-align: center;
 }
 
 .sock-quality {
@@ -302,9 +314,9 @@ h2 {
 	width: 250px;
 	height: 250px;
 	border-radius: 125px;
-	border: 10px solid red;
+	border: 10px solid #90C695;
 	background-color: $beige;
-	color: $red;
+	color: $blue;
 
 	p {
 		width: 75%;
@@ -358,14 +370,17 @@ h2 {
 ////////////////////////////////////////////
 // subscribe
 ////////////////////////////////////////////
+
+
 #subscribe {
 	height: 100%;
 	padding: 100px;
 	color: $red;
+
 	.content-box {
 		width: 90%;
 		margin: auto;
-		border: 10px solid red;
+		border: 10px solid $green;
 		background-color: $beige;
 		padding: 30px;
 	}
@@ -530,3 +545,10 @@ footer .link-times {
 		padding-bottom: -5px;
 	}
 
+
+
+#happysocks {
+	background-color: $blue;
+	padding: 10px;
+	border: 10px solid $green;
+}
