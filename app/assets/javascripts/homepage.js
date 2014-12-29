@@ -98,7 +98,7 @@ $(document).ready(function() {
 
 
     setInterval(function() {
-       $('.open-arrow').animate({'bottom': '-10px'}).animate({'bottom': '10px'});
+       $('.open-arrow').animate({'bottom': '-5px'}).animate({'bottom': '-15px'});
     }, 2000);
     
     function animateSock1(sock) {
@@ -117,22 +117,5 @@ $(document).ready(function() {
        animateSock1('#cool1');
        animateSock2('#cool2');
      }, 2000);
-
-    // $('#subscribe').waypoint({ 
-    //   triggerOnce: true,
-    //   handler: subList
-    // });
-    // $('#about').waypoint({
-    //   triggerOnce: true,
-    //   handler: coolList
-    // });
-
-    // function coolList() {
-    //   return $('.bg8').parallax("100%", 1);
-    // }
-
-    // function subList() {
-    //   return TweenMax.staggerFrom(".sub-list", 1, {scale: 1.1,  opacity:0.8, delay:1, ease:Elastic.easeOut, force3D:true}, 1);
-    // }
 
 }); 
