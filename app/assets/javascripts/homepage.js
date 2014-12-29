@@ -28,9 +28,6 @@ $(document).ready(function ($){
 	return false;
   });
 
-  $('.ock').show(2000).hide(2000);
-  $('.ox').show(2000).hide(2000);
-  $('h1').slideDown(2000);
 });
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -68,9 +65,7 @@ function parallaxInit() {
 		$('.bg2').parallax("50%", 0.5);
 		$('.bg3').parallax("50%", 0.5);
 		$('.bg4').parallax("50%", 0.5);
-		$('.bg5').parallax("50%", 0.5);
     $('.bg9').parallax("50%", 0.5);
-    $('.coolpic').parallax("50%", 0.5);
     // $('.pattern1').parallax("50%", 0.5);
 	}
 }

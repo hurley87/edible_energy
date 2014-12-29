@@ -51,6 +51,20 @@ $beige: #FEFBEE;
 	color: #0a3542;
 	margin: 0;
 }
+#gift .content-box h1 {
+	color: $red;
+}
+
+#gift ul li {
+	display: inline-block;
+	font-size: 1.5em;
+	width: 150px;
+}
+
+#gift ul li a {
+	text-decoration: none;
+	width: 120px;
+}
 
 #gift h3 {
 	color: #0a3542;

@@ -21,9 +21,12 @@ class ChargesController < ApplicationController
 	    shipping_address_apt: params[:shippingApt], shipping_address_city: params[:shippingCity],
 	    ashipping_address_country: params[:shippingCountry], shipping_address_country_code: params[:shippingCountryCode],
 	    shipping_address_line1: params[:shippingAddress1], shipping_address_state: params[:shippingState],
-	    shipping_address_zip: params[:shippingZip], shipping_name: params[:shippingName], referral: params[:referral]
+	    shipping_address_zip: params[:shippingZip], shipping_name: params[:shippingName], referral: params[:referral], 
+	    one: params[:one], two: params[:two], three: params[:three]
     )
-
+	
+	pry 
+	
     redirect_to purchase
 
 	rescue Stripe::CardError => e

@@ -1,23 +1,32 @@
+
 <div id='gift'>
-  <h2  style='margin-top: 20px;' class='text-center'>&nbsp;</h2>
+  <h2  style='margin-top: 10px;' class='text-center'>&nbsp;</h2>
 <section id='subscribe' class='bg5'>
     <div class='row'>
       <div class='col-md-6'>
         <h1>Give the gift of Socks</h1>
         
-        <h3>Its the holidays, your busy and we want to help. </h3>
+        <h3>Sock & Box is the perfect gift for the men in your life. Simply pick the subscription length and you're good to go! They'll thank you every month.</h3>
+        <br>
+        <p class='text-center'>
+        <ul>
+          <li> <a class='option' id='oneMonth'>1 pair</a> </li>
+          <li> <a class='option' id='twoMonth'>6 pairs</a> </li>
+          <li> <a class='option' id='threeMonth'>12 pairs</a> </li>
+        </ul>
+        </p>
       </div>
       <div class='col-md-6'>
           
             <div class='content-box'>
 
               <h1 class='text-center'>Sock & Box</h1>
-              <p class='text-center'>Buy just one pair of socks for  <span style='text-decoration: line-through;'>$8.99</span>!</p>
+              <p id='infop' class='text-center'>Buy just one pair of socks for  <span style='text-decoration: line-through;'>$8.99</span>!</p>
               <p class='text-center'></p>
           <%= form_tag charges_path, id:'chargeForm' do %>
                              
             <p class='text-center'><a style='font-size: 1.2em;' id="btn-buy" type="button" class='btn'>purchase</a></p>
-            <p class='text-center'>PS. you can buy them a <a href="/">subscription</a> too.</p>
+    
             <br>
              	<%= hidden_field_tag 'stripeToken' %>
               <%= hidden_field_tag 'stripeEmail' %> 
@@ -38,6 +47,8 @@
               <%= hidden_field_tag 'shippingZip' %> 
               <%= hidden_field_tag 'shippingName' %>
               <%= hidden_field_tag 'one' %>
+              <%= hidden_field_tag 'two' %>
+              <%= hidden_field_tag 'three' %>
               
           <% end %>
           </div>
@@ -47,6 +58,27 @@
 </div>
 <script src="https://checkout.stripe.com/checkout.js"></script>
 <script type="text/javascript">
+  
+  $('#oneMonth').on('click', function() {
+      $('#infop').text('You purchase 1 pair of socks.');
+      document.getElementById("two").value = false;
+      document.getElementById("three").value = false;
+      document.getElementById("one").value = true;
+  });
+
+  $('#twoMonth').on('click', function() {
+      $('#infop').text('You purchase one pair each month for the next 6 months.');
+      document.getElementById("two").value = true;
+      document.getElementById("three").value = false;
+      document.getElementById("one").value = false;
+  });
+
+  $('#threeMonth').on('click', function() {
+      $('#infop').text('You purchase one pair each month for the next year.');
+      document.getElementById("two").value = false;
+      document.getElementById("three").value = true;
+      document.getElementById("one").value = false;
+  });
   
   var handler = StripeCheckout.configure({
     key: '<%= @stripe_key %>',
@@ -69,7 +101,7 @@
       document.getElementById("shippingState").value = arg.shipping_address_state;
       document.getElementById("shippingZip").value = arg.shipping_address_zip;
       document.getElementById("shippingName").value = arg.shipping_name;
-      document.getElementById("one").value = true;
+      
       document.getElementById("chargeForm").submit();
     }
   });
