@@ -337,6 +337,7 @@ h2 {
 	p {
 		padding: 15px;
 		font-size: 2em;
+		color: $green;
 	}
 }
 
@@ -381,7 +382,7 @@ h2 {
 		width: 90%;
 		margin: auto;
 		border: 10px solid $green;
-		background-color: $beige;
+		background-color: $blue;
 		padding: 30px;
 	}
 
@@ -395,14 +396,14 @@ h2 {
 
 		a {
 			border: none;
-			background-color: $beige;
+			background-color: $blue;
 			color: #2ECC71;
 			border: 2px solid #2ECC71;
 			padding: 10px;
 			text-shadow: none;
 			margin-top: 5px;
 			border-radius: 70px;
-			box-shadow: 1px 1px 1px black;
+
 			font-size: 0.9em;
 
 			&:hover {
@@ -418,7 +419,7 @@ h2 {
 		}
 
 		p {
-			color: black;
+			color: $green;
 			font-family: 'Raleway', sans-serif;
 		}
 	
@@ -464,17 +465,16 @@ h2 {
 ////////////////////////////////////////////
 // footer
 ////////////////////////////////////////////
-footer p a{
+footer a{
 	text-decoration: none;
-	color: white;
-
+	color: $green;
 	&:hover {
 		color: $red;
 	}
 }
 
 footer {
-	color: white;
+	color: $green;
 	font-family: 'Raleway', sans-serif;
 	background-color: $orange;
 }
@@ -485,7 +485,7 @@ footer h3 {
 
 footer .link-times {
 	text-decoration: none;
-	color: white;
+	color: $green;
 
 	&:hover {
 		color: $red;
