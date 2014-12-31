@@ -3,13 +3,51 @@ class ChargesController < ApplicationController
 	end
 
 	def create
+
+	if params[:three] == 'true'
+		customer = Stripe::Customer.create(
+		    :email => 'hello@sockandbox.com',
+		    :card  => params[:stripeToken]
+		  )
+
+		  charge = Stripe::Charge.create(
+		    :customer    => customer.id,
+		    :amount      => 6900,
+		    :description => '6 pairs',
+		    :currency    => 'cad'
+		  )
+	elsif params[:two] == 'true'
+		customer = Stripe::Customer.create(
+		    :email => 'hello@sockandbox.com',
+		    :card  => params[:stripeToken]
+		  )
+
+		  charge = Stripe::Charge.create(
+		    :customer    => customer.id,
+		    :amount      => 4000,
+		    :description => '3 pairs',
+		    :currency    => 'cad'
+		  )
+	elsif params[:one] == 'true'	
+		customer = Stripe::Customer.create(
+		    :email => 'hello@sockandbox.com',
+		    :card  => params[:stripeToken]
+		  )
+
+		  charge = Stripe::Charge.create(
+		    :customer    => customer.id,
+		    :amount      => 1500,
+		    :description => '1 pair',
+		    :currency    => 'cad'
+		  )
+	else	
 	  customer = Stripe::Customer.create(
 	    :email => params[:stripeEmail],
 	    :card  => params[:stripeToken],
 	    :plan => 'SOCKS'
 	  )
-	 
-	  pry
+	end
+
 	  purchase = Purchase.create(email: params[:stripeEmail], card: params[:stripeToken], 
 	    amount: params[:amount], description: 'You get one pair of cool socks a month!', currency: 'cad',
 	    customer_id: customer.id, amount: 1499, product_id: 1, uuid: SecureRandom.uuid, 

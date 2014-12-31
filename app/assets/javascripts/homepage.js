@@ -89,28 +89,3 @@ function parallaxInit() {
 //////////////////////////////////////////////////////////////////////////////////////////
 //waypoints
 //////////////////////////////////////////////////////////////////////////////////////////
-$(document).ready(function() {
-
-
-    setInterval(function() {
-       $('.open-arrow').animate({'bottom': '-5px'}).animate({'bottom': '-15px'});
-    }, 2000);
-    
-    function animateSock1(sock) {
-      return TweenMax.to($(sock), 1, {rotation: -10, onComplete: makeItRain,  ease:Back.easeOut});
-    }
-    function animateSock2(sock) {
-      return TweenMax.to($(sock), 1, {rotation: -10, onComplete: makeItRain,  ease:Back.easeOut});
-    }
-
-    function makeItRain() {
-      TweenMax.to($('#cool1'), 2, {rotation: 10, onComplete: makeItRain,  ease:Back.easeOut });
-      TweenMax.to($('#cool2'), 2, {rotation: 10, onComplete: makeItRain,  ease:Back.easeOut });
-     }
-
-     setInterval(function() {
-       animateSock1('#cool1');
-       animateSock2('#cool2');
-     }, 2000);
-
-}); 

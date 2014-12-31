@@ -99,3 +99,22 @@ $green: #90C695;
 
 .bg11 { background: image-url('HSgirl.jpg') no-repeat top center fixed; height: 450px;}
 
+.sp {
+	box-shadow: 2px 2px 2px black;
+	background-color: $green;
+}
+
+.option {
+	border: 2px solid $blue;
+	padding: 5px 10px 5px 10px;
+	font-size: 0.7em;
+	text-decoration: none !important;
+	color: $blue !important;
+	border-radius: 70px;
+
+	&:hover {
+		transition: 2s all;
+		background-color: $blue;
+		color: white !important;
+	}
+}
