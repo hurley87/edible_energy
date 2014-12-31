@@ -12,7 +12,4 @@
 //
 //= require jquery
 //= require bootstrap-sprockets
-//= require jquery_ujs
-//= require 'greensock/TweenLite'
-//= require 'greensock/easing/EasePack'
 //= require_tree .

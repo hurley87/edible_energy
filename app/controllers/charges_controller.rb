@@ -6,10 +6,10 @@ class ChargesController < ApplicationController
 	  customer = Stripe::Customer.create(
 	    :email => params[:stripeEmail],
 	    :card  => params[:stripeToken],
-	    :plan => 'SOCKS',
-	    :coupon => 'launch1'
+	    :plan => 'SOCKS'
 	  )
 	 
+	  pry
 	  purchase = Purchase.create(email: params[:stripeEmail], card: params[:stripeToken], 
 	    amount: params[:amount], description: 'You get one pair of cool socks a month!', currency: 'cad',
 	    customer_id: customer.id, amount: 1499, product_id: 1, uuid: SecureRandom.uuid, 
@@ -25,9 +25,8 @@ class ChargesController < ApplicationController
 	    one: params[:one], two: params[:two], three: params[:three]
     )
 	
-	pry 
 	
-    redirect_to purchase
+    redirect_to root_path
 
 	rescue Stripe::CardError => e
 	  flash[:error] = e.message

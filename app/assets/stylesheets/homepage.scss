@@ -19,7 +19,7 @@ body {
 	padding: 0;
 	margin: 0;
   font-family: $quick;
-  background-color: $blue !important;
+  background-color: white !important;
   overflow-x: hidden;
 }
 #top {
@@ -49,22 +49,25 @@ body {
 }
 
 .bg1 { background: image-url("background1.jpg") no-repeat 50% 0; background-size: cover; height: 100%; width: 100%; overflow:hidden;}
-.bg2 { background-color: $red; color: $blue; padding: 50px !important;}
-.bg3 { background-color: $blue; color: white;
+.bg2 { background-color: white; background-size: cover; color: $blue; padding-top: 40px !important;}
+.bg3 { background-color: white; color: white;
 
 p {
-	padding-bottom: 100px !important;
-	padding-top: 100px !important;
+
+	width: 80%;
+	padding-bottom: 40px;
+	margin: auto;
 
 } }
-.bg4 { background-color: $orange; color: white; p {
-	padding-bottom: 100px !important;
-	padding-top: 100px !important;
+.bg4 { padding-bottom: 60px; background-color: white; color: white; p {
+	padding-bottom: 50px !important;
+	padding-top: 70px !important;
 
 } }
-.bg5 { background-color: $red; color: white;}
+.bg5 { background-color: white; color: white;}
 
 .bg8 { background: image-url('background4.jpg') no-repeat top center fixed; height: 450px;}
+.bg10 { background: image-url('photo7.jpg') no-repeat top center fixed; height: 450px;}
 .bg1, .bg2, .bg3, .bg4, .bg5, .bg6, .bg7 {
 	padding: 0;
 	background-attachment: fixed;
@@ -72,7 +75,7 @@ p {
 }
 
 h2 {
-	padding-top: 70px;
+	padding-top: 40px;
 	margin: 0 !important;
 	padding-bottom: 5px;
 	line-height: 120%;
@@ -183,7 +186,7 @@ h2 {
 
 		h1 {
 			color: $red;
-			font-size: 6em;
+			font-size: 4em;
 			font-weight: 800;
 			background-color: $blue;
 		}
@@ -212,7 +215,6 @@ h2 {
 	
   a {
   	color: $blue;
-  	background-color: $red;
   	&:hover {
 		 	transition: all 1s;
 		 	color: $green;
@@ -230,26 +232,26 @@ h2 {
 	font-weight: 900;
 	text-align: center;
 	line-height: 450px;
+	
+	a {
+		text-decoration: none;
+		color: $red !important;
+	}
 }
 
 .circle-num {
 	margin: auto;
-	background-color: $blue;
 	font-size: 3.5em;
 	color: $red;
 	width: 50%;
-	border: 10px solid #90C695;
 	text-align: center;
 }
 
 .sock-quality {
 	margin: auto;
 	background-color: white;
-	padding-top: 5%;
 	width: 250px;
-	height: 250px;
-	border: 10px solid #90C695;
-	background-color: $blue;
+	height: 200px;
 	color: $blue;
 
 	h3 {
@@ -260,21 +262,21 @@ h2 {
 		width: 75%;
 		margin: auto;
 		font-size: 1.2em;
-		color: $green;
+		color: $blue;
 	}
 }
 
 .sock-list {
 	height: 100%;
-	padding: 10px;
 	color: white;
-	background-color: $blue;
 	border-radius: 15px;
 
 	p {
-		padding: 15px;
 		font-size: 2em;
-		color: $green;
+		color: $blue;
+		text-align: center;
+		width: 70%;
+		margin: auto;
 	}
 }
 
@@ -286,20 +288,16 @@ h2 {
 
 #subscribe {
 	height: 100%;
-	padding: 100px;
 	color: $red;
 
 	.content-box {
-		width: 90%;
+		width: 75%;
 		margin: auto;
 		border: 10px solid $green;
 		background-color: $blue;
 		padding: 30px;
 	}
 
-	
-	
-		
 		input {
 			width: 50%;
 			padding-right: 20px;
@@ -325,6 +323,7 @@ h2 {
 		}
 
 		p {
+			font-size: 1.5em;
 			color: $green;
 			font-family: 'Raleway', sans-serif;
 		}

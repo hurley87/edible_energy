@@ -97,15 +97,15 @@ $(document).ready(function() {
     }, 2000);
     
     function animateSock1(sock) {
-      return TweenMax.to($(sock), 1, {rotation: -10, onComplete: makeItRain, opacity:0.8,  ease:Back.easeOut});
+      return TweenMax.to($(sock), 1, {rotation: -10, onComplete: makeItRain,  ease:Back.easeOut});
     }
     function animateSock2(sock) {
-      return TweenMax.to($(sock), 1, {rotation: -10, onComplete: makeItRain, opacity:0.8,  ease:Back.easeOut});
+      return TweenMax.to($(sock), 1, {rotation: -10, onComplete: makeItRain,  ease:Back.easeOut});
     }
 
     function makeItRain() {
-      TweenMax.to($('#cool1'), 2, {rotation: 10, onComplete: makeItRain, opacity:0.8,  ease:Back.easeOut });
-      TweenMax.to($('#cool2'), 2, {rotation: 10, onComplete: makeItRain, opacity:0.8,  ease:Back.easeOut });
+      TweenMax.to($('#cool1'), 2, {rotation: 10, onComplete: makeItRain,  ease:Back.easeOut });
+      TweenMax.to($('#cool2'), 2, {rotation: 10, onComplete: makeItRain,  ease:Back.easeOut });
      }
 
      setInterval(function() {

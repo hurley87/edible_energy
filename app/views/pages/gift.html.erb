@@ -1,34 +1,72 @@
 
 <div id='gift'>
   <h2  style='margin-top: 10px;' class='text-center'>&nbsp;</h2>
-<section id='subscribe' class='bg5'>
-    <div class='row'>
-      <div class='col-md-6'>
-        <h1>Give the gift of Socks</h1>
+    <div  class='opening text-center'>
+      
+        <h1>Give the Gift of Socks</h1>
         
-        <h3>Sock & Box is the perfect gift for the men in your life. Simply pick the subscription length and you're good to go! They'll thank you every month.</h3>
+        <h3>Sock & Box is the perfect gift for the men in your life. Simply pick the subscription length and you're good to go! </h3>
+    </div>
+    <p class='open-arrow'><a style='color: #90C695;' class='scroll-link' href="#about"><i class='fa fa-angle-down'></i></a></p>
+</div>
+<section id='about' class='bg2'>
+  <div class='text-center'>
+    <h2 style='font-size: 4em;'>choose your gift</h2>
+    <br>
+    <br>
+   
+    <div class='row'>
+      <div class='container'> 
+      <div id='sock1' class='col-md-4'>
+       <div class='circle-num cool-list'>
+        <a class='scroll-link' href="#subscribe" id='oneMonth'>1 pair</a></div>
         <br>
-        <p class='text-center'>
-        <ul>
-          <li> <a class='option' id='oneMonth'>1 pair</a> </li>
-          <li> <a class='option' id='twoMonth'>6 pairs</a> </li>
-          <li> <a class='option' id='threeMonth'>12 pairs</a> </li>
-        </ul>
-        </p>
+        <div class='sock-quality cool-list'>
+          <h3>$15</h3>
+          <p>Let us know your shipping info and we will send you a pair of our socks monthly. </p>
+        </div>
       </div>
-      <div class='col-md-6'>
-          
+      <div id='sock2' class='col-md-4'>
+        <div class='circle-num cool-list'> <a id='twoMonth' class='scroll-link' href="#subscribe">3 pairs</a> </div>
+        <br>
+        <div class='sock-quality cool-list'>
+          <h3>$33</h3>
+          <p>We'll get the socks to you in 5-10 business days. Shipping is free of charge. </p>
+        </div>
+      </div>
+      <div id='sock3' class='col-md-4'>
+        
+         <div class='circle-num text-center cool-list'><a class='scroll-link' href="#subscribe" id='threeMonth'>6 pairs</a> </div>
+        <br>
+         <div class='sock-quality cool-list'>
+          <h3>$60</h3>
+          <p>You receive them in the mail and feel great by slipping on your fresh, new, fancy socks!</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+    <br>
+  </div>
+</section>
+ <div class='bg11'>
+  <p class='info'> <span  id='happysocks'><a href="/gift">let's get <i>fancy</a></i></span> </p>
+  </div>
+<section style='padding: 100px;' id='subscribe' class='bg5'>
+
+    <div class='row'>
+      <div class='col-md-2'>&nbsp;</div>
+      <div class='col-md-8'>
             <div class='content-box'>
 
               <h1 class='text-center'>Sock & Box</h1>
-              <p id='infop' class='text-center'>Buy just one pair of socks for  <span style='text-decoration: line-through;'>$8.99</span>!</p>
+              <p class='text-center'>Subscribe now for only $9.99 a month!</p>
               <p class='text-center'></p>
           <%= form_tag charges_path, id:'chargeForm' do %>
-                             
-            <p class='text-center'><a style='font-size: 1.2em;' id="btn-buy" type="button" class='btn'>purchase</a></p>
     
+               <p class='text-center'><a id="btn-buy" type="button" class='btn'>purchase</a></p>
             <br>
-             	<%= hidden_field_tag 'stripeToken' %>
+              <%= hidden_field_tag 'stripeToken' %>
               <%= hidden_field_tag 'stripeEmail' %> 
               <%= hidden_field_tag 'billingApt' %>
               <%= hidden_field_tag 'billingCity' %> 
@@ -46,79 +84,11 @@
               <%= hidden_field_tag 'shippingState' %>
               <%= hidden_field_tag 'shippingZip' %> 
               <%= hidden_field_tag 'shippingName' %>
-              <%= hidden_field_tag 'one' %>
-              <%= hidden_field_tag 'two' %>
-              <%= hidden_field_tag 'three' %>
+
               
           <% end %>
           </div>
         </div>
-      
+    </div>
 </section>
-</div>
-<script src="https://checkout.stripe.com/checkout.js"></script>
-<script type="text/javascript">
-  
-  $('#oneMonth').on('click', function() {
-      $('#infop').text('You purchase 1 pair of socks.');
-      document.getElementById("two").value = false;
-      document.getElementById("three").value = false;
-      document.getElementById("one").value = true;
-  });
 
-  $('#twoMonth').on('click', function() {
-      $('#infop').text('You purchase one pair each month for the next 6 months.');
-      document.getElementById("two").value = true;
-      document.getElementById("three").value = false;
-      document.getElementById("one").value = false;
-  });
-
-  $('#threeMonth').on('click', function() {
-      $('#infop').text('You purchase one pair each month for the next year.');
-      document.getElementById("two").value = false;
-      document.getElementById("three").value = true;
-      document.getElementById("one").value = false;
-  });
-  
-  var handler = StripeCheckout.configure({
-    key: '<%= @stripe_key %>',
-    token: function(token, arg) {
-      document.getElementById("stripeToken").value = token.id;
-      document.getElementById("stripeEmail").value = token.email;
-      document.getElementById("billingApt").value = arg.billing_address_city;
-      document.getElementById("billingCity").value = arg.billing_address_city;
-      document.getElementById("billingCountry").value = arg.billing_address_country;
-      document.getElementById("billingCountryCode").value = arg.billing_address_country_code;
-      document.getElementById("billingAddress1").value = arg.billing_address_line1;
-      document.getElementById("billingState").value = arg.billing_address_state;
-      document.getElementById("billingZip").value = arg.billing_address_zip;
-      document.getElementById("billingName").value = arg.billing_name;
-      document.getElementById("shippingApt").value = arg.shipping_address_apt;
-      document.getElementById("shippingCity").value = arg.shipping_address_city;
-      document.getElementById("shippingCountry").value = arg.shipping_address_country;
-      document.getElementById("shippingCountryCode").value = arg.shipping_address_country_code;
-      document.getElementById("shippingAddress1").value = arg.shipping_address_line1;
-      document.getElementById("shippingState").value = arg.shipping_address_state;
-      document.getElementById("shippingZip").value = arg.shipping_address_zip;
-      document.getElementById("shippingName").value = arg.shipping_name;
-      
-      document.getElementById("chargeForm").submit();
-    }
-  });
-   document.getElementById('btn-buy').addEventListener('click', function(e) {
-    handler.open({
-      name: 'Sock and Box',
-      description: 'Monthly Socks Delivered ($8.99)',
-      amount: 899,
-      shippingAddress: true,
-      billingAddress: true
-   });
-   e.preventDefault();
-  });
-   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-57256394-1', 'auto');
-  ga('send', 'pageview');
-</script>

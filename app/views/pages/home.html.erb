@@ -10,13 +10,13 @@
         <h3 class='text-center'>Comfortable socks that look great, delivered&nbsp;monthly.</h3>
    
     </div>
-    <div>
+
       <p class='open-arrow'><a class='scroll-link' href="#about"><i class='fa fa-angle-down'></i></a></p>
-    </div>
+
 </section>
 <section id='about' class='bg2'>
   <div class='text-center'>
-    <h2 style='font-size: 4em;'>how it works</h2>
+    <h2 style='font-size: 4em;'>3 easy steps</h2>
     <br>
     <br>
    
@@ -56,61 +56,41 @@
   </div>
 
 </section>
+  <div class='bg8'>
+  <p class='info'> <span  id='happysocks'><a href="http://happysocks.com"> we sell <i>Happy Socks</a></i></span> </p>
 
-<div class='sock-dis'>
-<br>
-<section class='bg3'>
+  </div>
+
+<section class='bg3 '>
   <div class='container'>
-    <div class='row'>
-      <div class='col-md-6'>
+        <br>
+        <br>
+
+        <p  id='cool1' class='text-center'><span class='sock1'><%= image_tag("happysocks2.png") %></span><span class='sock2'><%= image_tag("happysocks3.png") %></span></p>
+
         <div class='sock-list'>
           <p>Scouring the department stores for the perfect pair of socks can be a challenge, so sit back and let us do the work for you. We guarantee you'll love the pair you get. If not send em back and we'll get you a fresh new style.</p>
         </div>
 
-      </div>
-      <div class='col-md-6'>
-        <p  id='cool1' class='text-center'><span class='sock1'><%= image_tag("happysocks2.png") %></span><span class='sock2'><%= image_tag("happysocks3.png") %></span></p>
-        
-        <br>
-      </div>
-    </div>
+ 
   </div>
 </section>
 
-
-
-  <br>
-
-  <div class='bg8'>
-  <p class='info'> <span  id='happysocks'>We distribute <i>Happy Socks</i></span> </p>
-
+ <div class='bg10'>
+  <p class='info'> <span  id='happysocks'><a href="/gift">give the gift of <i>socks</a></i></span> </p>
   </div>
-
 
 
 <section id='socks' class='bg4'>
   <br>
   <div class='container'>
-  <br>
-    <div clsas='row'>
-      <div class='col-md-6'>
 
-        <p id='cool2'><span class='sock1'><%= image_tag("happysocks4.png") %></span><span class='sock2'><%= image_tag("happysocks5.png") %></span></p>
-        
-    </div> 
-    <div class='col-md-6'>
       <div class='sock-list'>
-          <p>The socks we provide are manufactured using only the best materials. The high end material will not fade or shrink.  Slide into comfort and convenience today.</p>
+          <p >The socks we provide are manufactured using only the best materials. The high end material will not fade or shrink.  Slide into comfort and convenience today.</p>
         </div>
-
-    </div>    
-  </div>
-  <br>
-  <br>
+  
 </section>
  <br id='sock-start'>
-</div>
-</div>
 
 <section id='subscribe' class='bg5'>
     <div class='row'>
@@ -120,7 +100,7 @@
             <div class='content-box'>
 
               <h1 class='text-center'>Sock & Box</h1>
-              <p class='text-center'>Subscribe now for only <span style='text-decoration: line-through;'>$14.99</span> a month!<br>(First 50 customers get their first month for only $8.99!)</p>
+              <p class='text-center'>Subscribe now for only $9.99 a month!</p>
               <p class='text-center'></p>
           <%= form_tag charges_path, id:'chargeForm' do %>
     
@@ -153,7 +133,8 @@
 </section>
 <br>
 <br class='clear'>
-<script src="https://checkout.stripe.com/checkout.js"></script>
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+ <script src="https://checkout.stripe.com/checkout.js"></script>
 <script type="text/javascript">
   
   var handler = StripeCheckout.configure({
@@ -183,8 +164,8 @@
    document.getElementById('btn-buy').addEventListener('click', function(e) {
     handler.open({
       name: 'Sock and Box',
-      description: 'Monthly Socks Delivered ($8.99)',
-      amount: 899,
+      description: 'Monthly Socks Delivered',
+      amount: 1899,
       shippingAddress: true,
       billingAddress: true
    });

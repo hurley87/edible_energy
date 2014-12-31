@@ -97,9 +97,6 @@
 		display: none;
 	}
 	
-	#about {
-		height: 1400px !important;
-	}
 	.down {
 		padding: none;
 	}
@@ -143,5 +140,9 @@ section #about.bg2 {
 		height: 50%;
 		margin-top: -150px;
 	}
+	.info {
+	font-size: 2em;
+}
 
 }
+

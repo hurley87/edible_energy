@@ -5,11 +5,11 @@ $red: #f37453;
 $orange: #0a3542;
 $blue: #0a3542;
 $beige: #FEFBEE;
+$green: #90C695;
 
 .thankyou {
-	color: white;
+	color: $blue;
 	padding-top: 15px;
-	background-color: $blue;
 }
 
 .insta-cta {
@@ -47,13 +47,38 @@ $beige: #FEFBEE;
 	}
 }
 
-#gift h1 {
-	color: #0a3542;
-	margin: 0;
+#gift {
+	height: 100vh;
+	background: image-url("backgroundgift.jpg") no-repeat 50% 0; 
+	width: 100%; 
+	overflow:hidden;
+
+	.opening {
+		width: 50%;
+		margin: auto;
+		padding: 15px;
+		padding-bottom: 20px;
+		background-color: $blue;
+
+		h1 {
+			color: $red;
+			font-size: 3em;
+			font-weight: 800;
+			
+		}
+
+		h3 {
+			font-size: 1.5sem;
+			font-weight: 800;
+			color: $green;
+	
+			padding: 10px;
+		}
+
+	}
+
 }
-#gift .content-box h1 {
-	color: $red;
-}
+
 
 #gift ul li {
 	display: inline-block;
@@ -67,10 +92,10 @@ $beige: #FEFBEE;
 }
 
 #gift h3 {
-	color: #0a3542;
+	color: $blue;
 	padding-top: 20px;
 	font-size: 2em;
 }
 
-
+.bg11 { background: image-url('HSgirl.jpg') no-repeat top center fixed; height: 450px;}
 
