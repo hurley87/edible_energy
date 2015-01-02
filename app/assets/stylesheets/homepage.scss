@@ -292,10 +292,9 @@ h2 {
 	.content-box {
 		width: 75%;
 		margin: auto;
-		border: 10px solid $green;
+		
 		background-color: $blue;
-		margin-top: 100px;
-		margin-bottom: 100px;
+		margin-bottom: 50px;
 	}
 
 		input {
@@ -401,7 +400,7 @@ footer .link-times {
 			padding-bottom: 5px;
 		}
 		p {
-			color: $green;
+			color: $blue 1;
 		}
 	}
 
@@ -420,9 +419,12 @@ footer .link-times {
 
 
 #happysocks {
-	background-color: $blue;
+	/*background-color: $blue;*/
 	padding: 10px;
-	border: 10px solid $green;
+	
+	a {
+		text-shadow: 2px 2px 2px black;
+	}
 }
 
 .buttonChange {
