@@ -234,8 +234,18 @@ h2 {
 	line-height: 450px;
 	
 	a {
+		border: 2px solid $red;
 		text-decoration: none;
 		color: $red !important;
+		padding: 5px 10px 5px 10px;
+		border-radius: 20px;
+
+		&:hover {
+			transition: 2s all;
+			text-decoration: none;
+			background-color: $red;
+			color: white !important;
+		}	
 	}
 }
 
@@ -248,18 +258,14 @@ h2 {
 }
 
 .sock-quality {
-	margin: auto;
-	width: 250px;
-	height: 200px;
-	color: $blue;
+	
 
 	h3 {
 		color: $red;
 	}
 
 	p {
-		width: 75%;
-		margin: auto;
+		
 		font-size: 1.2em;
 		color: $blue;
 	}
