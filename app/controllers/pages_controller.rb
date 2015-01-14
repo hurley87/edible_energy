@@ -20,5 +20,10 @@ class PagesController < ApplicationController
   	@users = Insta.all
   end
 
- 
+  def boxers
+  end
+
+  def blog 
+  end
+
 end

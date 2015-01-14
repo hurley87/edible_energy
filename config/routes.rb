@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   get 'privacy' => 'pages#privacy'
   get 'instagram' => 'pages#instagram'
   get 'faq' => 'pages#faq'
+  get 'boxers' => 'pages#boxers'
+  get 'blog' => 'pages#blog'
   
   resources :charges
   resources :purchases, only: [:show]
