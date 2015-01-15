@@ -236,15 +236,16 @@ h2 {
 	a {
 		border: 2px solid $red;
 		text-decoration: none;
-		color: $red !important;
-		padding: 5px 10px 5px 10px;
-		border-radius: 20px;
+		color: white !important;
+		padding: 15px 60px 15px 60px;
+		border-radius: 60px;
+		background-color: $red;
 
 		&:hover {
 			transition: 2s all;
 			text-decoration: none;
-			background-color: $red;
-			color: white !important;
+			background-color: $blue;
+			
 		}	
 	}
 }
