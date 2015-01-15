@@ -2,17 +2,19 @@
 <html>
 <head>
   <title>SOCKS</title>
+  <link href="http://vjs.zencdn.net/4.10/video-js.css" rel="stylesheet">
+	<script src="http://vjs.zencdn.net/4.10/video.js"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width" />
   <%= favicon_link_tag 'favicon.ico' %>
-
   
 </head>
 <body>
 	<%= render 'layouts/nav'  %>
 	<%= yield %>
 	<%= render 'layouts/footer' %>
+
 </body>
 </html>
