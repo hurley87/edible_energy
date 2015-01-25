@@ -51,4 +51,6 @@ gem 'greensock-rails'
 
 gem "letter_opener", :group => :development
 
+gem 'sorcery'
+
 
