@@ -79,27 +79,29 @@
 	  BCL.contentEvent = brightcove.api.events.ContentEvent;
 	  BCL.cuePointEvent = brightcove.api.events.CuePointEvent;
 	  BCL.mediaEvent = brightcove.api.events.MediaEvent;
+
+	  console.log(BCL.player);
 	};
 
 
-	var myTemplateLoaded = function (experienceID) {
-	    player = brightcove.api.getExperience(experienceID);
-	    modVP = player.getModule(brightcove.api.modules.APIModules.VIDEO_PLAYER);
-	    modExp = player.getModule(brightcove.api.modules.APIModules.EXPERIENCE);
-	    modCon = player.getModule(brightcove.api.modules.APIModules.CONTENT);
-	}
+	// var myTemplateLoaded = function (experienceID) {
+	//     player = brightcove.api.getExperience(experienceID);
+	//     modVP = player.getModule(brightcove.api.modules.APIModules.VIDEO_PLAYER);
+	//     modExp = player.getModule(brightcove.api.modules.APIModules.EXPERIENCE);
+	//     modCon = player.getModule(brightcove.api.modules.APIModules.CONTENT);
+	// }
 
-	 var onTemplateReady = function (evt) {
-	    modVP.getCurrentVideo(function (dto) {
-	    });
-	    modVP.addEventListener(brightcove.api.events.MediaEvent.BEGIN, onMediaEventFired);
-	    modVP.addEventListener(brightcove.api.events.MediaEvent.CHANGE, onMediaEventFired);
-	    modVP.addEventListener(brightcove.api.events.MediaEvent.COMPLETE, onMediaEventFired);
-	    modVP.addEventListener(brightcove.api.events.MediaEvent.ERROR, onMediaEventFired);
-	    modVP.addEventListener(brightcove.api.events.MediaEvent.PLAY, onMediaEventFired);
-	    modVP.addEventListener(brightcove.api.events.MediaEvent.PROGRESS, onMediaProgressFired);
-	    modVP.addEventListener(brightcove.api.events.MediaEvent.STOP, onMediaEventFired);
-	}
+	//  var onTemplateReady = function (evt) {
+	//     modVP.getCurrentVideo(function (dto) {
+	//     });
+	//     modVP.addEventListener(brightcove.api.events.MediaEvent.BEGIN, onMediaEventFired);
+	//     modVP.addEventListener(brightcove.api.events.MediaEvent.CHANGE, onMediaEventFired);
+	//     modVP.addEventListener(brightcove.api.events.MediaEvent.COMPLETE, onMediaEventFired);
+	//     modVP.addEventListener(brightcove.api.events.MediaEvent.ERROR, onMediaEventFired);
+	//     modVP.addEventListener(brightcove.api.events.MediaEvent.PLAY, onMediaEventFired);
+	//     modVP.addEventListener(brightcove.api.events.MediaEvent.PROGRESS, onMediaProgressFired);
+	//     modVP.addEventListener(brightcove.api.events.MediaEvent.STOP, onMediaEventFired);
+	// }
 
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
