@@ -1,6 +1,6 @@
 	<style type="text/css">
 	 	body {
-	 		background-image: url('images/bg.png');
+	 
 	 		background-size: cover;
 	 		background-repeat: no-repeat;
 	 	}
@@ -11,7 +11,6 @@
 
 	 	#vid {
 	 		width: 100%;
-	 		background-image: url('images/section.png');
 	 		background-image: cover;
 	 		background-repeat: no-repeat;
 	 		height: 600px;
@@ -35,10 +34,6 @@
 	 	}
 	</style>
 
-<h1>
-	<img src="images/logo.jpg">
-</h1>
-
 <div id='vid'>
 	<div class='container'>
 		<object id="myExperience4012772652001" class="BrightcoveExperience">
@@ -60,7 +55,7 @@
 </div>
 
 
-
+<div id='videoName'></div>
 
 <script type="text/javascript" src="http://sadmin.brightcove.com/js/BrightcoveExperiences.js"></script>
 <script type="text/javascript">
@@ -81,6 +76,22 @@
 	  BCL.mediaEvent = brightcove.api.events.MediaEvent;
 
 	  console.log(experienceID);
+	};
+
+	BCL.onTemplateLoad("myExperience4012772652001");
+
+
+	BCL.onTemplateReady = function (evt) {
+	  BCL.videoPlayer = BCL.player.getModule(BCL.APIModules.VIDEO_PLAYER);
+	};
+
+	BCL.videoPlayer.getCurrentVideo( function(videoDTO) {
+		  document.getElementById("videoName").innerHTML = "Currently watching: <strong>" + videoDTO.displayName + "<strong>";
+		});
+	// passing the name of the callback function
+	BCL.videoPlayer.getCurrentVideo( BCL.onGetVideo );
+	// callback 
+	BCL.onGetVideo = function (videoDTO) {   document.getElementById("videoName").innerHTML = "Currently watching: <strong>" + videoDTO.displayName + "<strong>";
 	};
 
 
