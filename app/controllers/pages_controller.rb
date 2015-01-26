@@ -26,4 +26,6 @@ class PagesController < ApplicationController
   def blog 
   end
 
+  def proof 
+  end
 end

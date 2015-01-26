@@ -1,0 +1,126 @@
+	<style type="text/css">
+	 	body {
+	 		background-image: url('images/bg.png');
+	 		background-size: cover;
+	 		background-repeat: no-repeat;
+	 	}
+
+	 	h1 {
+	 		padding: 25px 0 25px 100px;
+	 	}
+
+	 	#vid {
+	 		width: 100%;
+	 		background-image: url('images/section.png');
+	 		background-image: cover;
+	 		background-repeat: no-repeat;
+	 		height: 600px;
+	 		background-size: 100%;
+		    background-position: 50% 50%;
+		    background-repeat: no-repeat;
+		    position: relative;
+		    bottom: 100px;
+		    text-align: center;
+	 	}
+
+	 	.container {
+	 		width: 50%;
+	 		margin: auto;
+	 	}
+
+	 	object {
+	 		position: relative;
+	 		top: 100px;
+	 		width: 100%;
+	 	}
+	</style>
+
+<h1>
+	<img src="images/logo.jpg">
+</h1>
+
+<div id='vid'>
+	<div class='container'>
+		<object id="myExperience4012772652001" class="BrightcoveExperience">
+		  <param name="bgcolor" value="#FFFFFF" />
+		  <param name="width" value="486" />
+		  <param name="height" value="412" />
+		  <param name="playerID" value="4011908126001" />
+		  <param name="playerKey" value="AQ~~,AAADpfNQpeE~,UXu8Mv40lfh_i-NN0cgS0fL4gJS0NXHX" />
+		  <param name="isVid" value="true" />
+		  <param name="dynamicStreaming" value="true" />
+		  <param name="secureConnections" value="true" />
+		  <param name="secureHTMLConnections" value="true" />
+		  <param name="includeAPI" value="true" />
+		  <param name="templateLoadHandler" value="BCL.onTemplateLoad" />
+		  <param name="templateReadyHandler" value="BCL.onTemplateReady" />
+		  <param name="@videoPlayer" value="4012772652001" />
+		</object>
+	</div>	
+</div>
+
+
+
+
+<script type="text/javascript" src="http://sadmin.brightcove.com/js/BrightcoveExperiences.js"></script>
+<script type="text/javascript">
+	brightcove.createExperiences();
+</script>
+<script type="text/javascript">
+	// Brightcove Learning namespace
+	var BCL = {};
+	//template loaded event handler
+	BCL.onTemplateLoad = function (experienceID) {
+	  // get references to the player and API Modules and Events
+	  BCL.player = brightcove.api.getExperience(experienceID);
+	  BCL.APIModules = brightcove.api.modules.APIModules;
+	  BCL.adEvent = brightcove.api.events.AdEvent;
+	  BCL.captionsEvent = brightcove.api.events.CaptionsEvent;
+	  BCL.contentEvent = brightcove.api.events.ContentEvent;
+	  BCL.cuePointEvent = brightcove.api.events.CuePointEvent;
+	  BCL.mediaEvent = brightcove.api.events.MediaEvent;
+	};
+
+
+	var myTemplateLoaded = function (experienceID) {
+	    player = brightcove.api.getExperience(experienceID);
+	    modVP = player.getModule(brightcove.api.modules.APIModules.VIDEO_PLAYER);
+	    modExp = player.getModule(brightcove.api.modules.APIModules.EXPERIENCE);
+	    modCon = player.getModule(brightcove.api.modules.APIModules.CONTENT);
+	}
+
+	 var onTemplateReady = function (evt) {
+	    modVP.getCurrentVideo(function (dto) {
+	    });
+	    modVP.addEventListener(brightcove.api.events.MediaEvent.BEGIN, onMediaEventFired);
+	    modVP.addEventListener(brightcove.api.events.MediaEvent.CHANGE, onMediaEventFired);
+	    modVP.addEventListener(brightcove.api.events.MediaEvent.COMPLETE, onMediaEventFired);
+	    modVP.addEventListener(brightcove.api.events.MediaEvent.ERROR, onMediaEventFired);
+	    modVP.addEventListener(brightcove.api.events.MediaEvent.PLAY, onMediaEventFired);
+	    modVP.addEventListener(brightcove.api.events.MediaEvent.PROGRESS, onMediaProgressFired);
+	    modVP.addEventListener(brightcove.api.events.MediaEvent.STOP, onMediaEventFired);
+	}
+
+	// function onMediaEventFired(evt) {
+	//    document.getElementById("eventLog").innerHTML += "MEDIA EVENT: " + evt.type + " fired at position: " + evt.position + "<BR>";
+	//    if (evt.type === "mediaComplete") {
+	//        changeVideo();
+	//    }
+	// }
+
+	// function onMediaProgressFired(evt) {
+	//    document.getElementById("positionLog").innerHTML = "CURRENT POSITION: " + evt.position;
+	// }
+
+	// function currentVideoCallback(currentVideo) {
+	//    document.getElementById("positionLog").innerHTML = "";
+	//    document.getElementById("eventLog").innerHTML = "";
+
+	//    if (currentVideo.id == videosToSwap[0]) {
+	//       modVP.loadVideoByID(videosToSwap[1]);
+	//    } else {
+	//       modVP.loadVideoByID(videosToSwap[0]);
+	//    }
+	// }
+
+</script>

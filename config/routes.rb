@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   get 'faq' => 'pages#faq'
   get 'boxers' => 'pages#boxers'
   get 'blog' => 'pages#blog'
+  get 'proof' => 'pages#proof'
   
   resources :charges
   resources :purchases, only: [:show]
